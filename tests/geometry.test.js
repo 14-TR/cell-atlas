@@ -1,0 +1,41 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+
+test('seeded geometry preserves explicit cellular illustration invariants', async () => {
+  const mod = await import('../src/cell.js').catch(() => ({}));
+  assert.equal(typeof mod.createCell, 'function', 'a real procedural cell factory exists');
+  const a = mod.createCell({ quality: 'low' });
+  const b = mod.createCell({ quality: 'low' });
+  assert.equal(a.groups.size, 12);
+  assert.equal(a.manifest.nuclearMembranes, 2);
+  assert.equal(a.manifest.mitochondrialMembranes, 2);
+  assert.equal(a.manifest.poreSymmetry, 8);
+  assert.equal(a.manifest.chromatin, 'interphase fibers');
+  assert.equal(a.manifest.golgiRibosomes, 0);
+  assert.equal(a.manifest.plantOrganelles, 0);
+  assert.ok(a.manifest.mitochondria >= 10);
+  assert.ok(a.manifest.boundRibosomes > 400);
+  assert.ok(a.manifest.freeRibosomes > 400);
+  assert.ok(a.manifest.nuclearPores >= 20);
+  assert.equal(a.manifest.roughERConnected, true);
+  assert.equal(a.manifest.smoothERConnected, true);
+  assert.equal(a.manifest.corticalTopology, 'irregular mesh');
+  const nuclearMaterials = a.groups.get('nucleus').children.filter(x=>x.isMesh).map(x=>x.material.name);
+  assert.ok(nuclearMaterials.includes('nucleus') && nuclearMaterials.includes('nuclearInner'));
+  const mitochondrialMaterials = a.groups.get('mitochondria').children.map(x=>x.material.name);
+  assert.ok(mitochondrialMaterials.includes('mitoOuter') && mitochondrialMaterials.includes('mitoInner') && mitochondrialMaterials.includes('cristae'));
+  assert.ok(!a.groups.get('golgi').children.some(x=>/ribo/i.test(x.material.name)));
+  const vertices = [];
+  let instanced = 0;
+  a.root.traverse(obj => {
+    if (obj.isInstancedMesh) instanced += obj.count;
+    if (!obj.geometry) return;
+    const pos = obj.geometry.attributes.position;
+    for (const v of pos.array) assert.ok(Number.isFinite(v), 'geometry has finite positions');
+    vertices.push(pos.count);
+  });
+  const second = []; b.root.traverse(obj => { if (obj.geometry) second.push(obj.geometry.attributes.position.count); });
+  assert.deepEqual(vertices, second);
+  assert.ok(instanced > 1500, 'small repeated features use instancing');
+  assert.ok(vertices.reduce((a, b) => a + b, 0) > 30000, 'detailed rather than a few primitive spheres');
+});

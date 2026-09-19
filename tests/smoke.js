@@ -1,0 +1,62 @@
+import { chromium, devices } from 'playwright';
+import assert from 'node:assert/strict';
+import fs from 'node:fs/promises';
+const base = process.env.BASE_URL || 'http://127.0.0.1:4175';
+await fs.mkdir('evidence', { recursive: true });
+const browser = await chromium.launch({ channel: 'chromium', headless: true, args: ['--use-angle=metal'] });
+const evidence = { tests: [], errors: [], url: base, at: new Date().toISOString() };
+try {
+  for (const mode of ['desktop','mobile']) {
+    const context = await browser.newContext(mode === 'mobile' ? { ...devices['iPhone 13'], reducedMotion: 'reduce' } : { viewport: { width: 1440, height: 1000 }, reducedMotion: 'reduce' });
+    const page = await context.newPage();
+    page.on('pageerror', e => evidence.errors.push(e.message));
+    page.on('console', m => { if (m.type() === 'error') evidence.errors.push(m.text()); });
+    await page.goto(base);
+    await page.getByRole('heading', { name: 'Cell Atlas', exact: true }).waitFor({ timeout: 8000 });
+    await page.waitForFunction(() => window.cellAtlas?.ready, { timeout: 20000 });
+    assert.equal(await page.locator('#structure-list button').count(),12);
+    assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth),true);
+    const render = await page.evaluate(() => window.cellAtlas.diagnostics());
+    assert.equal(render.webgl,true);
+    assert.ok(render.triangles > 10000);
+    assert.ok(render.dpr <= 1.75);
+    await page.screenshot({ path: `evidence/${mode}-overview.png` });
+    if (mode === 'mobile') await page.getByRole('button', { name: 'Structures', exact: true }).click();
+    await page.locator('[data-structure="mitochondria"]').click();
+    assert.equal(await page.locator('#selected-name').innerText(), 'Mitochondria');
+    await page.getByRole('button', { name: 'Focus', exact: true }).click();
+    await page.waitForTimeout(1100);
+    await page.getByRole('button', { name: 'Isolate', exact: true }).click();
+    assert.equal(await page.evaluate(() => window.cellAtlas.diagnostics().isolated),true);
+    await page.screenshot({ path: `evidence/${mode}-mitochondria.png` });
+    await page.getByRole('button', { name: 'Reset view', exact: true }).click();
+    assert.equal(await page.evaluate(() => window.cellAtlas.diagnostics().isolated),false);
+    await page.getByRole('button', { name: 'View settings', exact: true }).click();
+    await page.locator('#clipping').fill('50');
+    assert.equal(await page.evaluate(() => window.cellAtlas.diagnostics().clipping),50);
+    await page.locator('#membrane-toggle').uncheck();
+    assert.equal(await page.evaluate(() => window.cellAtlas.diagnostics().membrane),false);
+    await page.locator('#quality').selectOption('low');
+    await page.waitForTimeout(700);
+    assert.equal(await page.evaluate(() => window.cellAtlas.diagnostics().quality),'low');
+    await page.getByRole('button', {name:'Close view settings'}).click();
+    await page.getByRole('button', { name: 'Sources & accuracy', exact: true }).click();
+    assert.match(await page.locator('#sources-dialog').innerText(), /not a measured reconstruction/i);
+    await page.getByRole('button', {name:'Close sources'}).click();
+    evidence.tests.push({ mode, status:'passed', render });
+    await context.close();
+  }
+  const context = await browser.newContext({ viewport: {width:390,height:844} });
+  const page = await context.newPage();
+  await page.goto(base + '/?webgl=off');
+  await page.getByText('Your cell atlas is still here.').waitFor();
+  assert.equal(await page.locator('#structure-list button').count(),12);
+  await page.screenshot({path:'evidence/webgl-fallback.png'});
+  evidence.tests.push({mode:'fallback',status:'passed'});
+  assert.deepEqual(evidence.errors, []);
+  await context.close();
+  console.log(JSON.stringify(evidence,null,2));
+} finally {
+  await fs.writeFile('evidence/smoke-results.json',JSON.stringify(evidence,null,2));
+  await browser.close();
+}
