@@ -20,7 +20,7 @@ try {
   evidence.touchOrbit=await gesture([{x:cx,y:cy,id:1}],[{x:cx+45,y:cy-20,id:1}]);
   evidence.pinchZoom=await gesture([{x:cx-30,y:cy,id:1},{x:cx+30,y:cy,id:2}],[{x:cx-60,y:cy,id:1},{x:cx+60,y:cy,id:2}]);
   evidence.twoFingerPan=await gesture([{x:cx-30,y:cy,id:1},{x:cx+30,y:cy,id:2}],[{x:cx-10,y:cy+30,id:1},{x:cx+50,y:cy+30,id:2}]);
-  await page.getByRole('button',{name:'Reset view',exact:true}).click();
+  await page.getByRole('button',{name:'Whole cell — reset view',exact:true}).click();
   await page.waitForTimeout(100);
   for(const [u,v] of [[.72,.7],[.75,.55],[.62,.34],[.3,.7],[.5,.5]]) {
     await page.touchscreen.tap(box.x+box.width*u,box.y+box.height*v);

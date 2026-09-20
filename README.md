@@ -18,6 +18,7 @@ npm run build               # deployable static files in dist/
 npm run test:e2e             # desktop/mobile Chromium + WebGL fallback
 node tests/responsive.js     # 320×568, 390×844, 844×390, 1024×768
 node tests/gestures.js       # real CDP touch orbit, pinch, pan, tap selection
+node tests/usability.js      # inline touch slider, structure navigation, short landscape
 node tests/production.js     # built assets under /cell-atlas/ subpath
 ```
 
@@ -29,8 +30,10 @@ The browser tests require the dev server at port 4175, except production.js, whi
 
 - One finger / left drag: orbit. Pinch / wheel: zoom. Two fingers / right drag: pan.
 - Tap a large rendered structure, or use the color-keyed structure index, to select it. The index also covers tiny particles and the membrane.
-- Focus centers a representative structure. Isolate shows the selected class; nucleus isolation retains its nucleolus. Reset restores framing, visibility, and section depth.
-- View settings: section slider, membrane visibility, labels, and efficient/balanced/detailed rendering.
+- Index selection and previous/next center a representative structure; navigation wraps. They clear section depth and reveal a hidden membrane when selected. Canvas taps select without unexpectedly zooming.
+- Focus reveals and centers the selection. Isolate follows navigation and retains the nucleolus with the nucleus. Whole cell restores framing, visibility, and section depth without discarding the selected field notes.
+- Section depth stays beside the model, with a live percentage, a large native slider, keyboard arrows/Home/End, and an Off reset. Deliberate sectioning can hide parts; Focus reveals the selection again. Cut faces remain open, not volume-filled.
+- View settings: membrane visibility, labels, and efficient/balanced/detailed rendering.
 - Rotation starts slowly unless reduced motion is requested; direct manipulation pauses it. The rotation button resumes or pauses.
 - Canvas keyboard: arrow keys orbit, +/− zoom, Home resets. All organelles are available from keyboard-accessible index buttons.
 - Field notes and Sources & accuracy include direct NCBI references. Native dialogs support Escape and focus management.

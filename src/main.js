@@ -24,13 +24,13 @@ $('model-disclaimer').textContent = model.disclaimer;
 $('source-links').innerHTML = referenceLinks(Object.values(sources).map(s => s.url));
 $('structure-list').innerHTML = structures.map((s,i) => `<button data-structure="${s.id}" aria-pressed="false"><span class="color-dot" style="background:${s.color}"></span><span>${s.name}</span></button>`).join('');
 
-function select(id) {
+function select(id, { frame = false } = {}) {
   const item = structures.find(x => x.id === id);
   if (!item) return;
   state.selected = id;
   $('selected-name').textContent = item.name;
   $('selected-eyebrow').textContent = item.eyebrow;
-  $('selected-index').textContent = `${String(structures.indexOf(item) + 1).padStart(2,'0')} / 12`;
+  $('selected-index').textContent = `${String(structures.indexOf(item) + 1).padStart(2,'0')} / ${structures.length}`;
   $('selected-dot').style.background = item.color;
   $('selected-function').textContent = item.function;
   $('selected-description').textContent = item.description;
@@ -42,6 +42,7 @@ function select(id) {
   applyVisibility();
   $('structure-panel').classList.remove('open');
   $('structures-open').setAttribute('aria-expanded', 'false');
+  if (frame) focus();
   announce(`${item.name} selected. ${item.function}.`);
 }
 function applyVisibility() {
@@ -77,7 +78,13 @@ function moveCamera(position, target, animated = true) {
   else { tween = null; camera.position.copy(position); controls.target.copy(target); controls.update(); }
 }
 function focus() {
-  if (!cell) return;
+  if (!cell || !webgl) return;
+  // A deliberate selection/focus must never land on an invisible section.
+  setClipping(0);
+  if (state.selected === 'membrane') {
+    state.membrane = true; $('membrane-toggle').checked = true;
+  }
+  applyVisibility();
   state.rotating = false; updateRotation();
   const { point, distance } = cell.groups.get(state.selected).userData.focus;
   const direction = new THREE.Vector3(.15,.12,1).normalize();
@@ -85,9 +92,8 @@ function focus() {
   announce(`${structures.find(s => s.id === state.selected).name} centered.`);
 }
 function reset() {
-  state.isolated = false; state.clipping = 0; state.membrane = true;
-  $('clipping').value = 0; $('clipping-value').value = '0%'; $('membrane-toggle').checked = true;
-  clippingPlane.constant = 9;
+  state.isolated = false; state.membrane = true;
+  setClipping(0); $('membrane-toggle').checked = true;
   applyVisibility(); resetCamera(); announce('Cell view reset. All structures visible.');
 }
 function openDialog(id) { $(id).showModal(); }
@@ -96,7 +102,18 @@ $('details-open').addEventListener('click', () => openDialog('details-dialog'));
 $('settings-open').addEventListener('click', () => openDialog('settings-dialog'));
 document.querySelectorAll('[data-close]').forEach(button => button.addEventListener('click', () => $(button.dataset.close).close()));
 document.querySelectorAll('dialog').forEach(dialog => dialog.addEventListener('click', e => { if (e.target === dialog) { const r = dialog.getBoundingClientRect(); if (e.clientX < r.left || e.clientX > r.right || e.clientY < r.top || e.clientY > r.bottom) dialog.close(); } }));
-$('structure-list').addEventListener('click', e => { const button = e.target.closest('[data-structure]'); if (button) select(button.dataset.structure); });
+$('structure-list').addEventListener('click', e => {
+  const button = e.target.closest('[data-structure]');
+  if (!button) return;
+  select(button.dataset.structure, { frame: true });
+  if ($('structures-open').offsetParent) $('structures-open').focus();
+});
+function stepStructure(direction) {
+  const index = structures.findIndex(s => s.id === state.selected);
+  select(structures[(index + direction + structures.length) % structures.length].id, { frame: true });
+}
+$('previous-structure').addEventListener('click', () => stepStructure(-1));
+$('next-structure').addEventListener('click', () => stepStructure(1));
 function toggleStructures(show) { $('structure-panel').classList.toggle('open', show); $('structures-open').setAttribute('aria-expanded', String(show)); if (show) $('structure-list').querySelector('[aria-pressed=true]').focus(); }
 $('structures-open').setAttribute('aria-controls','structure-panel');
 $('structures-open').setAttribute('aria-expanded','false');
@@ -107,13 +124,19 @@ document.addEventListener('keydown', e => {
   if (e.key === 'Escape') toggleStructures(false);
 });
 $('focus-button').addEventListener('click', focus);
-$('isolate-button').addEventListener('click', () => { state.isolated = !state.isolated; applyVisibility(); announce(state.isolated ? 'Selected structure isolated.' : 'All structures restored.'); });
+$('isolate-button').addEventListener('click', () => { state.isolated = !state.isolated; if (state.isolated) focus(); applyVisibility(); announce(state.isolated ? 'Selected structure isolated. Next and previous keep isolation on.' : 'All structures restored.'); });
 $('reset-button').addEventListener('click', reset);
 $('rotate-button').addEventListener('click', () => { state.rotating = !state.rotating; updateRotation(); });
-$('clipping').addEventListener('input', e => {
-  state.clipping = Number(e.target.value); clippingPlane.constant = 6 - state.clipping * .115;
+function setClipping(value) {
+  state.clipping = Number(value);
+  clippingPlane.constant = state.clipping === 0 ? 9 : 6 - state.clipping * .115;
+  $('clipping').value = state.clipping;
   $('clipping-value').value = `${state.clipping}%`;
-});
+  $('clipping').setAttribute('aria-valuetext', state.clipping ? `${state.clipping}% section depth` : 'Off — no section plane');
+  $('section-hint').textContent = state.clipping ? 'Section may hide parts · Focus reveals selection' : 'Open cut faces · select a structure to reveal it';
+}
+$('clipping').addEventListener('input', e => setClipping(e.target.value));
+document.querySelectorAll('[data-depth]').forEach(button => button.addEventListener('click', () => setClipping(button.dataset.depth)));
 $('membrane-toggle').addEventListener('change', e => { state.membrane = e.target.checked; applyVisibility(); });
 $('labels-toggle').addEventListener('change', e => { state.labels = e.target.checked; });
 $('quality').addEventListener('change', e => {
@@ -133,6 +156,9 @@ function resize() {
 }
 function fallback(message) {
   webgl = false; ready = true;
+  $('section-control').hidden = true;
+  labels.forEach(label => { label.el.hidden = true; });
+  $('app').classList.add('reading-mode');
   $('loading').hidden = true; $('fallback').hidden = false;
   if (renderer) renderer.domElement.hidden = true;
   $('render-status').textContent = 'READING MODE';
@@ -219,7 +245,7 @@ window.cellAtlas = {
   diagnostics(){
     let gpu='unavailable';
     if(renderer&&webgl){const gl=renderer.getContext(),ext=gl.getExtension('WEBGL_debug_renderer_info');gpu=ext?gl.getParameter(ext.UNMASKED_RENDERER_WEBGL):gl.getParameter(gl.RENDERER);}
-    return { ...state, webgl, gpu, dpr:renderer?.getPixelRatio()||0, triangles:renderer?.info.render.triangles||0, calls:renderer?.info.render.calls||0, manifest:cell?.manifest, camera:camera?.position.toArray() };
+    return { ...state, webgl, gpu, dpr:renderer?.getPixelRatio()||0, triangles:renderer?.info.render.triangles||0, calls:renderer?.info.render.calls||0, manifest:cell?.manifest, camera:camera?.position.toArray(), target:controls?.target.toArray(), focusPoint:cell?.groups.get(state.selected).userData.focus.point.toArray(), clippingConstant:clippingPlane.constant, transitioning:!!tween, visibleIds:cell ? [...cell.groups].filter(([,g])=>g.visible).map(([id])=>id) : [] };
   },
 };
 requestAnimationFrame(init);
