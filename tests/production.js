@@ -28,6 +28,22 @@ try {
  assert.equal(report.render.webgl,true);
  assert.deepEqual(report.errors,[]);
  await page.screenshot({path:'evidence/production-mobile.png'});
+ report.models=[];
+ for(const [id,count,selection] of [['plant',14,'chloroplasts'],['fungal',14,'vacuole'],['mammalian',12,'nucleus']]) {
+   await page.locator('#cell-model').selectOption(id);
+   await page.evaluate(()=>new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve))));
+   const render=await page.evaluate(()=>window.cellAtlas.diagnostics());
+   assert.equal(render.webgl,true);assert.equal(render.manifest.modelId,id);assert.equal(render.selected,selection);
+   assert.equal(await page.locator('[data-structure]').count(),count);
+   await page.locator('#isolate-button').click();assert.equal((await page.evaluate(()=>window.cellAtlas.diagnostics())).isolated,true);
+   await page.locator('#reset-button').click();
+   await page.locator('#details-open').click();assert.ok(await page.locator('#detail-sources a').count());await page.keyboard.press('Escape');
+   await page.screenshot({path:`evidence/production-${id}.png`});report.models.push({id,status:'passed',render});
+ }
+ await page.goto(`http://127.0.0.1:${server.address().port}/cell-atlas/?webgl=off`);await page.waitForFunction(()=>window.cellAtlas?.ready);
+ await page.locator('#cell-model').selectOption('fungal');assert.equal(await page.locator('[data-structure]').count(),14);
+ assert.equal((await page.evaluate(()=>window.cellAtlas.diagnostics())).webgl,false);
+ assert.deepEqual(report.errors,[]);
  report.status='passed';report.subpath='/cell-atlas/';
  console.log(JSON.stringify(report,null,2));
 }finally{await fs.writeFile('evidence/production-results.json',JSON.stringify(report,null,2));await browser.close();server.close();}
