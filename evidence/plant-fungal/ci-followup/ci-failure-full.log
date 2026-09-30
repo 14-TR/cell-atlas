@@ -1,0 +1,325 @@
+build	Set up job	﻿2026-09-30T01:33:56.6429822Z Current runner version: '2.337.0'
+build	Set up job	2026-09-30T01:33:56.6466165Z ##[group]Runner Image Provisioner
+build	Set up job	2026-09-30T01:33:56.6468038Z Hosted Compute Agent
+build	Set up job	2026-09-30T01:33:56.6469029Z Version: 20260828.587
+build	Set up job	2026-09-30T01:33:56.6470055Z Commit: abac92662cab4cc7352de4f9f9d2e2419aad9c29
+build	Set up job	2026-09-30T01:33:56.6471397Z Build Date: 2026-08-28T16:44:25Z
+build	Set up job	2026-09-30T01:33:56.6472672Z Worker ID: {6fafa9ba-afb9-4da1-b307-7464c3413607}
+build	Set up job	2026-09-30T01:33:56.6474143Z Azure Region: centralus
+build	Set up job	2026-09-30T01:33:56.6475248Z ##[endgroup]
+build	Set up job	2026-09-30T01:33:56.6477857Z ##[group]Operating System
+build	Set up job	2026-09-30T01:33:56.6479006Z Ubuntu
+build	Set up job	2026-09-30T01:33:56.6480037Z 24.04.5
+build	Set up job	2026-09-30T01:33:56.6480942Z LTS
+build	Set up job	2026-09-30T01:33:56.6482025Z ##[endgroup]
+build	Set up job	2026-09-30T01:33:56.6483079Z ##[group]Runner Image
+build	Set up job	2026-09-30T01:33:56.6484175Z Image: ubuntu-24.04
+build	Set up job	2026-09-30T01:33:56.6485252Z Version: 20260920.314.1
+build	Set up job	2026-09-30T01:33:56.6487484Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20260920.314/images/ubuntu/Ubuntu2404-Readme.md
+build	Set up job	2026-09-30T01:33:56.6490468Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20260920.314
+build	Set up job	2026-09-30T01:33:56.6492302Z ##[endgroup]
+build	Set up job	2026-09-30T01:33:56.6494254Z ##[group]GITHUB_TOKEN Permissions
+build	Set up job	2026-09-30T01:33:56.6497872Z Contents: read
+build	Set up job	2026-09-30T01:33:56.6498895Z Metadata: read
+build	Set up job	2026-09-30T01:33:56.6500111Z ##[endgroup]
+build	Set up job	2026-09-30T01:33:56.6502909Z Secret source: Actions
+build	Set up job	2026-09-30T01:33:56.6504652Z Cache mode: write
+build	Set up job	2026-09-30T01:33:56.6505864Z Prepare workflow directory
+build	Set up job	2026-09-30T01:33:56.6850859Z Prepare all required actions
+build	Set up job	2026-09-30T01:33:56.6920855Z Getting action download info
+build	Set up job	2026-09-30T01:33:56.9842881Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+build	Set up job	2026-09-30T01:33:57.0711955Z Download action repository 'actions/setup-node@v4' (SHA:49933ea5288caeca8642d1e84afbd3f7d6820020)
+build	Set up job	2026-09-30T01:33:57.1590191Z Download action repository 'actions/upload-pages-artifact@v3' (SHA:56afc609e74202658d3ffba0e8f6dda462b719fa)
+build	Set up job	2026-09-30T01:33:57.4130601Z Getting action download info
+build	Set up job	2026-09-30T01:33:57.5207801Z Download action repository 'actions/upload-artifact@v4' (SHA:ea165f8d65b6e75b540449e92b4886f43607fa02)
+build	Set up job	2026-09-30T01:33:57.6643314Z Complete job name: build
+build	Run actions/checkout@v4	﻿2026-09-30T01:33:57.7508789Z ##[group]Run actions/checkout@v4
+build	Run actions/checkout@v4	2026-09-30T01:33:57.7509877Z with:
+build	Run actions/checkout@v4	2026-09-30T01:33:57.7510413Z   repository: 14-TR/cell-atlas
+build	Run actions/checkout@v4	2026-09-30T01:33:57.7519161Z   token: ***
+build	Run actions/checkout@v4	2026-09-30T01:33:57.7519698Z   ssh-strict: true
+build	Run actions/checkout@v4	2026-09-30T01:33:57.7520240Z   ssh-user: git
+build	Run actions/checkout@v4	2026-09-30T01:33:57.7520797Z   persist-credentials: true
+build	Run actions/checkout@v4	2026-09-30T01:33:57.7521492Z   clean: true
+build	Run actions/checkout@v4	2026-09-30T01:33:57.7522052Z   sparse-checkout-cone-mode: true
+build	Run actions/checkout@v4	2026-09-30T01:33:57.7522773Z   fetch-depth: 1
+build	Run actions/checkout@v4	2026-09-30T01:33:57.7523302Z   fetch-tags: false
+build	Run actions/checkout@v4	2026-09-30T01:33:57.7523869Z   show-progress: true
+build	Run actions/checkout@v4	2026-09-30T01:33:57.7524426Z   lfs: false
+build	Run actions/checkout@v4	2026-09-30T01:33:57.7524918Z   submodules: false
+build	Run actions/checkout@v4	2026-09-30T01:33:57.7525501Z   set-safe-directory: true
+build	Run actions/checkout@v4	2026-09-30T01:33:57.7526172Z   allow-unsafe-pr-checkout: false
+build	Run actions/checkout@v4	2026-09-30T01:33:57.7527350Z ##[endgroup]
+build	Run actions/checkout@v4	2026-09-30T01:33:57.8543560Z Syncing repository: 14-TR/cell-atlas
+build	Run actions/checkout@v4	2026-09-30T01:33:57.8547366Z ##[group]Getting Git version info
+build	Run actions/checkout@v4	2026-09-30T01:33:57.8549136Z Working directory is '/home/runner/work/cell-atlas/cell-atlas'
+build	Run actions/checkout@v4	2026-09-30T01:33:57.8552059Z [command]/usr/bin/git version
+build	Run actions/checkout@v4	2026-09-30T01:33:57.8594656Z git version 2.55.0
+build	Run actions/checkout@v4	2026-09-30T01:33:57.8617874Z ##[endgroup]
+build	Run actions/checkout@v4	2026-09-30T01:33:57.8649700Z Temporarily overriding HOME='/home/runner/work/_temp/653d26df-c42e-4d50-9d1f-686aa712b8f0' before making global git config changes
+build	Run actions/checkout@v4	2026-09-30T01:33:57.8653954Z Adding repository directory to the temporary git global config as a safe directory
+build	Run actions/checkout@v4	2026-09-30T01:33:57.8658070Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/cell-atlas/cell-atlas
+build	Run actions/checkout@v4	2026-09-30T01:33:57.8701178Z Deleting the contents of '/home/runner/work/cell-atlas/cell-atlas'
+build	Run actions/checkout@v4	2026-09-30T01:33:57.8706365Z ##[group]Initializing the repository
+build	Run actions/checkout@v4	2026-09-30T01:33:57.8711484Z [command]/usr/bin/git init /home/runner/work/cell-atlas/cell-atlas
+build	Run actions/checkout@v4	2026-09-30T01:33:57.8813222Z hint: Using 'master' as the name for the initial branch. This default branch name
+build	Run actions/checkout@v4	2026-09-30T01:33:57.8815334Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+build	Run actions/checkout@v4	2026-09-30T01:33:57.8817046Z hint: to use in all of your new repositories, which will suppress this warning,
+build	Run actions/checkout@v4	2026-09-30T01:33:57.8818198Z hint: call:
+build	Run actions/checkout@v4	2026-09-30T01:33:57.8818848Z hint:
+build	Run actions/checkout@v4	2026-09-30T01:33:57.8819522Z hint: 	git config --global init.defaultBranch <name>
+build	Run actions/checkout@v4	2026-09-30T01:33:57.8820384Z hint:
+build	Run actions/checkout@v4	2026-09-30T01:33:57.8821180Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+build	Run actions/checkout@v4	2026-09-30T01:33:57.8822662Z hint: 'development'. The just-created branch can be renamed via this command:
+build	Run actions/checkout@v4	2026-09-30T01:33:57.8823788Z hint:
+build	Run actions/checkout@v4	2026-09-30T01:33:57.8824287Z hint: 	git branch -m <name>
+build	Run actions/checkout@v4	2026-09-30T01:33:57.8824887Z hint:
+build	Run actions/checkout@v4	2026-09-30T01:33:57.8825777Z hint: Disable this message with "git config set advice.defaultBranchName false"
+build	Run actions/checkout@v4	2026-09-30T01:33:57.8832788Z Initialized empty Git repository in /home/runner/work/cell-atlas/cell-atlas/.git/
+build	Run actions/checkout@v4	2026-09-30T01:33:57.8849561Z [command]/usr/bin/git remote add origin https://github.com/14-TR/cell-atlas
+build	Run actions/checkout@v4	2026-09-30T01:33:57.8894122Z ##[endgroup]
+build	Run actions/checkout@v4	2026-09-30T01:33:57.8896149Z ##[group]Disabling automatic garbage collection
+build	Run actions/checkout@v4	2026-09-30T01:33:57.8898250Z [command]/usr/bin/git config --local gc.auto 0
+build	Run actions/checkout@v4	2026-09-30T01:33:57.8930910Z ##[endgroup]
+build	Run actions/checkout@v4	2026-09-30T01:33:57.8932790Z ##[group]Setting up auth
+build	Run actions/checkout@v4	2026-09-30T01:33:57.8939866Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+build	Run actions/checkout@v4	2026-09-30T01:33:57.8976058Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+build	Run actions/checkout@v4	2026-09-30T01:33:57.9345272Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+build	Run actions/checkout@v4	2026-09-30T01:33:57.9388843Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+build	Run actions/checkout@v4	2026-09-30T01:33:57.9623650Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+build	Run actions/checkout@v4	2026-09-30T01:33:57.9659628Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+build	Run actions/checkout@v4	2026-09-30T01:33:57.9886109Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+build	Run actions/checkout@v4	2026-09-30T01:33:57.9965442Z ##[endgroup]
+build	Run actions/checkout@v4	2026-09-30T01:33:57.9967401Z ##[group]Fetching the repository
+build	Run actions/checkout@v4	2026-09-30T01:33:57.9969830Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +96b87f47369a81ec6ee09d653b22deb31f4cb255:refs/remotes/pull/1/merge
+build	Run actions/checkout@v4	2026-09-30T01:33:58.7940572Z From https://github.com/14-TR/cell-atlas
+build	Run actions/checkout@v4	2026-09-30T01:33:58.7942123Z  * [new ref]         96b87f47369a81ec6ee09d653b22deb31f4cb255 -> pull/1/merge
+build	Run actions/checkout@v4	2026-09-30T01:33:58.7946478Z ##[endgroup]
+build	Run actions/checkout@v4	2026-09-30T01:33:58.7947931Z ##[group]Determining the checkout info
+build	Run actions/checkout@v4	2026-09-30T01:33:58.7950150Z ##[endgroup]
+build	Run actions/checkout@v4	2026-09-30T01:33:58.7955587Z [command]/usr/bin/git sparse-checkout disable
+build	Run actions/checkout@v4	2026-09-30T01:33:58.8011153Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+build	Run actions/checkout@v4	2026-09-30T01:33:58.8043864Z ##[group]Checking out the ref
+build	Run actions/checkout@v4	2026-09-30T01:33:58.8045921Z [command]/usr/bin/git checkout --progress --force refs/remotes/pull/1/merge
+build	Run actions/checkout@v4	2026-09-30T01:33:58.8219577Z Note: switching to 'refs/remotes/pull/1/merge'.
+build	Run actions/checkout@v4	2026-09-30T01:33:58.8220944Z 
+build	Run actions/checkout@v4	2026-09-30T01:33:58.8222001Z You are in 'detached HEAD' state. You can look around, make experimental
+build	Run actions/checkout@v4	2026-09-30T01:33:58.8224562Z changes and commit them, and you can discard any commits you make in this
+build	Run actions/checkout@v4	2026-09-30T01:33:58.8227323Z state without impacting any branches by switching back to a branch.
+build	Run actions/checkout@v4	2026-09-30T01:33:58.8228357Z 
+build	Run actions/checkout@v4	2026-09-30T01:33:58.8229293Z If you want to create a new branch to retain commits you create, you may
+build	Run actions/checkout@v4	2026-09-30T01:33:58.8231969Z do so (now or later) by using -c with the switch command. Example:
+build	Run actions/checkout@v4	2026-09-30T01:33:58.8233088Z 
+build	Run actions/checkout@v4	2026-09-30T01:33:58.8233778Z   git switch -c <new-branch-name>
+build	Run actions/checkout@v4	2026-09-30T01:33:58.8234781Z 
+build	Run actions/checkout@v4	2026-09-30T01:33:58.8235316Z Or undo this operation with:
+build	Run actions/checkout@v4	2026-09-30T01:33:58.8236122Z 
+build	Run actions/checkout@v4	2026-09-30T01:33:58.8236593Z   git switch -
+build	Run actions/checkout@v4	2026-09-30T01:33:58.8237521Z 
+build	Run actions/checkout@v4	2026-09-30T01:33:58.8238426Z Turn off this advice by setting config variable advice.detachedHead to false
+build	Run actions/checkout@v4	2026-09-30T01:33:58.8239670Z 
+build	Run actions/checkout@v4	2026-09-30T01:33:58.8240986Z HEAD is now at 96b87f4 Merge c924bc37762dd19246415e25b3cf7bd3757b653f into e7c9968c2c2b2ca465430c60eecc5070cd3472e8
+build	Run actions/checkout@v4	2026-09-30T01:33:58.8245815Z ##[endgroup]
+build	Run actions/checkout@v4	2026-09-30T01:33:58.8277277Z [command]/usr/bin/git log -1 --format=%H
+build	Run actions/checkout@v4	2026-09-30T01:33:58.8305368Z 96b87f47369a81ec6ee09d653b22deb31f4cb255
+build	Run actions/setup-node@v4	﻿2026-09-30T01:33:58.8679474Z ##[group]Run actions/setup-node@v4
+build	Run actions/setup-node@v4	2026-09-30T01:33:58.8680545Z with:
+build	Run actions/setup-node@v4	2026-09-30T01:33:58.8681378Z   node-version: 22
+build	Run actions/setup-node@v4	2026-09-30T01:33:58.8682246Z   cache: npm
+build	Run actions/setup-node@v4	2026-09-30T01:33:58.8683070Z   always-auth: false
+build	Run actions/setup-node@v4	2026-09-30T01:33:58.8683967Z   check-latest: false
+build	Run actions/setup-node@v4	2026-09-30T01:33:58.8692343Z   token: ***
+build	Run actions/setup-node@v4	2026-09-30T01:33:58.8693179Z ##[endgroup]
+build	Run actions/setup-node@v4	2026-09-30T01:33:59.0152839Z Found in cache @ /opt/hostedtoolcache/node/22.23.2/x64
+build	Run actions/setup-node@v4	2026-09-30T01:33:59.0156548Z (node:2276) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+build	Run actions/setup-node@v4	2026-09-30T01:33:59.0160966Z (Use `node --trace-deprecation ...` to show where the warning was created)
+build	Run actions/setup-node@v4	2026-09-30T01:33:59.0164467Z ##[group]Environment details
+build	Run actions/setup-node@v4	2026-09-30T01:33:59.3833277Z node: v22.23.2
+build	Run actions/setup-node@v4	2026-09-30T01:33:59.3834275Z npm: 10.9.8
+build	Run actions/setup-node@v4	2026-09-30T01:33:59.3834939Z yarn: 1.22.22
+build	Run actions/setup-node@v4	2026-09-30T01:33:59.3836158Z ##[endgroup]
+build	Run actions/setup-node@v4	2026-09-30T01:33:59.3855382Z [command]/opt/hostedtoolcache/node/22.23.2/x64/bin/npm config get cache
+build	Run actions/setup-node@v4	2026-09-30T01:33:59.4905817Z /home/runner/.npm
+build	Run actions/setup-node@v4	2026-09-30T01:33:59.6272866Z npm cache is not found
+build	Run npm ci	﻿2026-09-30T01:33:59.6412946Z ##[group]Run npm ci
+build	Run npm ci	2026-09-30T01:33:59.6413345Z ^[[36;1mnpm ci^[[0m
+build	Run npm ci	2026-09-30T01:33:59.6675743Z shell: /usr/bin/bash -e {0}
+build	Run npm ci	2026-09-30T01:33:59.6676122Z ##[endgroup]
+build	Run npm ci	2026-09-30T01:34:01.8383881Z 
+build	Run npm ci	2026-09-30T01:34:01.8390125Z added 17 packages, and audited 18 packages in 2s
+build	Run npm ci	2026-09-30T01:34:01.8390918Z 
+build	Run npm ci	2026-09-30T01:34:01.8391303Z 5 packages are looking for funding
+build	Run npm ci	2026-09-30T01:34:01.8392122Z   run `npm fund` for details
+build	Run npm ci	2026-09-30T01:34:01.8397482Z 
+build	Run npm ci	2026-09-30T01:34:01.8397820Z found 0 vulnerabilities
+build	Run npm test	﻿2026-09-30T01:34:01.8917639Z ##[group]Run npm test
+build	Run npm test	2026-09-30T01:34:01.8917968Z ^[[36;1mnpm test^[[0m
+build	Run npm test	2026-09-30T01:34:01.8981971Z shell: /usr/bin/bash -e {0}
+build	Run npm test	2026-09-30T01:34:01.8982255Z ##[endgroup]
+build	Run npm test	2026-09-30T01:34:02.0108566Z 
+build	Run npm test	2026-09-30T01:34:02.0109488Z > cell-atlas@1.0.0 test
+build	Run npm test	2026-09-30T01:34:02.0110392Z > node --test tests/*.test.js
+build	Run npm test	2026-09-30T01:34:02.0110984Z 
+build	Run npm test	2026-09-30T01:34:02.0748012Z TAP version 13
+build	Run npm test	2026-09-30T01:34:03.1063342Z # Subtest: seeded geometry preserves explicit cellular illustration invariants
+build	Run npm test	2026-09-30T01:34:03.1073890Z ok 1 - seeded geometry preserves explicit cellular illustration invariants
+build	Run npm test	2026-09-30T01:34:03.1075081Z   ---
+build	Run npm test	2026-09-30T01:34:03.1075776Z   duration_ms: 991.689932
+build	Run npm test	2026-09-30T01:34:03.1076374Z   type: 'test'
+build	Run npm test	2026-09-30T01:34:03.1077151Z   ...
+build	Run npm test	2026-09-30T01:34:08.3498353Z # Subtest: walled-cell organelles stay outside the vacuole lumen
+build	Run npm test	2026-09-30T01:34:08.3504468Z ok 2 - walled-cell organelles stay outside the vacuole lumen
+build	Run npm test	2026-09-30T01:34:08.3505620Z   ---
+build	Run npm test	2026-09-30T01:34:08.3506431Z   duration_ms: 1000.738353
+build	Run npm test	2026-09-30T01:34:08.3507571Z   type: 'test'
+build	Run npm test	2026-09-30T01:34:08.3508209Z   ...
+build	Run npm test	2026-09-30T01:34:08.3509396Z # Subtest: mammalian/low: deterministic finite geometry and complete selectable groups
+build	Run npm test	2026-09-30T01:34:08.3511035Z ok 3 - mammalian/low: deterministic finite geometry and complete selectable groups
+build	Run npm test	2026-09-30T01:34:08.3512110Z   ---
+build	Run npm test	2026-09-30T01:34:08.3512734Z   duration_ms: 342.192049
+build	Run npm test	2026-09-30T01:34:08.3513434Z   type: 'test'
+build	Run npm test	2026-09-30T01:34:08.3514701Z   ...
+build	Run npm test	2026-09-30T01:34:08.3521413Z # Subtest: mammalian/balanced: deterministic finite geometry and complete selectable groups
+build	Run npm test	2026-09-30T01:34:08.3523108Z ok 4 - mammalian/balanced: deterministic finite geometry and complete selectable groups
+build	Run npm test	2026-09-30T01:34:08.3524398Z   ---
+build	Run npm test	2026-09-30T01:34:08.3525128Z   duration_ms: 385.023189
+build	Run npm test	2026-09-30T01:34:08.3525869Z   type: 'test'
+build	Run npm test	2026-09-30T01:34:08.3526522Z   ...
+build	Run npm test	2026-09-30T01:34:08.3528101Z # Subtest: mammalian/high: deterministic finite geometry and complete selectable groups
+build	Run npm test	2026-09-30T01:34:08.3529795Z ok 5 - mammalian/high: deterministic finite geometry and complete selectable groups
+build	Run npm test	2026-09-30T01:34:08.3539339Z   ---
+build	Run npm test	2026-09-30T01:34:08.3540119Z   duration_ms: 395.510627
+build	Run npm test	2026-09-30T01:34:08.3540839Z   type: 'test'
+build	Run npm test	2026-09-30T01:34:08.3541496Z   ...
+build	Run npm test	2026-09-30T01:34:08.3542645Z # Subtest: plant/low: deterministic finite geometry and complete selectable groups
+build	Run npm test	2026-09-30T01:34:08.3545946Z ok 6 - plant/low: deterministic finite geometry and complete selectable groups
+build	Run npm test	2026-09-30T01:34:08.3547667Z   ---
+build	Run npm test	2026-09-30T01:34:08.3548546Z   duration_ms: 395.308931
+build	Run npm test	2026-09-30T01:34:08.3549271Z   type: 'test'
+build	Run npm test	2026-09-30T01:34:08.3549909Z   ...
+build	Run npm test	2026-09-30T01:34:08.3551022Z # Subtest: plant/balanced: deterministic finite geometry and complete selectable groups
+build	Run npm test	2026-09-30T01:34:08.3552607Z ok 7 - plant/balanced: deterministic finite geometry and complete selectable groups
+build	Run npm test	2026-09-30T01:34:08.3553794Z   ---
+build	Run npm test	2026-09-30T01:34:08.3554459Z   duration_ms: 449.977402
+build	Run npm test	2026-09-30T01:34:08.3555175Z   type: 'test'
+build	Run npm test	2026-09-30T01:34:08.3555836Z   ...
+build	Run npm test	2026-09-30T01:34:08.3557191Z # Subtest: plant/high: deterministic finite geometry and complete selectable groups
+build	Run npm test	2026-09-30T01:34:08.3558799Z ok 8 - plant/high: deterministic finite geometry and complete selectable groups
+build	Run npm test	2026-09-30T01:34:08.3559890Z   ---
+build	Run npm test	2026-09-30T01:34:08.3560546Z   duration_ms: 489.107808
+build	Run npm test	2026-09-30T01:34:08.3561250Z   type: 'test'
+build	Run npm test	2026-09-30T01:34:08.3561879Z   ...
+build	Run npm test	2026-09-30T01:34:08.3563045Z # Subtest: fungal/low: deterministic finite geometry and complete selectable groups
+build	Run npm test	2026-09-30T01:34:08.3564599Z ok 9 - fungal/low: deterministic finite geometry and complete selectable groups
+build	Run npm test	2026-09-30T01:34:08.3565660Z   ---
+build	Run npm test	2026-09-30T01:34:08.3566321Z   duration_ms: 369.793391
+build	Run npm test	2026-09-30T01:34:08.3567298Z   type: 'test'
+build	Run npm test	2026-09-30T01:34:08.3567963Z   ...
+build	Run npm test	2026-09-30T01:34:08.3569109Z # Subtest: fungal/balanced: deterministic finite geometry and complete selectable groups
+build	Run npm test	2026-09-30T01:34:08.3570773Z ok 10 - fungal/balanced: deterministic finite geometry and complete selectable groups
+build	Run npm test	2026-09-30T01:34:08.3572328Z   ---
+build	Run npm test	2026-09-30T01:34:08.3572978Z   duration_ms: 451.334076
+build	Run npm test	2026-09-30T01:34:08.3573685Z   type: 'test'
+build	Run npm test	2026-09-30T01:34:08.3574318Z   ...
+build	Run npm test	2026-09-30T01:34:08.3575427Z # Subtest: fungal/high: deterministic finite geometry and complete selectable groups
+build	Run npm test	2026-09-30T01:34:08.3577239Z ok 11 - fungal/high: deterministic finite geometry and complete selectable groups
+build	Run npm test	2026-09-30T01:34:08.3578301Z   ---
+build	Run npm test	2026-09-30T01:34:08.3578848Z   duration_ms: 490.339288
+build	Run npm test	2026-09-30T01:34:08.3579414Z   type: 'test'
+build	Run npm test	2026-09-30T01:34:08.3579908Z   ...
+build	Run npm test	2026-09-30T01:34:08.3580753Z # Subtest: new model organelles fit within the enclosing plasma membrane
+build	Run npm test	2026-09-30T01:34:08.3582085Z ok 12 - new model organelles fit within the enclosing plasma membrane
+build	Run npm test	2026-09-30T01:34:08.3582906Z   ---
+build	Run npm test	2026-09-30T01:34:08.3583426Z   duration_ms: 478.324911
+build	Run npm test	2026-09-30T01:34:08.3584001Z   type: 'test'
+build	Run npm test	2026-09-30T01:34:08.3584542Z   ...
+build	Run npm test	2026-09-30T01:34:08.3585696Z # Subtest: disposing a specimen releases instance buffers as well as geometry and materials
+build	Run npm test	2026-09-30T01:34:08.3587631Z ok 13 - disposing a specimen releases instance buffers as well as geometry and materials
+build	Run npm test	2026-09-30T01:34:08.3588758Z   ---
+build	Run npm test	2026-09-30T01:34:08.3589415Z   duration_ms: 172.683707
+build	Run npm test	2026-09-30T01:34:08.3590126Z   type: 'test'
+build	Run npm test	2026-09-30T01:34:08.3590763Z   ...
+build	Run npm test	2026-09-30T01:34:08.3591937Z # Subtest: chloroplast grana expose layered discs rather than end-on dots in the front cutaway
+build	Run npm test	2026-09-30T01:34:08.3593906Z ok 14 - chloroplast grana expose layered discs rather than end-on dots in the front cutaway
+build	Run npm test	2026-09-30T01:34:08.3595050Z   ---
+build	Run npm test	2026-09-30T01:34:08.3595691Z   duration_ms: 161.705774
+build	Run npm test	2026-09-30T01:34:08.3596434Z   type: 'test'
+build	Run npm test	2026-09-30T01:34:08.3597343Z   ...
+build	Run npm test	2026-09-30T01:34:08.3598628Z # Subtest: mammalian geometry remains byte-identical to the original low-quality specimen
+build	Run npm test	2026-09-30T01:34:08.3600405Z not ok 15 - mammalian geometry remains byte-identical to the original low-quality specimen
+build	Run npm test	2026-09-30T01:34:08.3601526Z   ---
+build	Run npm test	2026-09-30T01:34:08.3602134Z   duration_ms: 158.864633
+build	Run npm test	2026-09-30T01:34:08.3602815Z   type: 'test'
+build	Run npm test	2026-09-30T01:34:08.3603863Z   location: '/home/runner/work/cell-atlas/cell-atlas/tests/model-geometry.test.js:115:1'
+build	Run npm test	2026-09-30T01:34:08.3605023Z   failureType: 'testCodeFailure'
+build	Run npm test	2026-09-30T01:34:08.3605779Z   error: |-
+build	Run npm test	2026-09-30T01:34:08.3606496Z     Expected values to be strictly equal:
+build	Run npm test	2026-09-30T01:34:08.3607600Z     + actual - expected
+build	Run npm test	2026-09-30T01:34:08.3608230Z     
+build	Run npm test	2026-09-30T01:34:08.3609089Z     + 'eb078c16cb8fbf031d588fc979aace792117c4bc62691f03fc99367ddf03f6fa'
+build	Run npm test	2026-09-30T01:34:08.3610363Z     - '1212927358e4c65fa8e8f182be428dfb31c1dae91226bb6a95232d9451da6d21'
+build	Run npm test	2026-09-30T01:34:08.3611275Z     
+build	Run npm test	2026-09-30T01:34:08.3611848Z   code: 'ERR_ASSERTION'
+build	Run npm test	2026-09-30T01:34:08.3612535Z   name: 'AssertionError'
+build	Run npm test	2026-09-30T01:34:08.3613578Z   expected: '1212927358e4c65fa8e8f182be428dfb31c1dae91226bb6a95232d9451da6d21'
+build	Run npm test	2026-09-30T01:34:08.3614952Z   actual: 'eb078c16cb8fbf031d588fc979aace792117c4bc62691f03fc99367ddf03f6fa'
+build	Run npm test	2026-09-30T01:34:08.3616038Z   operator: 'strictEqual'
+build	Run npm test	2026-09-30T01:34:08.3616733Z   stack: |-
+build	Run npm test	2026-09-30T01:34:08.3618329Z     TestContext.<anonymous> (file:///home/runner/work/cell-atlas/cell-atlas/tests/model-geometry.test.js:117:16)
+build	Run npm test	2026-09-30T01:34:08.3619770Z     Test.runInAsyncScope (node:async_hooks:214:14)
+build	Run npm test	2026-09-30T01:34:08.3620772Z     Test.run (node:internal/test_runner/test:1047:25)
+build	Run npm test	2026-09-30T01:34:08.3621913Z     Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+build	Run npm test	2026-09-30T01:34:08.3623101Z     Test.postRun (node:internal/test_runner/test:1173:19)
+build	Run npm test	2026-09-30T01:34:08.3624143Z     Test.run (node:internal/test_runner/test:1101:12)
+build	Run npm test	2026-09-30T01:34:08.3625314Z     async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+build	Run npm test	2026-09-30T01:34:08.3626322Z   ...
+build	Run npm test	2026-09-30T01:34:08.3627772Z # Subtest: plant geometry has an outer wall, central tonoplast and distinct chloroplast membrane systems
+build	Run npm test	2026-09-30T01:34:08.3629354Z ok 16 - plant geometry has an outer wall, central tonoplast and distinct chloroplast membrane systems
+build	Run npm test	2026-09-30T01:34:08.3630583Z   ---
+build	Run npm test	2026-09-30T01:34:08.3631083Z   duration_ms: 182.309345
+build	Run npm test	2026-09-30T01:34:08.3631593Z   type: 'test'
+build	Run npm test	2026-09-30T01:34:08.3632029Z   ...
+build	Run npm test	2026-09-30T01:34:08.3632986Z # Subtest: budding yeast has a continuous mother-bud envelope and dispersed Golgi, not plant anatomy
+build	Run npm test	2026-09-30T01:34:08.3634387Z ok 17 - budding yeast has a continuous mother-bud envelope and dispersed Golgi, not plant anatomy
+build	Run npm test	2026-09-30T01:34:08.3635325Z   ---
+build	Run npm test	2026-09-30T01:34:08.3635781Z   duration_ms: 190.415926
+build	Run npm test	2026-09-30T01:34:08.3636278Z   type: 'test'
+build	Run npm test	2026-09-30T01:34:08.3636715Z   ...
+build	Run npm test	2026-09-30T01:34:08.3867461Z # Subtest: model registry keeps mammalian defaults and scopes plant and budding yeast biology
+build	Run npm test	2026-09-30T01:34:08.3873046Z ok 18 - model registry keeps mammalian defaults and scopes plant and budding yeast biology
+build	Run npm test	2026-09-30T01:34:08.3873924Z   ---
+build	Run npm test	2026-09-30T01:34:08.3874293Z   duration_ms: 7.237355
+build	Run npm test	2026-09-30T01:34:08.3874726Z   type: 'test'
+build	Run npm test	2026-09-30T01:34:08.3875072Z   ...
+build	Run npm test	2026-09-30T01:34:08.3875853Z # Subtest: a sourced generalized mammalian interphase atlas declares its limits
+build	Run npm test	2026-09-30T01:34:08.3877217Z ok 19 - a sourced generalized mammalian interphase atlas declares its limits
+build	Run npm test	2026-09-30T01:34:08.3877939Z   ---
+build	Run npm test	2026-09-30T01:34:08.3878281Z   duration_ms: 2.567474
+build	Run npm test	2026-09-30T01:34:08.3878677Z   type: 'test'
+build	Run npm test	2026-09-30T01:34:08.3879030Z   ...
+build	Run npm test	2026-09-30T01:34:08.3879736Z 1..19
+build	Run npm test	2026-09-30T01:34:08.3880074Z # tests 19
+build	Run npm test	2026-09-30T01:34:08.3880412Z # suites 0
+build	Run npm test	2026-09-30T01:34:08.3880746Z # pass 18
+build	Run npm test	2026-09-30T01:34:08.3881070Z # fail 1
+build	Run npm test	2026-09-30T01:34:08.3881349Z # cancelled 0
+build	Run npm test	2026-09-30T01:34:08.3881594Z # skipped 0
+build	Run npm test	2026-09-30T01:34:08.3881819Z # todo 0
+build	Run npm test	2026-09-30T01:34:08.3882065Z # duration_ms 6344.01707
+build	Run npm test	2026-09-30T01:34:08.4017764Z ##[error]Process completed with exit code 1.
+build	Post Run actions/checkout@v4	﻿2026-09-30T01:34:08.4163890Z Post job cleanup.
+build	Post Run actions/checkout@v4	2026-09-30T01:34:08.5027753Z [command]/usr/bin/git version
+build	Post Run actions/checkout@v4	2026-09-30T01:34:08.5066225Z git version 2.55.0
+build	Post Run actions/checkout@v4	2026-09-30T01:34:08.5111365Z Temporarily overriding HOME='/home/runner/work/_temp/994482ca-5ba8-4b64-9ec7-d9d7c08b655a' before making global git config changes
+build	Post Run actions/checkout@v4	2026-09-30T01:34:08.5112906Z Adding repository directory to the temporary git global config as a safe directory
+build	Post Run actions/checkout@v4	2026-09-30T01:34:08.5117109Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/cell-atlas/cell-atlas
+build	Post Run actions/checkout@v4	2026-09-30T01:34:08.5156756Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+build	Post Run actions/checkout@v4	2026-09-30T01:34:08.5193323Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+build	Post Run actions/checkout@v4	2026-09-30T01:34:08.5439679Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+build	Post Run actions/checkout@v4	2026-09-30T01:34:08.5468367Z http.https://github.com/.extraheader
+build	Post Run actions/checkout@v4	2026-09-30T01:34:08.5480190Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+build	Post Run actions/checkout@v4	2026-09-30T01:34:08.5514796Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+build	Post Run actions/checkout@v4	2026-09-30T01:34:08.5770042Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+build	Post Run actions/checkout@v4	2026-09-30T01:34:08.5811222Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+build	Complete job	﻿2026-09-30T01:34:08.6248086Z Cleaning up orphan processes
+build	Complete job	2026-09-30T01:34:08.6521447Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/setup-node@v4. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/

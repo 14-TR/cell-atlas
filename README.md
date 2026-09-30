@@ -44,7 +44,7 @@ The browser tests use `BASE_URL` (default `http://127.0.0.1:4175`), except produ
 
 ## Geometry
 
-The original mammalian specimen retains its geometry, colors and twelve structures; a SHA-256 regression checks the actual low-quality vertex/index/instance buffers against the pre-change model.
+The original mammalian specimen retains its geometry, colors and twelve structures. The preservation test compares SHA-256 fingerprints of low-quality material names and vertex/index/instance buffers from the candidate and an independent, byte-preserved pre-change generator on the same runtime. The test-only fixture comes from commit `e7c9968c2c2b2ca465430c60eecc5070cd3472e8`; literal source-integrity hashes protect both fixture files, and tests require no Git history. Historical platform-specific geometry hashes are receipts, not cross-runtime oracles; see [CI follow-up](evidence/plant-fungal/ci-followup/README.md).
 
 Seeded procedural geometry includes two perforated nuclear envelopes with stylized eightfold pore rings; interphase chromatin fibers and a lobed, non-membranous nucleolus; paired rough-ER sheets connected by membrane bridges to each other and the nuclear envelope, with attached ribosomes; a branching smooth-ER network; six curved Golgi cisternae with membrane buds and vesicles; fourteen two-membrane mitochondrial cutaways with cristae; lysosomes, peroxisomes, multivesicular-endosome-like compartments; free paired ribosomal particles; an irregular cortical mesh and longer cytoskeletal tracks; and a translucent open plasma membrane.
 

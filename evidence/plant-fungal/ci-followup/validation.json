@@ -1,0 +1,199 @@
+[
+  {
+    "label": "green-preservation",
+    "argv": [
+      "node",
+      "--test",
+      "--test-name-pattern=mammalian geometry remains byte-identical",
+      "tests/model-geometry.test.js"
+    ],
+    "cwd": "/Users/tr/Projects/cell-atlas",
+    "exit_code": 0,
+    "expected_exit_code": 0,
+    "log": "/Users/tr/Projects/cell-atlas/.git/reviews/plant-fungal-v1/fixer/green-preservation.log",
+    "log_sha256": "85de7a8e52bb55687a094f5b46ec9e9c2f5ea221965feeb80c711c590f10cf8b",
+    "delivered_log": "evidence/plant-fungal/ci-followup/green-preservation.log"
+  },
+  {
+    "label": "red-missing-fixture",
+    "argv": [
+      "node",
+      "--test",
+      "--test-name-pattern=mammalian geometry remains byte-identical",
+      "tests/model-geometry.test.js"
+    ],
+    "cwd": "/Users/tr/Projects/cell-atlas",
+    "exit_code": 1,
+    "expected_exit_code": 1,
+    "log": "/Users/tr/Projects/cell-atlas/.git/reviews/plant-fungal-v1/fixer/red-missing-fixture.log",
+    "log_sha256": "0e47dc703c76cdab4f02400330238f07e90b117977acda7e96fdaeca25934239",
+    "delivered_log": "evidence/plant-fungal/ci-followup/red-missing-fixture.log"
+  },
+  {
+    "label": "runtime",
+    "argv": [
+      "node",
+      "-p",
+      "JSON.stringify({platform:process.platform,arch:process.arch,node:process.version,versions:process.versions})"
+    ],
+    "cwd": "/Users/tr/Projects/cell-atlas",
+    "exit_code": 0,
+    "expected_exit_code": 0,
+    "log": "/Users/tr/Projects/cell-atlas/.git/reviews/plant-fungal-v1/fixer/runtime.log",
+    "log_sha256": "83871e4603033a42fbc409d0c476b50665cbebeacd71a680b48761ee54a872f6",
+    "delivered_log": "evidence/plant-fungal/ci-followup/runtime.log"
+  },
+  {
+    "label": "npm-version",
+    "argv": [
+      "npm",
+      "--version"
+    ],
+    "cwd": "/Users/tr/Projects/cell-atlas",
+    "exit_code": 0,
+    "expected_exit_code": 0,
+    "log": "/Users/tr/Projects/cell-atlas/.git/reviews/plant-fungal-v1/fixer/npm-version.log",
+    "log_sha256": "005206ab803f8881d8227540b7980b37e723b69a8849edb31734a90b7e7964e2",
+    "delivered_log": "evidence/plant-fungal/ci-followup/npm-version.log"
+  },
+  {
+    "label": "unit",
+    "argv": [
+      "npm",
+      "test"
+    ],
+    "cwd": "/Users/tr/Projects/cell-atlas",
+    "exit_code": 0,
+    "expected_exit_code": 0,
+    "log": "/Users/tr/Projects/cell-atlas/.git/reviews/plant-fungal-v1/fixer/unit.log",
+    "log_sha256": "edcf845ede715cfa0ff1de8a1a452a0158bcf8848ae4769faab67aad310a2b69",
+    "delivered_log": "evidence/plant-fungal/ci-followup/unit.log"
+  },
+  {
+    "label": "build",
+    "argv": [
+      "npm",
+      "run",
+      "build",
+      "--",
+      "--outDir",
+      "/Users/tr/Projects/cell-atlas/.git/reviews/plant-fungal-v1/fixer/root-build",
+      "--emptyOutDir"
+    ],
+    "cwd": "/Users/tr/Projects/cell-atlas",
+    "exit_code": 0,
+    "expected_exit_code": 0,
+    "log": "/Users/tr/Projects/cell-atlas/.git/reviews/plant-fungal-v1/fixer/build.log",
+    "log_sha256": "0ac19e71959300e7991f0d9661f1f964930a0213465bc6d8fb1e56bac897074d",
+    "delivered_log": "evidence/plant-fungal/ci-followup/build.log"
+  },
+  {
+    "label": "no-git-discovery",
+    "argv": [
+      "git",
+      "rev-parse",
+      "--show-toplevel"
+    ],
+    "cwd": "/Users/tr/Projects/cell-atlas/.git/reviews/plant-fungal-v1/fixer/source-without-git",
+    "exit_code": 128,
+    "expected_exit_code": 128,
+    "log": "/Users/tr/Projects/cell-atlas/.git/reviews/plant-fungal-v1/fixer/no-git-discovery.log",
+    "log_sha256": "d2b35cacadc66b7fad8dedd1be5244e17150a6625978c9330f831bd7a9cd6b1e",
+    "delivered_log": "evidence/plant-fungal/ci-followup/no-git-discovery.log"
+  },
+  {
+    "label": "no-git-unit",
+    "argv": [
+      "npm",
+      "test"
+    ],
+    "cwd": "/Users/tr/Projects/cell-atlas/.git/reviews/plant-fungal-v1/fixer/source-without-git",
+    "exit_code": 0,
+    "expected_exit_code": 0,
+    "log": "/Users/tr/Projects/cell-atlas/.git/reviews/plant-fungal-v1/fixer/no-git-unit.log",
+    "log_sha256": "ede0dc3e5baf65bbb8a552477d32a85be6c7381bfb8e769b165f89c6dacf8755",
+    "delivered_log": "evidence/plant-fungal/ci-followup/no-git-unit.log"
+  },
+  {
+    "label": "no-git-build",
+    "argv": [
+      "npm",
+      "run",
+      "build"
+    ],
+    "cwd": "/Users/tr/Projects/cell-atlas/.git/reviews/plant-fungal-v1/fixer/source-without-git",
+    "exit_code": 0,
+    "expected_exit_code": 0,
+    "log": "/Users/tr/Projects/cell-atlas/.git/reviews/plant-fungal-v1/fixer/no-git-build.log",
+    "log_sha256": "184a188c71d0b57c7f1b5e12c73ca7d2298ad71949ebd4461d9a7bdbf13cc1ad",
+    "delivered_log": "evidence/plant-fungal/ci-followup/no-git-build.log"
+  },
+  {
+    "label": "corrupt-cell.js",
+    "argv": [
+      "node",
+      "--test",
+      "--test-name-pattern=mammalian geometry remains byte-identical",
+      "tests/model-geometry.test.js"
+    ],
+    "cwd": "/Users/tr/Projects/cell-atlas/.git/reviews/plant-fungal-v1/fixer/source-without-git",
+    "exit_code": 1,
+    "expected_exit_code": 1,
+    "log": "/Users/tr/Projects/cell-atlas/.git/reviews/plant-fungal-v1/fixer/corrupt-cell.js.log",
+    "log_sha256": "8d6aec5a1b3a517dab8b5ef8e6543ba33a3f4dfb2406552fa8c4970539f14ba2",
+    "delivered_log": "evidence/plant-fungal/ci-followup/corrupt-cell.js.log"
+  },
+  {
+    "label": "corrupt-data.js",
+    "argv": [
+      "node",
+      "--test",
+      "--test-name-pattern=mammalian geometry remains byte-identical",
+      "tests/model-geometry.test.js"
+    ],
+    "cwd": "/Users/tr/Projects/cell-atlas/.git/reviews/plant-fungal-v1/fixer/source-without-git",
+    "exit_code": 1,
+    "expected_exit_code": 1,
+    "log": "/Users/tr/Projects/cell-atlas/.git/reviews/plant-fungal-v1/fixer/corrupt-data.js.log",
+    "log_sha256": "081b7ea9edc0db6380f7fad145e830e8148f4d43e0b38f4cf3b7624034a52113",
+    "delivered_log": "evidence/plant-fungal/ci-followup/corrupt-data.js.log"
+  },
+  {
+    "label": "restored-preservation",
+    "argv": [
+      "node",
+      "--test",
+      "--test-name-pattern=mammalian geometry remains byte-identical",
+      "tests/model-geometry.test.js"
+    ],
+    "cwd": "/Users/tr/Projects/cell-atlas/.git/reviews/plant-fungal-v1/fixer/source-without-git",
+    "exit_code": 0,
+    "expected_exit_code": 0,
+    "log": "/Users/tr/Projects/cell-atlas/.git/reviews/plant-fungal-v1/fixer/restored-preservation.log",
+    "log_sha256": "7f14c3713fc761a26b445b10f38d2cede7f6456f713b83794d37134685cf197d",
+    "delivered_log": "evidence/plant-fungal/ci-followup/restored-preservation.log"
+  },
+  {
+    "label": "bundle-module-audit",
+    "argv": [
+      "node",
+      "/Users/tr/Projects/cell-atlas/.git/reviews/plant-fungal-v1/fixer/bundle-audit.mjs"
+    ],
+    "cwd": "/Users/tr/Projects/cell-atlas",
+    "exit_code": 0,
+    "expected_exit_code": 0,
+    "log": "/Users/tr/Projects/cell-atlas/.git/reviews/plant-fungal-v1/fixer/bundle-module-audit.log",
+    "log_sha256": "51f841f4b4534756df7b56ac38f910a4bb0d8f9f00b55e0ded89b73b16211580",
+    "delivered_log": "evidence/plant-fungal/ci-followup/bundle-module-audit.log"
+  },
+  {
+    "argv": [
+      "git",
+      "diff",
+      "--check"
+    ],
+    "cwd": "/Users/tr/Projects/cell-atlas",
+    "exit_code": 0,
+    "log": "/Users/tr/Projects/cell-atlas/.git/reviews/plant-fungal-v1/fixer/diff-check.log"
+  }
+]

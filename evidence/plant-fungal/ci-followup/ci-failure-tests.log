@@ -1,0 +1,155 @@
+build	Run npm test	﻿2026-09-30T01:34:01.8917639Z ##[group]Run npm test
+build	Run npm test	2026-09-30T01:34:01.8917968Z ^[[36;1mnpm test^[[0m
+build	Run npm test	2026-09-30T01:34:01.8981971Z shell: /usr/bin/bash -e {0}
+build	Run npm test	2026-09-30T01:34:01.8982255Z ##[endgroup]
+build	Run npm test	2026-09-30T01:34:02.0108566Z 
+build	Run npm test	2026-09-30T01:34:02.0109488Z > cell-atlas@1.0.0 test
+build	Run npm test	2026-09-30T01:34:02.0110392Z > node --test tests/*.test.js
+build	Run npm test	2026-09-30T01:34:02.0110984Z 
+build	Run npm test	2026-09-30T01:34:02.0748012Z TAP version 13
+build	Run npm test	2026-09-30T01:34:03.1063342Z # Subtest: seeded geometry preserves explicit cellular illustration invariants
+build	Run npm test	2026-09-30T01:34:03.1073890Z ok 1 - seeded geometry preserves explicit cellular illustration invariants
+build	Run npm test	2026-09-30T01:34:03.1075081Z   ---
+build	Run npm test	2026-09-30T01:34:03.1075776Z   duration_ms: 991.689932
+build	Run npm test	2026-09-30T01:34:03.1076374Z   type: 'test'
+build	Run npm test	2026-09-30T01:34:03.1077151Z   ...
+build	Run npm test	2026-09-30T01:34:08.3498353Z # Subtest: walled-cell organelles stay outside the vacuole lumen
+build	Run npm test	2026-09-30T01:34:08.3504468Z ok 2 - walled-cell organelles stay outside the vacuole lumen
+build	Run npm test	2026-09-30T01:34:08.3505620Z   ---
+build	Run npm test	2026-09-30T01:34:08.3506431Z   duration_ms: 1000.738353
+build	Run npm test	2026-09-30T01:34:08.3507571Z   type: 'test'
+build	Run npm test	2026-09-30T01:34:08.3508209Z   ...
+build	Run npm test	2026-09-30T01:34:08.3509396Z # Subtest: mammalian/low: deterministic finite geometry and complete selectable groups
+build	Run npm test	2026-09-30T01:34:08.3511035Z ok 3 - mammalian/low: deterministic finite geometry and complete selectable groups
+build	Run npm test	2026-09-30T01:34:08.3512110Z   ---
+build	Run npm test	2026-09-30T01:34:08.3512734Z   duration_ms: 342.192049
+build	Run npm test	2026-09-30T01:34:08.3513434Z   type: 'test'
+build	Run npm test	2026-09-30T01:34:08.3514701Z   ...
+build	Run npm test	2026-09-30T01:34:08.3521413Z # Subtest: mammalian/balanced: deterministic finite geometry and complete selectable groups
+build	Run npm test	2026-09-30T01:34:08.3523108Z ok 4 - mammalian/balanced: deterministic finite geometry and complete selectable groups
+build	Run npm test	2026-09-30T01:34:08.3524398Z   ---
+build	Run npm test	2026-09-30T01:34:08.3525128Z   duration_ms: 385.023189
+build	Run npm test	2026-09-30T01:34:08.3525869Z   type: 'test'
+build	Run npm test	2026-09-30T01:34:08.3526522Z   ...
+build	Run npm test	2026-09-30T01:34:08.3528101Z # Subtest: mammalian/high: deterministic finite geometry and complete selectable groups
+build	Run npm test	2026-09-30T01:34:08.3529795Z ok 5 - mammalian/high: deterministic finite geometry and complete selectable groups
+build	Run npm test	2026-09-30T01:34:08.3539339Z   ---
+build	Run npm test	2026-09-30T01:34:08.3540119Z   duration_ms: 395.510627
+build	Run npm test	2026-09-30T01:34:08.3540839Z   type: 'test'
+build	Run npm test	2026-09-30T01:34:08.3541496Z   ...
+build	Run npm test	2026-09-30T01:34:08.3542645Z # Subtest: plant/low: deterministic finite geometry and complete selectable groups
+build	Run npm test	2026-09-30T01:34:08.3545946Z ok 6 - plant/low: deterministic finite geometry and complete selectable groups
+build	Run npm test	2026-09-30T01:34:08.3547667Z   ---
+build	Run npm test	2026-09-30T01:34:08.3548546Z   duration_ms: 395.308931
+build	Run npm test	2026-09-30T01:34:08.3549271Z   type: 'test'
+build	Run npm test	2026-09-30T01:34:08.3549909Z   ...
+build	Run npm test	2026-09-30T01:34:08.3551022Z # Subtest: plant/balanced: deterministic finite geometry and complete selectable groups
+build	Run npm test	2026-09-30T01:34:08.3552607Z ok 7 - plant/balanced: deterministic finite geometry and complete selectable groups
+build	Run npm test	2026-09-30T01:34:08.3553794Z   ---
+build	Run npm test	2026-09-30T01:34:08.3554459Z   duration_ms: 449.977402
+build	Run npm test	2026-09-30T01:34:08.3555175Z   type: 'test'
+build	Run npm test	2026-09-30T01:34:08.3555836Z   ...
+build	Run npm test	2026-09-30T01:34:08.3557191Z # Subtest: plant/high: deterministic finite geometry and complete selectable groups
+build	Run npm test	2026-09-30T01:34:08.3558799Z ok 8 - plant/high: deterministic finite geometry and complete selectable groups
+build	Run npm test	2026-09-30T01:34:08.3559890Z   ---
+build	Run npm test	2026-09-30T01:34:08.3560546Z   duration_ms: 489.107808
+build	Run npm test	2026-09-30T01:34:08.3561250Z   type: 'test'
+build	Run npm test	2026-09-30T01:34:08.3561879Z   ...
+build	Run npm test	2026-09-30T01:34:08.3563045Z # Subtest: fungal/low: deterministic finite geometry and complete selectable groups
+build	Run npm test	2026-09-30T01:34:08.3564599Z ok 9 - fungal/low: deterministic finite geometry and complete selectable groups
+build	Run npm test	2026-09-30T01:34:08.3565660Z   ---
+build	Run npm test	2026-09-30T01:34:08.3566321Z   duration_ms: 369.793391
+build	Run npm test	2026-09-30T01:34:08.3567298Z   type: 'test'
+build	Run npm test	2026-09-30T01:34:08.3567963Z   ...
+build	Run npm test	2026-09-30T01:34:08.3569109Z # Subtest: fungal/balanced: deterministic finite geometry and complete selectable groups
+build	Run npm test	2026-09-30T01:34:08.3570773Z ok 10 - fungal/balanced: deterministic finite geometry and complete selectable groups
+build	Run npm test	2026-09-30T01:34:08.3572328Z   ---
+build	Run npm test	2026-09-30T01:34:08.3572978Z   duration_ms: 451.334076
+build	Run npm test	2026-09-30T01:34:08.3573685Z   type: 'test'
+build	Run npm test	2026-09-30T01:34:08.3574318Z   ...
+build	Run npm test	2026-09-30T01:34:08.3575427Z # Subtest: fungal/high: deterministic finite geometry and complete selectable groups
+build	Run npm test	2026-09-30T01:34:08.3577239Z ok 11 - fungal/high: deterministic finite geometry and complete selectable groups
+build	Run npm test	2026-09-30T01:34:08.3578301Z   ---
+build	Run npm test	2026-09-30T01:34:08.3578848Z   duration_ms: 490.339288
+build	Run npm test	2026-09-30T01:34:08.3579414Z   type: 'test'
+build	Run npm test	2026-09-30T01:34:08.3579908Z   ...
+build	Run npm test	2026-09-30T01:34:08.3580753Z # Subtest: new model organelles fit within the enclosing plasma membrane
+build	Run npm test	2026-09-30T01:34:08.3582085Z ok 12 - new model organelles fit within the enclosing plasma membrane
+build	Run npm test	2026-09-30T01:34:08.3582906Z   ---
+build	Run npm test	2026-09-30T01:34:08.3583426Z   duration_ms: 478.324911
+build	Run npm test	2026-09-30T01:34:08.3584001Z   type: 'test'
+build	Run npm test	2026-09-30T01:34:08.3584542Z   ...
+build	Run npm test	2026-09-30T01:34:08.3585696Z # Subtest: disposing a specimen releases instance buffers as well as geometry and materials
+build	Run npm test	2026-09-30T01:34:08.3587631Z ok 13 - disposing a specimen releases instance buffers as well as geometry and materials
+build	Run npm test	2026-09-30T01:34:08.3588758Z   ---
+build	Run npm test	2026-09-30T01:34:08.3589415Z   duration_ms: 172.683707
+build	Run npm test	2026-09-30T01:34:08.3590126Z   type: 'test'
+build	Run npm test	2026-09-30T01:34:08.3590763Z   ...
+build	Run npm test	2026-09-30T01:34:08.3591937Z # Subtest: chloroplast grana expose layered discs rather than end-on dots in the front cutaway
+build	Run npm test	2026-09-30T01:34:08.3593906Z ok 14 - chloroplast grana expose layered discs rather than end-on dots in the front cutaway
+build	Run npm test	2026-09-30T01:34:08.3595050Z   ---
+build	Run npm test	2026-09-30T01:34:08.3595691Z   duration_ms: 161.705774
+build	Run npm test	2026-09-30T01:34:08.3596434Z   type: 'test'
+build	Run npm test	2026-09-30T01:34:08.3597343Z   ...
+build	Run npm test	2026-09-30T01:34:08.3598628Z # Subtest: mammalian geometry remains byte-identical to the original low-quality specimen
+build	Run npm test	2026-09-30T01:34:08.3600405Z not ok 15 - mammalian geometry remains byte-identical to the original low-quality specimen
+build	Run npm test	2026-09-30T01:34:08.3601526Z   ---
+build	Run npm test	2026-09-30T01:34:08.3602134Z   duration_ms: 158.864633
+build	Run npm test	2026-09-30T01:34:08.3602815Z   type: 'test'
+build	Run npm test	2026-09-30T01:34:08.3603863Z   location: '/home/runner/work/cell-atlas/cell-atlas/tests/model-geometry.test.js:115:1'
+build	Run npm test	2026-09-30T01:34:08.3605023Z   failureType: 'testCodeFailure'
+build	Run npm test	2026-09-30T01:34:08.3605779Z   error: |-
+build	Run npm test	2026-09-30T01:34:08.3606496Z     Expected values to be strictly equal:
+build	Run npm test	2026-09-30T01:34:08.3607600Z     + actual - expected
+build	Run npm test	2026-09-30T01:34:08.3608230Z     
+build	Run npm test	2026-09-30T01:34:08.3609089Z     + 'eb078c16cb8fbf031d588fc979aace792117c4bc62691f03fc99367ddf03f6fa'
+build	Run npm test	2026-09-30T01:34:08.3610363Z     - '1212927358e4c65fa8e8f182be428dfb31c1dae91226bb6a95232d9451da6d21'
+build	Run npm test	2026-09-30T01:34:08.3611275Z     
+build	Run npm test	2026-09-30T01:34:08.3611848Z   code: 'ERR_ASSERTION'
+build	Run npm test	2026-09-30T01:34:08.3612535Z   name: 'AssertionError'
+build	Run npm test	2026-09-30T01:34:08.3613578Z   expected: '1212927358e4c65fa8e8f182be428dfb31c1dae91226bb6a95232d9451da6d21'
+build	Run npm test	2026-09-30T01:34:08.3614952Z   actual: 'eb078c16cb8fbf031d588fc979aace792117c4bc62691f03fc99367ddf03f6fa'
+build	Run npm test	2026-09-30T01:34:08.3616038Z   operator: 'strictEqual'
+build	Run npm test	2026-09-30T01:34:08.3616733Z   stack: |-
+build	Run npm test	2026-09-30T01:34:08.3618329Z     TestContext.<anonymous> (file:///home/runner/work/cell-atlas/cell-atlas/tests/model-geometry.test.js:117:16)
+build	Run npm test	2026-09-30T01:34:08.3619770Z     Test.runInAsyncScope (node:async_hooks:214:14)
+build	Run npm test	2026-09-30T01:34:08.3620772Z     Test.run (node:internal/test_runner/test:1047:25)
+build	Run npm test	2026-09-30T01:34:08.3621913Z     Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+build	Run npm test	2026-09-30T01:34:08.3623101Z     Test.postRun (node:internal/test_runner/test:1173:19)
+build	Run npm test	2026-09-30T01:34:08.3624143Z     Test.run (node:internal/test_runner/test:1101:12)
+build	Run npm test	2026-09-30T01:34:08.3625314Z     async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+build	Run npm test	2026-09-30T01:34:08.3626322Z   ...
+build	Run npm test	2026-09-30T01:34:08.3627772Z # Subtest: plant geometry has an outer wall, central tonoplast and distinct chloroplast membrane systems
+build	Run npm test	2026-09-30T01:34:08.3629354Z ok 16 - plant geometry has an outer wall, central tonoplast and distinct chloroplast membrane systems
+build	Run npm test	2026-09-30T01:34:08.3630583Z   ---
+build	Run npm test	2026-09-30T01:34:08.3631083Z   duration_ms: 182.309345
+build	Run npm test	2026-09-30T01:34:08.3631593Z   type: 'test'
+build	Run npm test	2026-09-30T01:34:08.3632029Z   ...
+build	Run npm test	2026-09-30T01:34:08.3632986Z # Subtest: budding yeast has a continuous mother-bud envelope and dispersed Golgi, not plant anatomy
+build	Run npm test	2026-09-30T01:34:08.3634387Z ok 17 - budding yeast has a continuous mother-bud envelope and dispersed Golgi, not plant anatomy
+build	Run npm test	2026-09-30T01:34:08.3635325Z   ---
+build	Run npm test	2026-09-30T01:34:08.3635781Z   duration_ms: 190.415926
+build	Run npm test	2026-09-30T01:34:08.3636278Z   type: 'test'
+build	Run npm test	2026-09-30T01:34:08.3636715Z   ...
+build	Run npm test	2026-09-30T01:34:08.3867461Z # Subtest: model registry keeps mammalian defaults and scopes plant and budding yeast biology
+build	Run npm test	2026-09-30T01:34:08.3873046Z ok 18 - model registry keeps mammalian defaults and scopes plant and budding yeast biology
+build	Run npm test	2026-09-30T01:34:08.3873924Z   ---
+build	Run npm test	2026-09-30T01:34:08.3874293Z   duration_ms: 7.237355
+build	Run npm test	2026-09-30T01:34:08.3874726Z   type: 'test'
+build	Run npm test	2026-09-30T01:34:08.3875072Z   ...
+build	Run npm test	2026-09-30T01:34:08.3875853Z # Subtest: a sourced generalized mammalian interphase atlas declares its limits
+build	Run npm test	2026-09-30T01:34:08.3877217Z ok 19 - a sourced generalized mammalian interphase atlas declares its limits
+build	Run npm test	2026-09-30T01:34:08.3877939Z   ---
+build	Run npm test	2026-09-30T01:34:08.3878281Z   duration_ms: 2.567474
+build	Run npm test	2026-09-30T01:34:08.3878677Z   type: 'test'
+build	Run npm test	2026-09-30T01:34:08.3879030Z   ...
+build	Run npm test	2026-09-30T01:34:08.3879736Z 1..19
+build	Run npm test	2026-09-30T01:34:08.3880074Z # tests 19
+build	Run npm test	2026-09-30T01:34:08.3880412Z # suites 0
+build	Run npm test	2026-09-30T01:34:08.3880746Z # pass 18
+build	Run npm test	2026-09-30T01:34:08.3881070Z # fail 1
+build	Run npm test	2026-09-30T01:34:08.3881349Z # cancelled 0
+build	Run npm test	2026-09-30T01:34:08.3881594Z # skipped 0
+build	Run npm test	2026-09-30T01:34:08.3881819Z # todo 0
+build	Run npm test	2026-09-30T01:34:08.3882065Z # duration_ms 6344.01707
+build	Run npm test	2026-09-30T01:34:08.4017764Z ##[error]Process completed with exit code 1.

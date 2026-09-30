@@ -1,6 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { createHash } from 'node:crypto';
+import { existsSync, readFileSync } from 'node:fs';
 import * as THREE from 'three';
 import { createCell } from '../src/cell.js';
 import { plantLayout, fungalLayout } from '../src/walled-cell.js';
@@ -112,10 +113,28 @@ test('chloroplast grana expose layered discs rather than end-on dots in the fron
   } finally {cell.dispose();}
 });
 
-test('mammalian geometry remains byte-identical to the original low-quality specimen', () => {
-  const cell = createCell({ quality: 'low' });
-  try { assert.equal(fingerprint(cell), '1212927358e4c65fa8e8f182be428dfb31c1dae91226bb6a95232d9451da6d21'); }
-  finally { cell.dispose(); }
+test('mammalian geometry remains byte-identical to the original low-quality specimen', async () => {
+  // Immutable pre-change source, independently hashed from commit e7c9968.
+  // Check bytes before importing: neither the candidate nor editable provenance
+  // supplies the expected source hashes. No Git history is needed at test time.
+  for (const [name, expected] of Object.entries({
+    'cell.js': 'c252b94bf1e91ce57949a582759d337d2913160c1158d412151f273b777a6d42',
+    'data.js': '91d4047d09769150c721cea1b3a53783dbf15fea157ddb77462428c411a3bff1',
+  })) {
+    const source = new URL(`./fixtures/mammalian-baseline/${name}`, import.meta.url);
+    assert.ok(existsSync(source), `baseline fixture missing: ${name}`);
+    assert.equal(createHash('sha256').update(readFileSync(source)).digest('hex'), expected,
+      `baseline fixture integrity: ${name}`);
+  }
+  const { createCell: createBaselineCell } = await import('./fixtures/mammalian-baseline/cell.js');
+  const baseline = createBaselineCell({ quality: 'low' });
+  let cell;
+  try {
+    cell = createCell({ quality: 'low' });
+    // Procedural trig bytes can vary across runtimes. Compare independent
+    // generators on this runtime, without rounding or platform hash allowlists.
+    assert.equal(fingerprint(cell), fingerprint(baseline));
+  } finally { cell?.dispose(); baseline.dispose(); }
 });
 
 test('plant geometry has an outer wall, central tonoplast and distinct chloroplast membrane systems', () => {

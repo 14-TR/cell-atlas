@@ -1,0 +1,41 @@
+{
+  "all_ledger_entries_match": true,
+  "ledger": {
+    "src/models.js": {
+      "expected": "1e96cc98b939b6ad1cc0874544ab2a9c53f54ef6c64b2d48a7e02bc549570f5c",
+      "actual": "1e96cc98b939b6ad1cc0874544ab2a9c53f54ef6c64b2d48a7e02bc549570f5c"
+    },
+    "src/walled-cell.js": {
+      "expected": "a0c4821ed30e87084709e4fced51f9316b5f4b9476632932ebe221137c3b1a7e",
+      "actual": "a0c4821ed30e87084709e4fced51f9316b5f4b9476632932ebe221137c3b1a7e"
+    },
+    "src/cell.js": {
+      "expected": "0b8ebd9b9d7479497fdff7d41544916dedce358a837548bbdf40fb1f5bd3f9ea",
+      "actual": "0b8ebd9b9d7479497fdff7d41544916dedce358a837548bbdf40fb1f5bd3f9ea"
+    },
+    "src/main.js": {
+      "expected": "86906ecd4d786ecbc70be861b82b302d2dacf8bbb07485ec6567c309313db897",
+      "actual": "86906ecd4d786ecbc70be861b82b302d2dacf8bbb07485ec6567c309313db897"
+    },
+    "src/style.css": {
+      "expected": "9baf1b239563e66e7a2916df8359dd9ff282a7ca86256c8b62d8b58fa148683e",
+      "actual": "9baf1b239563e66e7a2916df8359dd9ff282a7ca86256c8b62d8b58fa148683e"
+    },
+    "index.html": {
+      "expected": "c17c8fa89cbb8c95537d583d150a8c57ce5465fe8f40237f415ff7a47a618590",
+      "actual": "c17c8fa89cbb8c95537d583d150a8c57ce5465fe8f40237f415ff7a47a618590"
+    }
+  },
+  "all_src_and_index_match_initial_clean_HEAD": true,
+  "source_sha256": {
+    "src/cell.js": "0b8ebd9b9d7479497fdff7d41544916dedce358a837548bbdf40fb1f5bd3f9ea",
+    "src/walled-cell.js": "a0c4821ed30e87084709e4fced51f9316b5f4b9476632932ebe221137c3b1a7e",
+    "src/models.js": "1e96cc98b939b6ad1cc0874544ab2a9c53f54ef6c64b2d48a7e02bc549570f5c",
+    "src/main.js": "86906ecd4d786ecbc70be861b82b302d2dacf8bbb07485ec6567c309313db897",
+    "src/data.js": "91d4047d09769150c721cea1b3a53783dbf15fea157ddb77462428c411a3bff1",
+    "src/style.css": "9baf1b239563e66e7a2916df8359dd9ff282a7ca86256c8b62d8b58fa148683e",
+    "index.html": "c17c8fa89cbb8c95537d583d150a8c57ce5465fe8f40237f415ff7a47a618590"
+  },
+  "historical_evidence_unchanged": true,
+  "historical_evidence_file_count": 21
+}

@@ -1,0 +1,22 @@
+vite v7.3.6 building client environment for production...
+transforming...
+✓ 12 modules transformed.
+rendering chunks...
+✓ built in 390ms
+{
+  "fixtureExcluded": true,
+  "bundledModuleIds": [
+    "\u0000vite/modulepreload-polyfill.js",
+    "/Users/tr/Projects/cell-atlas/index.html",
+    "/Users/tr/Projects/cell-atlas/node_modules/three/build/three.core.js",
+    "/Users/tr/Projects/cell-atlas/node_modules/three/build/three.module.js",
+    "/Users/tr/Projects/cell-atlas/node_modules/three/examples/jsm/controls/OrbitControls.js",
+    "/Users/tr/Projects/cell-atlas/node_modules/three/examples/jsm/utils/BufferGeometryUtils.js",
+    "/Users/tr/Projects/cell-atlas/src/cell.js",
+    "/Users/tr/Projects/cell-atlas/src/data.js",
+    "/Users/tr/Projects/cell-atlas/src/main.js",
+    "/Users/tr/Projects/cell-atlas/src/models.js",
+    "/Users/tr/Projects/cell-atlas/src/style.css",
+    "/Users/tr/Projects/cell-atlas/src/walled-cell.js"
+  ]
+}

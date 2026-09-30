@@ -1,0 +1,13 @@
+
+> cell-atlas@1.0.0 build
+> vite build --outDir /Users/tr/Projects/cell-atlas/.git/reviews/plant-fungal-v1/fixer/root-build --emptyOutDir
+
+vite v7.3.6 building client environment for production...
+transforming...
+✓ 12 modules transformed.
+rendering chunks...
+computing gzip size...
+.git/reviews/plant-fungal-v1/fixer/root-build/index.html                   7.59 kB │ gzip:   2.90 kB
+.git/reviews/plant-fungal-v1/fixer/root-build/assets/index-CEHPYMtC.css   20.50 kB │ gzip:   5.10 kB
+.git/reviews/plant-fungal-v1/fixer/root-build/assets/index-BSf9cszb.js   573.82 kB │ gzip: 150.72 kB
+✓ built in 395ms
