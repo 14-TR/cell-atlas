@@ -1,6 +1,8 @@
 import * as THREE from 'three';
 import { mergeGeometries } from 'three/addons/utils/BufferGeometryUtils.js';
-import { structures, model } from './data.js';
+import { model } from './data.js';
+import { getCellModel } from './models.js';
+import { plantLayout, fungalLayout, inPlant, inYeast, inVacuole, buildPlant, buildFungal } from './walled-cell.js';
 
 export function seededRandom(seed = model.seed) {
   return () => { seed |= 0; seed = seed + 0x6D2B79F5 | 0; let t = Math.imul(seed ^ seed >>> 15, 1 | seed); t ^= t + Math.imul(t ^ t >>> 7, 61 | t); return ((t ^ t >>> 14) >>> 0) / 4294967296; };
@@ -24,8 +26,13 @@ function surface(fn, nu = 48, nv = 20, keep) {
   g.setIndex(indices); g.computeVertexNormals(); return g;
 }
 
-export function createCell({ quality = 'balanced' } = {}) {
-  const rng = seededRandom(), root = new THREE.Group(), groups = new Map(), batches = new Map();
+export function createCell({ quality = 'balanced', modelId = 'mammalian' } = {}) {
+  const definition = getCellModel(modelId), { structures } = definition;
+  const layout = modelId === 'plant' ? plantLayout : modelId === 'fungal' ? fungalLayout : null;
+  const rng = seededRandom(definition.seed), root = new THREE.Group(), groups = new Map(), batches = new Map();
+  const assemblyIds = new Set(['nucleus','nucleolus','rough-er','smooth-er']);
+  const assemblyMatrix = layout ? new THREE.Matrix4().makeScale(layout.assemblyScale,layout.assemblyScale,layout.assemblyScale) : null;
+  if (assemblyMatrix) assemblyMatrix.setPosition(V(...layout.nucleus).sub(V(-1.45,.9,.4).multiplyScalar(layout.assemblyScale)));
   const detail = quality === 'low' ? .65 : quality === 'high' ? 1.3 : 1;
   const mats = {}, allMaterials = [];
   const material = (key, color, opts = {}) => {
@@ -47,6 +54,7 @@ export function createCell({ quality = 'balanced' } = {}) {
   }
   function add(id, geo, mat, transform) {
     if (transform) geo.applyMatrix4(transform);
+    if (assemblyMatrix && assemblyIds.has(id)) geo.applyMatrix4(assemblyMatrix);
     const key = id + ':' + mat.uuid;
     if (!batches.has(key)) batches.set(key, { id, mat, geos: [] });
     batches.get(key).geos.push(geo);
@@ -62,6 +70,7 @@ export function createCell({ quality = 'balanced' } = {}) {
       dummy.position.copy(b.p); dummy.scale.setScalar(b.r || .06);
       if (b.scale) dummy.scale.multiply(b.scale);
       dummy.rotation.set(b.rot || 0, i * 2.4, 0); dummy.updateMatrix(); mesh.setMatrixAt(i, dummy.matrix);
+      if (assemblyMatrix && assemblyIds.has(id)) mesh.setMatrixAt(i, dummy.matrix.clone().premultiply(assemblyMatrix));
     });
     mesh.userData.id = id; groups.get(id).add(mesh); return mesh;
   }
@@ -154,13 +163,25 @@ export function createCell({ quality = 'balanced' } = {}) {
   }
   tube('smooth-er', [erPoint(.98, 1, 1), V(1, -.8, -2.4), serNodes[0]], .1, serMat);
   for (let i = 0; i < 8; i++) tube('smooth-er', [serNodes[i * 3], V(2.4 + rng() * 2, .7 + rng(), -1 + rng()), V(2 + rng() * 2, 1.6, -1 + rng())], .073, serMat);
+  if (modelId === 'fungal') {
+    const inverse = assemblyMatrix.clone().invert();
+    const start = serNodes[29].clone().applyMatrix4(assemblyMatrix);
+    tube('smooth-er',[start,V(.3,1,-1),V(1.7,1,-.4),V(2.9,.2,-.3),V(4.7,.7,-.3)].map(p=>p.applyMatrix4(inverse)),.075/layout.assemblyScale,serMat);
+  }
 
   // Curved Golgi cisternae with a narrow lumen and swollen rims.
   const golgi = material('golgi', '#c99c60'), golgiRim = material('golgiRim', '#edc891');
   const gc = V(2.4, 1.4, 1.2);
   function golgiPoint(u, v, layer, side = 0) {
     const a = -.95 + u * 1.9, width = .28 + v * .62, span = 1 - Math.abs(layer - 2.5) * .06;
-    return V(gc.x + Math.sin(a) * 1.78 * span, gc.y + layer * .25 + .36 * (1 - Math.cos(a)) + side + .035 * Math.sin(u * 15 + v * 5), gc.z + Math.cos(a) * width * span);
+    const p = V(gc.x + Math.sin(a) * 1.78 * span, gc.y + layer * .25 + .36 * (1 - Math.cos(a)) + side + .035 * Math.sin(u * 15 + v * 5), gc.z + Math.cos(a) * width * span);
+    if (layout) {
+      p.sub(gc);
+      // Yeast cisternae have no layer offset: each occupies a different site.
+      p.y -= (modelId === 'fungal' ? layer : Math.floor(layer/3)*3) * .25;
+      return p.multiplyScalar(layout.golgiScale).add(V(...layout.golgiSites[modelId === 'fungal' ? layer : Math.floor(layer/3)]));
+    }
+    return p;
   }
   for (let k = 0; k < 6; k++) {
     for (const side of [-.036, .036]) add('golgi', surface((u, v) => golgiPoint(u, v, k, side), 54, 14), golgi);
@@ -170,14 +191,15 @@ export function createCell({ quality = 'balanced' } = {}) {
   const buds = [];
   for (let i = 0; i < 26; i++) {
     const p = V(gc.x + (i % 2 ? 1 : -1) * (1.52 + rng() * .58), gc.y + rng() * 1.9, gc.z + .25 + rng() * .9);
-    buds.push({ p, r: .10 + rng() * .10 });
+    if (layout) p.sub(gc).multiplyScalar(layout.golgiScale).add(V(...layout.golgiSites[modelId === 'fungal' ? i%6 : Math.floor((i%6)/3)]));
+    buds.push({ p, r: (.10 + rng() * .10) * (layout ? .6 : 1) });
     if (i < 6) tube('golgi', [golgiPoint(i % 2, .5, i), p], .05, golgi);
   }
   beads('golgi', buds, golgiRim, new THREE.SphereGeometry(1, 14, 10));
 
   const mitoOuter = material('mitoOuter', '#c97861'), mitoInner = material('mitoInner', '#b78251');
   const cristaeMat = material('cristae', '#e9b77c'), mitoEdge = material('mitoEdge', '#ecae89');
-  const mitoPositions = [
+  const mitoPositions = layout?.mitochondria || [
     [3.6,-1.55,2.6,1.08,.3], [-3.6,-1.6,2.8,.95,-.7], [0,-3,2.1,.98,.1], [4.6,.7,-.1,.88,1.1],
     [-4.5,2.1,.1,.9,-.7], [1.2,3.5,.1,.86,.4], [-.8,-3.5,-.9,1.05,.2], [3.1,-2.8,-1.7,.92,-.4],
     [-4.3,-2,-1.4,.88,.5], [3,2.3,-2.5,.82,-.6], [-1,2.7,-2.7,.86,.3], [5.2,-1.1,-1.7,.75,1.2],
@@ -213,10 +235,11 @@ export function createCell({ quality = 'balanced' } = {}) {
     ['endosomes', '#7aa7c1', [[3.7,2.8,1.2], [-4.9,-.7,1.9], [.4,-3.3,3], [5,.4,1.4]], .42],
   ];
   for (const [id, color, locations, radius] of vesicles) {
+    if (!groups.has(id)) continue;
     const shell = material(id, color, { transparent: true, opacity: .47, depthWrite: false, roughness: .24 });
     const cargo = material(id + 'cargo', color);
     const interior = [];
-    for (const location of locations) {
+    for (const location of layout?.[id] || locations) {
       const center = V(...location);
       const geo = new THREE.SphereGeometry(radius, 24, 16); geo.translate(...location); add(id, geo, shell);
       for (let j = 0; j < (id === 'endosomes' ? 8 : 16); j++) {
@@ -230,13 +253,17 @@ export function createCell({ quality = 'balanced' } = {}) {
   const free = [];
   for (let i = 0; i < 1000; i++) {
     const p = V((rng() - .5) * 12.7, (rng() - .5) * 9, (rng() - .5) * 8);
-    if ((p.x / 6.8) ** 2 + (p.y / 4.8) ** 2 + (p.z / 4.6) ** 2 > .86 || p.distanceTo(nuc) < 2.35) { i--; continue; }
+    const outside = layout ? !(modelId === 'plant' ? inPlant(p) : inYeast(p)) || inVacuole(p,layout,1.025) || p.distanceTo(V(...layout.nucleus)) < 2.35*layout.assemblyScale : (p.x / 6.8) ** 2 + (p.y / 4.8) ** 2 + (p.z / 4.6) ** 2 > .86 || p.distanceTo(nuc) < 2.35;
+    if (outside) { i--; continue; }
     free.push({ p, r: .026 + rng() * .019, scale: V(1.3, .85, 1) });
   }
   const freeMat = material('freeRibo', '#d8c4a6', { roughness: .9 });
   beads('ribosomes', free, freeMat, new THREE.IcosahedronGeometry(1, 0));
   beads('ribosomes', free.map(b => ({ p: b.p.clone().add(V(.026,.023,0)), r: b.r * .7 })), freeMat, new THREE.IcosahedronGeometry(1, 0));
 
+  let features;
+  if (layout) features = (modelId === 'plant' ? buildPlant : buildFungal)({ add,tube,beads,material,surface,detail });
+  else {
   const cytoMat = material('cyto', '#537b7d', { transparent: true, opacity: .36, roughness: .8 });
   const actinMat = material('actin', '#688889', { transparent: true, opacity: .24 });
   for (let i = 0; i < 24; i++) {
@@ -266,6 +293,7 @@ export function createCell({ quality = 'balanced' } = {}) {
   const proteins = [];
   for (let i = 0; i < 220; i++) proteins.push({ p: membranePoint(rng(),rng()*.8), r: .035 + rng() * .022, scale: V(.8,1.5,.8) });
   beads('membrane', proteins, membraneRim);
+  }
 
   for (const { id, mat, geos } of batches.values()) {
     const merged = mergeGeometries(geos, false);
@@ -279,14 +307,22 @@ export function createCell({ quality = 'balanced' } = {}) {
     peroxisomes: [V(-3.4,3,.1),3], endosomes: [V(3.7,2.8,1.2),3.1],
     ribosomes: [V(1,-1,2),8], cytoskeleton: [V(0,0,0),19], membrane: [V(0,0,0),20],
   };
-  for (const [id, [point, distance]] of Object.entries(focuses)) groups.get(id).userData.focus = { point, distance };
+  if (layout) {
+    for (const id of assemblyIds) { focuses[id][0].applyMatrix4(assemblyMatrix); focuses[id][1] *= layout.assemblyScale; }
+    focuses.mitochondria = [V(...layout.mitochondria[0].slice(0,3)),4.1];
+    focuses.golgi = [V(...layout.golgiSites[0]).add(V(0,.3,.2)),4];
+    for (const id of ['peroxisomes','endosomes']) focuses[id] = [V(...layout[id][0]),3];
+    Object.assign(focuses,features.focuses);
+  }
+  for (const [id, [point, distance]] of Object.entries(focuses)) if(groups.has(id)) groups.get(id).userData.focus = { point, distance };
   const manifest = {
     nuclearMembranes: 2, mitochondrialMembranes: 2, poreSymmetry: 8,
-    chromatin: 'interphase fibers', golgiRibosomes: 0, plantOrganelles: 0,
+    chromatin: 'interphase fibers', golgiRibosomes: 0, plantOrganelles: modelId === 'plant' ? 3 : 0,
     mitochondria: mitoPositions.length, boundRibosomes: bound.length, freeRibosomes: free.length,
-    nuclearPores: poreDirs.length, roughERConnected: true, smoothERConnected: true, corticalTopology: 'irregular mesh', seed: model.seed,
+    nuclearPores: poreDirs.length, roughERConnected: true, smoothERConnected: true, corticalTopology: layout ? 'peripheral tracks' : 'irregular mesh', seed: definition.seed,
+    modelId, ...features?.manifest,
   };
   return { root, groups, materials: allMaterials, manifest, dispose() {
-    root.traverse(o => { if (o.geometry) o.geometry.dispose(); }); allMaterials.forEach(m => m.dispose());
+    root.traverse(o => { if (o.isInstancedMesh) o.dispose(); if (o.geometry) o.geometry.dispose(); }); allMaterials.forEach(m => m.dispose());
   } };
 }
