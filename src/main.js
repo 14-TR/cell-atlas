@@ -2,12 +2,13 @@ import './style.css';
 import * as THREE from 'three';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 import { createCell } from './cell.js';
-import { structures, sources, model } from './data.js';
+import { cellModels, getCellModel, modelSources as sources } from './models.js';
 
 const $ = id => document.getElementById(id);
 const viewport = $('viewport');
 const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
-const state = { selected: 'nucleus', isolated: false, membrane: true, labels: true, clipping: 0, quality: 'balanced', rotating: !reduced };
+let model = getCellModel(), structures = model.structures;
+const state = { modelId: model.id, selected: model.defaultSelection, isolated: false, membrane: true, wall: true, labels: true, clipping: 0, quality: 'balanced', rotating: !reduced };
 let renderer, scene, camera, controls, cell, tween, ready = false, webgl = false;
 let clippingPlane = new THREE.Plane(new THREE.Vector3(0,0,-1), 9);
 const labels = [], pointer = new THREE.Vector2(), raycaster = new THREE.Raycaster();
@@ -20,9 +21,47 @@ function referenceLinks(urls) {
     return `<a href="${url}" target="_blank" rel="noopener noreferrer">${title}</a>`;
   }).join('');
 }
-$('model-disclaimer').textContent = model.disclaimer;
-$('source-links').innerHTML = referenceLinks(Object.values(sources).map(s => s.url));
-$('structure-list').innerHTML = structures.map((s,i) => `<button data-structure="${s.id}" aria-pressed="false"><span class="color-dot" style="background:${s.color}"></span><span>${s.name}</span></button>`).join('');
+$('cell-model').replaceChildren(...Object.values(cellModels).map(m => new Option(m.name, m.id)));
+function updateModelGuide() {
+  $('model-disclaimer').textContent = model.disclaimer;
+  $('model-accuracy').textContent = model.accuracy;
+  $('model-caption').textContent = model.caption;
+  $('model-phase').textContent = model.phase;
+  $('list-hint').textContent = `${structures.length} structures. One living system.`;
+  $('source-links').innerHTML = referenceLinks([...new Set(structures.flatMap(s=>s.sources))]);
+  $('structure-list').innerHTML = structures.map(s => `<button data-structure="${s.id}" aria-pressed="false"><span class="color-dot" style="background:${s.color}"></span><span>${s.name}</span></button>`).join('');
+  $('wall-setting').hidden = !structures.some(s=>s.id === 'cell-wall');
+  viewport.setAttribute('aria-label', `Interactive 3D ${model.cellType}`);
+  if(renderer) renderer.domElement.setAttribute('aria-label', `3D ${model.cellType}. Drag to rotate; pinch or scroll to zoom. Use the structure index for keyboard selection.`);
+}
+function rebuildLabels() {
+  labels.splice(0).forEach(label=>label.el.remove());
+  if(!cell)return;
+  for(const {id,text,point} of model.labels) {
+    const el=document.createElement('span'); el.className='scene-label'; el.textContent=text; el.hidden=true;
+    viewport.appendChild(el);
+    labels.push({id,el,point:point ? new THREE.Vector3(...point) : cell.groups.get(id).userData.focus.point.clone().add(new THREE.Vector3(0,.5,0))});
+  }
+}
+function rebuildCell() {
+  const next = createCell({ quality:state.quality, modelId:state.modelId });
+  if(cell){scene.remove(cell.root);cell.dispose();}
+  cell=next;scene.add(cell.root);rebuildLabels();applyVisibility();
+}
+function switchModel(id) {
+  if(id === state.modelId)return;
+  model=getCellModel(id);structures=model.structures;state.modelId=id;
+  tween=null;startPointer=null;
+  state.selected=model.defaultSelection;state.isolated=false;state.membrane=true;state.wall=true;state.rotating=false;
+  $('membrane-toggle').checked=true;$('wall-toggle').checked=true;
+  document.querySelectorAll('dialog[open]').forEach(dialog=>dialog.close());
+  setClipping(0);updateModelGuide();updateRotation();
+  if(webgl){rebuildCell();resetCamera(false);}
+  select(state.selected);updateRotation();
+  announce(`${model.name} loaded. ${structures.length} structures. ${model.cellType}.`);
+}
+$('cell-model').addEventListener('change',e=>switchModel(e.target.value));
+updateModelGuide();
 
 function select(id, { frame = false } = {}) {
   const item = structures.find(x => x.id === id);
@@ -46,10 +85,11 @@ function select(id, { frame = false } = {}) {
   announce(`${item.name} selected. ${item.function}.`);
 }
 function applyVisibility() {
+  $('isolate-button').setAttribute('aria-pressed', state.isolated);
   if (!cell) return;
   for (const [id, group] of cell.groups) {
     const nucleusContext = state.selected === 'nucleus' && id === 'nucleolus';
-    group.visible = (!state.isolated || id === state.selected || nucleusContext) && (id !== 'membrane' || state.membrane);
+    group.visible = (!state.isolated || id === state.selected || nucleusContext) && (id !== 'membrane' || state.membrane) && (id !== 'cell-wall' || state.wall);
     group.traverse(o => {
       if (o.material && !o.material.transparent) {
         o.material.emissive.set(id === state.selected ? '#283529' : '#000000');
@@ -57,7 +97,6 @@ function applyVisibility() {
       }
     });
   }
-  $('isolate-button').setAttribute('aria-pressed', state.isolated);
 }
 function updateRotation() {
   if (controls) controls.autoRotate = state.rotating;
@@ -68,12 +107,16 @@ function updateRotation() {
 function resetCamera(animated = true) {
   if (!camera) return;
   const aspect = viewport.clientWidth / viewport.clientHeight;
-  const distance = Math.max(18.6, 22.5 / aspect);
+  const distance = Math.max(18.6, 22.5 / aspect) * (state.modelId === 'plant' ? 1.2 : 1);
   const position = new THREE.Vector3(3.2, 2.8, distance);
   moveCamera(position, new THREE.Vector3(0,0,0), animated);
 }
 function moveCamera(position, target, animated = true) {
   if (!controls) return;
+  // Flush residual touch pan/orbit damping before a deliberate focus or reset.
+  const damping=controls.enableDamping, rotating=controls.autoRotate;
+  controls.enableDamping=false;controls.autoRotate=false;controls.update();
+  controls.enableDamping=damping;controls.autoRotate=rotating;
   if (animated && !reduced) tween = { start: performance.now(), from: camera.position.clone(), to: position, fromTarget: controls.target.clone(), toTarget: target };
   else { tween = null; camera.position.copy(position); controls.target.copy(target); controls.update(); }
 }
@@ -84,6 +127,7 @@ function focus() {
   if (state.selected === 'membrane') {
     state.membrane = true; $('membrane-toggle').checked = true;
   }
+  if (state.selected === 'cell-wall') { state.wall=true; $('wall-toggle').checked=true; }
   applyVisibility();
   state.rotating = false; updateRotation();
   const { point, distance } = cell.groups.get(state.selected).userData.focus;
@@ -92,8 +136,8 @@ function focus() {
   announce(`${structures.find(s => s.id === state.selected).name} centered.`);
 }
 function reset() {
-  state.isolated = false; state.membrane = true;
-  setClipping(0); $('membrane-toggle').checked = true;
+  state.isolated = false; state.membrane = true; state.wall = true;
+  setClipping(0); $('membrane-toggle').checked = true; $('wall-toggle').checked=true;
   applyVisibility(); resetCamera(); announce('Cell view reset. All structures visible.');
 }
 function openDialog(id) { $(id).showModal(); }
@@ -138,12 +182,12 @@ function setClipping(value) {
 $('clipping').addEventListener('input', e => setClipping(e.target.value));
 document.querySelectorAll('[data-depth]').forEach(button => button.addEventListener('click', () => setClipping(button.dataset.depth)));
 $('membrane-toggle').addEventListener('change', e => { state.membrane = e.target.checked; applyVisibility(); });
+$('wall-toggle').addEventListener('change',e=>{state.wall=e.target.checked;applyVisibility();});
 $('labels-toggle').addEventListener('change', e => { state.labels = e.target.checked; });
 $('quality').addEventListener('change', e => {
   state.quality = e.target.value;
-  if (!renderer) return;
-  scene.remove(cell.root); cell.dispose();
-  cell = createCell({ quality: state.quality }); scene.add(cell.root); applyVisibility();
+  if (!renderer || !webgl) return;
+  rebuildCell();
   resize(); announce(`Rendering quality: ${state.quality}.`);
 });
 select('nucleus'); updateRotation();
@@ -156,6 +200,10 @@ function resize() {
 }
 function fallback(message) {
   webgl = false; ready = true;
+  tween=null;startPointer=null;
+  if(cell){scene.remove(cell.root);cell.dispose();cell=null;}
+  rebuildLabels();
+  controls?.dispose();renderer?.dispose();
   $('section-control').hidden = true;
   labels.forEach(label => { label.el.hidden = true; });
   $('app').classList.add('reading-mode');
@@ -180,7 +228,7 @@ function init() {
     const key = new THREE.DirectionalLight('#fff0d9',3.5); key.position.set(-4,8,12); scene.add(key);
     const fill = new THREE.DirectionalLight('#a1cdd3',1.6); fill.position.set(8,-1,4); scene.add(fill);
     const rim = new THREE.DirectionalLight('#c4c0dc',2); rim.position.set(-3,4,-8); scene.add(rim);
-    cell = createCell({ quality: state.quality }); scene.add(cell.root);
+    rebuildCell();
     controls = new OrbitControls(camera,renderer.domElement);
     controls.enableDamping = true; controls.dampingFactor = .07; controls.minDistance = 2; controls.maxDistance = 45;
     controls.autoRotateSpeed = .28; controls.enablePan = true; controls.screenSpacePanning = true;
@@ -192,7 +240,8 @@ function init() {
       if (!startPointer || Math.hypot(e.clientX-startPointer.x,e.clientY-startPointer.y)>7 || performance.now()-startPointer.time>500) return;
       const r = renderer.domElement.getBoundingClientRect(); pointer.set((e.clientX-r.left)/r.width*2-1,-(e.clientY-r.top)/r.height*2+1);
       raycaster.setFromCamera(pointer,camera);
-      const objects = [...cell.groups.values()].filter(g=>g.visible && g.name !== 'membrane' && g.name !== 'cytoskeleton' && g.name !== 'ribosomes');
+      if(!webgl||!cell)return;
+      const objects = [...cell.groups.values()].filter(g=>g.visible && !['membrane','cell-wall','cytoskeleton','ribosomes'].includes(g.name));
       const hit = raycaster.intersectObjects(objects,true).find(h=>clippingPlane.distanceToPoint(h.point)>=0);
       if (hit) select(hit.object.userData.id);
     });
@@ -212,9 +261,7 @@ function init() {
       }
       state.rotating=false; updateRotation(); controls.update();
     });
-    for (const [id, text, point] of [ ['nucleus','Nucleus',[-2.2,2.9,1]], ['golgi','Golgi',[3.6,3.2,1.6]], ['mitochondria','Mitochondrion',[4.4,-1.5,2.7]] ]) {
-      const el=document.createElement('span'); el.className='scene-label'; el.textContent=text; viewport.appendChild(el); labels.push({id,el,point:new THREE.Vector3(...point)});
-    }
+
     resize(); resetCamera(false); updateRotation(); applyVisibility();
     new ResizeObserver(() => { resize(); }).observe(viewport);
     window.addEventListener('orientationchange', () => { setTimeout(() => { resize(); resetCamera(false); },150); });
@@ -245,7 +292,7 @@ window.cellAtlas = {
   diagnostics(){
     let gpu='unavailable';
     if(renderer&&webgl){const gl=renderer.getContext(),ext=gl.getExtension('WEBGL_debug_renderer_info');gpu=ext?gl.getParameter(ext.UNMASKED_RENDERER_WEBGL):gl.getParameter(gl.RENDERER);}
-    return { ...state, webgl, gpu, dpr:renderer?.getPixelRatio()||0, triangles:renderer?.info.render.triangles||0, calls:renderer?.info.render.calls||0, manifest:cell?.manifest, camera:camera?.position.toArray(), target:controls?.target.toArray(), focusPoint:cell?.groups.get(state.selected).userData.focus.point.toArray(), clippingConstant:clippingPlane.constant, transitioning:!!tween, visibleIds:cell ? [...cell.groups].filter(([,g])=>g.visible).map(([id])=>id) : [] };
+    return { ...state, webgl, gpu, dpr:renderer?.getPixelRatio()||0, triangles:renderer?.info.render.triangles||0, calls:renderer?.info.render.calls||0, geometries:renderer?.info.memory.geometries||0, labelIds:labels.map(l=>l.id), manifest:cell?.manifest, camera:camera?.position.toArray(), target:controls?.target.toArray(), focusPoint:cell?.groups.get(state.selected)?.userData.focus.point.toArray(), clippingConstant:clippingPlane.constant, transitioning:!!tween, visibleIds:cell ? [...cell.groups].filter(([,g])=>g.visible).map(([id])=>id) : [] };
   },
 };
 requestAnimationFrame(init);

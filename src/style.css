@@ -68,4 +68,9 @@
   #structure-panel.open{display:block}.panel-heading{display:flex;justify-content:space-between;align-items:center}#structure-list{display:grid;grid-template-columns:repeat(3,1fr)}.list-hint,.legend-note{display:none}
 }
 .reading-mode .viewport-tools{display:none}
+.model-picker select{min-height:44px;max-width:170px;padding:0 28px 0 10px;background:#192422;border:1px solid #a4b5a735;color:var(--accent);font-size:12px;cursor:pointer}
+#wall-setting[hidden]{display:none}
+@media(max-width:700px){.top-nav{gap:8px}.model-picker select{width:126px;font-size:10px;padding-left:7px;padding-right:16px}.top-nav button{padding:0 3px}}
+@media(max-width:370px){.model-picker select{width:111px}.top-nav{gap:4px}}
+@media(max-height:500px) and (orientation:landscape){.model-picker select{width:158px}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;scroll-behavior:auto!important}}

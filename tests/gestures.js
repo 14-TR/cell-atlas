@@ -5,7 +5,7 @@ const browser=await chromium.launch({channel:'chromium',headless:true,args:['--u
 const evidence={};
 try {
   const page=await browser.newPage({viewport:{width:390,height:844},hasTouch:true,isMobile:true,reducedMotion:'reduce'});
-  await page.goto('http://127.0.0.1:4175'); await page.waitForFunction(()=>window.cellAtlas?.ready);
+  await page.goto(process.env.BASE_URL || 'http://127.0.0.1:4175'); await page.waitForFunction(()=>window.cellAtlas?.ready);
   const canvas=page.locator('canvas'), box=await canvas.boundingBox(), cdp=await page.context().newCDPSession(page);
   const cx=box.x+box.width/2, cy=box.y+box.height/2;
   const position=()=>page.evaluate(()=>window.cellAtlas.diagnostics().camera);

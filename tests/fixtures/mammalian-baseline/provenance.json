@@ -1,0 +1,27 @@
+{
+  "purpose": "Bounded test-only independent pre-change mammalian generator; never application source or browser input",
+  "repository": "https://github.com/14-TR/cell-atlas",
+  "commit": "e7c9968c2c2b2ca465430c60eecc5070cd3472e8",
+  "extraction": "git show <commit>:<original_path>, captured as raw bytes; no import or newline normalization",
+  "hash_verification": "Python hashlib.sha256 and shasum -a 256 independently agreed on each immutable Git blob",
+  "files": {
+    "cell.js": {
+      "original_path": "src/cell.js",
+      "sha256": "c252b94bf1e91ce57949a582759d337d2913160c1158d412151f273b777a6d42",
+      "bytes": 17288
+    },
+    "data.js": {
+      "original_path": "src/data.js",
+      "sha256": "91d4047d09769150c721cea1b3a53783dbf15fea157ddb77462428c411a3bff1",
+      "bytes": 8203
+    }
+  },
+  "license": "Covered by repository root LICENSE; copyright TR Ingram",
+  "historical_low_quality_fingerprint": {
+    "platform": "macOS",
+    "node": "v26.8.1",
+    "sha256": "1212927358e4c65fa8e8f182be428dfb31c1dae91226bb6a95232d9451da6d21",
+    "meaning": "Historical platform-specific material-name and position/index/instance-buffer receipt, not a universal cross-runtime oracle"
+  },
+  "runtime_contract": "The test verifies these source bytes against literal hashes before import, then fingerprints baseline and candidate on the same runtime and installed Three.js. Git and Git history are not required."
+}

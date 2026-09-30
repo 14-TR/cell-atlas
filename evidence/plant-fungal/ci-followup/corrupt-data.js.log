@@ -1,0 +1,32 @@
+✖ mammalian geometry remains byte-identical to the original low-quality specimen (0.978042ms)
+ℹ tests 1
+ℹ suites 0
+ℹ pass 0
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 45.53825
+
+✖ failing tests:
+
+test at tests/model-geometry.test.js:116:1
+✖ mammalian geometry remains byte-identical to the original low-quality specimen (0.978042ms)
+  AssertionError [ERR_ASSERTION]: baseline fixture integrity: data.js
+  + actual - expected
+  
+  + '2d60e42706f3dd0b6d935cdec4e1755f777999f4c75ecab955a62adfb4ce4eb5'
+  - '91d4047d09769150c721cea1b3a53783dbf15fea157ddb77462428c411a3bff1'
+  
+      at TestContext.<anonymous> (file:///Users/tr/Projects/cell-atlas/.git/reviews/plant-fungal-v1/fixer/source-without-git/tests/model-geometry.test.js:126:12)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.start (node:internal/test_runner/test:1262:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:387:17) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: '2d60e42706f3dd0b6d935cdec4e1755f777999f4c75ecab955a62adfb4ce4eb5',
+    expected: '91d4047d09769150c721cea1b3a53783dbf15fea157ddb77462428c411a3bff1',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

@@ -1,0 +1,1294 @@
+{
+  "url": "http://127.0.0.1:4176",
+  "tests": [
+    {
+      "test": "context loss then model switch retains sourced reading mode",
+      "status": "passed"
+    },
+    {
+      "test": "1440x1000/plant: all selections, isolation, focus, section, quality, labels, keyboard",
+      "status": "passed",
+      "render": {
+        "modelId": "plant",
+        "selected": "cell-wall",
+        "isolated": false,
+        "membrane": true,
+        "wall": true,
+        "labels": true,
+        "clipping": 0,
+        "quality": "balanced",
+        "rotating": false,
+        "webgl": true,
+        "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4, Unspecified Version)",
+        "dpr": 1.5,
+        "triangles": 750764,
+        "calls": 48,
+        "geometries": 39,
+        "labelIds": [
+          "nucleus",
+          "chloroplasts",
+          "vacuole"
+        ],
+        "manifest": {
+          "nuclearMembranes": 2,
+          "mitochondrialMembranes": 2,
+          "poreSymmetry": 8,
+          "chromatin": "interphase fibers",
+          "golgiRibosomes": 0,
+          "plantOrganelles": 3,
+          "mitochondria": 6,
+          "boundRibosomes": 900,
+          "freeRibosomes": 1000,
+          "nuclearPores": 50,
+          "roughERConnected": true,
+          "smoothERConnected": true,
+          "corticalTopology": "peripheral tracks",
+          "seed": 240918,
+          "modelId": "plant",
+          "chloroplasts": 6,
+          "chloroplastEnvelopeMembranes": 2,
+          "vacuoleMembranes": 1,
+          "wallComposition": "cellulose, hemicelluloses, pectins and proteins",
+          "golgiArrangement": "discrete stacks"
+        },
+        "camera": [
+          3.2000000000000006,
+          2.800000000000002,
+          22.379104477611943
+        ],
+        "target": [
+          0,
+          0,
+          0
+        ],
+        "focusPoint": [
+          0,
+          0,
+          0
+        ],
+        "clippingConstant": 9,
+        "transitioning": false,
+        "visibleIds": [
+          "nucleus",
+          "nucleolus",
+          "rough-er",
+          "smooth-er",
+          "golgi",
+          "mitochondria",
+          "chloroplasts",
+          "vacuole",
+          "cell-wall",
+          "peroxisomes",
+          "endosomes",
+          "ribosomes",
+          "cytoskeleton",
+          "membrane"
+        ]
+      }
+    },
+    {
+      "test": "1440x1000/fungal: all selections, isolation, focus, section, quality, labels, keyboard",
+      "status": "passed",
+      "render": {
+        "modelId": "fungal",
+        "selected": "cell-wall",
+        "isolated": false,
+        "membrane": true,
+        "wall": true,
+        "labels": true,
+        "clipping": 0,
+        "quality": "balanced",
+        "rotating": false,
+        "webgl": true,
+        "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4, Unspecified Version)",
+        "dpr": 1.5,
+        "triangles": 792692,
+        "calls": 46,
+        "geometries": 37,
+        "labelIds": [
+          "nucleus",
+          "vacuole",
+          "bud-neck"
+        ],
+        "manifest": {
+          "nuclearMembranes": 2,
+          "mitochondrialMembranes": 2,
+          "poreSymmetry": 8,
+          "chromatin": "interphase fibers",
+          "golgiRibosomes": 0,
+          "plantOrganelles": 0,
+          "mitochondria": 6,
+          "boundRibosomes": 900,
+          "freeRibosomes": 1000,
+          "nuclearPores": 50,
+          "roughERConnected": true,
+          "smoothERConnected": true,
+          "corticalTopology": "peripheral tracks",
+          "seed": 240919,
+          "modelId": "fungal",
+          "chloroplasts": 0,
+          "vacuoleMembranes": 1,
+          "wallComposition": "beta-glucans, mannoproteins and chitin",
+          "golgiArrangement": "dispersed unstacked cisternae",
+          "budConnection": "open"
+        },
+        "camera": [
+          3.2,
+          2.799999999999999,
+          18.649253731343283
+        ],
+        "target": [
+          0,
+          0,
+          0
+        ],
+        "focusPoint": [
+          0,
+          0,
+          0
+        ],
+        "clippingConstant": 9,
+        "transitioning": false,
+        "visibleIds": [
+          "nucleus",
+          "nucleolus",
+          "rough-er",
+          "smooth-er",
+          "golgi",
+          "mitochondria",
+          "vacuole",
+          "cell-wall",
+          "bud-neck",
+          "peroxisomes",
+          "endosomes",
+          "ribosomes",
+          "cytoskeleton",
+          "membrane"
+        ]
+      }
+    },
+    {
+      "test": "1440x1000/mammalian: all selections, isolation, focus, section, quality, labels, keyboard",
+      "status": "passed",
+      "render": {
+        "modelId": "mammalian",
+        "selected": "membrane",
+        "isolated": false,
+        "membrane": true,
+        "wall": true,
+        "labels": true,
+        "clipping": 0,
+        "quality": "balanced",
+        "rotating": false,
+        "webgl": true,
+        "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4, Unspecified Version)",
+        "dpr": 1.5,
+        "triangles": 659340,
+        "calls": 42,
+        "geometries": 34,
+        "labelIds": [
+          "nucleus",
+          "golgi",
+          "mitochondria"
+        ],
+        "manifest": {
+          "nuclearMembranes": 2,
+          "mitochondrialMembranes": 2,
+          "poreSymmetry": 8,
+          "chromatin": "interphase fibers",
+          "golgiRibosomes": 0,
+          "plantOrganelles": 0,
+          "mitochondria": 14,
+          "boundRibosomes": 900,
+          "freeRibosomes": 1000,
+          "nuclearPores": 50,
+          "roughERConnected": true,
+          "smoothERConnected": true,
+          "corticalTopology": "irregular mesh",
+          "seed": 240917,
+          "modelId": "mammalian"
+        },
+        "camera": [
+          3.2,
+          2.799999999999999,
+          18.649253731343283
+        ],
+        "target": [
+          0,
+          0,
+          0
+        ],
+        "focusPoint": [
+          0,
+          0,
+          0
+        ],
+        "clippingConstant": 9,
+        "transitioning": false,
+        "visibleIds": [
+          "nucleus",
+          "nucleolus",
+          "rough-er",
+          "smooth-er",
+          "golgi",
+          "mitochondria",
+          "lysosomes",
+          "peroxisomes",
+          "endosomes",
+          "ribosomes",
+          "cytoskeleton",
+          "membrane"
+        ]
+      }
+    },
+    {
+      "test": "390x844/plant: all selections, isolation, focus, section, quality, labels, keyboard, touch orbit/pinch/pan/tap/slider",
+      "status": "passed",
+      "render": {
+        "modelId": "plant",
+        "selected": "golgi",
+        "isolated": false,
+        "membrane": true,
+        "wall": true,
+        "labels": true,
+        "clipping": 0,
+        "quality": "balanced",
+        "rotating": false,
+        "webgl": true,
+        "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4, Unspecified Version)",
+        "dpr": 1.5,
+        "triangles": 750764,
+        "calls": 48,
+        "geometries": 39,
+        "labelIds": [
+          "nucleus",
+          "chloroplasts",
+          "vacuole"
+        ],
+        "manifest": {
+          "nuclearMembranes": 2,
+          "mitochondrialMembranes": 2,
+          "poreSymmetry": 8,
+          "chromatin": "interphase fibers",
+          "golgiRibosomes": 0,
+          "plantOrganelles": 3,
+          "mitochondria": 6,
+          "boundRibosomes": 900,
+          "freeRibosomes": 1000,
+          "nuclearPores": 50,
+          "roughERConnected": true,
+          "smoothERConnected": true,
+          "corticalTopology": "peripheral tracks",
+          "seed": 240918,
+          "modelId": "plant",
+          "chloroplasts": 6,
+          "chloroplastEnvelopeMembranes": 2,
+          "vacuoleMembranes": 1,
+          "wallComposition": "cellulose, hemicelluloses, pectins and proteins",
+          "golgiArrangement": "discrete stacks"
+        },
+        "camera": [
+          3.2,
+          2.7999999999999994,
+          30.046153846153846
+        ],
+        "target": [
+          0,
+          0,
+          0
+        ],
+        "focusPoint": [
+          -1.9,
+          4.2,
+          2
+        ],
+        "clippingConstant": 9,
+        "transitioning": false,
+        "visibleIds": [
+          "nucleus",
+          "nucleolus",
+          "rough-er",
+          "smooth-er",
+          "golgi",
+          "mitochondria",
+          "chloroplasts",
+          "vacuole",
+          "cell-wall",
+          "peroxisomes",
+          "endosomes",
+          "ribosomes",
+          "cytoskeleton",
+          "membrane"
+        ]
+      }
+    },
+    {
+      "test": "390x844/fungal: all selections, isolation, focus, section, quality, labels, keyboard, touch orbit/pinch/pan/tap/slider",
+      "status": "passed",
+      "render": {
+        "modelId": "fungal",
+        "selected": "endosomes",
+        "isolated": false,
+        "membrane": true,
+        "wall": true,
+        "labels": true,
+        "clipping": 0,
+        "quality": "balanced",
+        "rotating": false,
+        "webgl": true,
+        "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4, Unspecified Version)",
+        "dpr": 1.5,
+        "triangles": 792692,
+        "calls": 46,
+        "geometries": 37,
+        "labelIds": [
+          "nucleus",
+          "vacuole",
+          "bud-neck"
+        ],
+        "manifest": {
+          "nuclearMembranes": 2,
+          "mitochondrialMembranes": 2,
+          "poreSymmetry": 8,
+          "chromatin": "interphase fibers",
+          "golgiRibosomes": 0,
+          "plantOrganelles": 0,
+          "mitochondria": 6,
+          "boundRibosomes": 900,
+          "freeRibosomes": 1000,
+          "nuclearPores": 50,
+          "roughERConnected": true,
+          "smoothERConnected": true,
+          "corticalTopology": "peripheral tracks",
+          "seed": 240919,
+          "modelId": "fungal",
+          "chloroplasts": 0,
+          "vacuoleMembranes": 1,
+          "wallComposition": "beta-glucans, mannoproteins and chitin",
+          "golgiArrangement": "dispersed unstacked cisternae",
+          "budConnection": "open"
+        },
+        "camera": [
+          3.2000000000000006,
+          2.7999999999999976,
+          25.038461538461544
+        ],
+        "target": [
+          0,
+          0,
+          0
+        ],
+        "focusPoint": [
+          -3.4,
+          -1.4,
+          1.7
+        ],
+        "clippingConstant": 9,
+        "transitioning": false,
+        "visibleIds": [
+          "nucleus",
+          "nucleolus",
+          "rough-er",
+          "smooth-er",
+          "golgi",
+          "mitochondria",
+          "vacuole",
+          "cell-wall",
+          "bud-neck",
+          "peroxisomes",
+          "endosomes",
+          "ribosomes",
+          "cytoskeleton",
+          "membrane"
+        ]
+      }
+    },
+    {
+      "test": "390x844/mammalian: all selections, isolation, focus, section, quality, labels, keyboard, touch orbit/pinch/pan/tap/slider",
+      "status": "passed",
+      "render": {
+        "modelId": "mammalian",
+        "selected": "peroxisomes",
+        "isolated": false,
+        "membrane": true,
+        "wall": true,
+        "labels": true,
+        "clipping": 0,
+        "quality": "balanced",
+        "rotating": false,
+        "webgl": true,
+        "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4, Unspecified Version)",
+        "dpr": 1.5,
+        "triangles": 659340,
+        "calls": 42,
+        "geometries": 34,
+        "labelIds": [
+          "nucleus",
+          "golgi",
+          "mitochondria"
+        ],
+        "manifest": {
+          "nuclearMembranes": 2,
+          "mitochondrialMembranes": 2,
+          "poreSymmetry": 8,
+          "chromatin": "interphase fibers",
+          "golgiRibosomes": 0,
+          "plantOrganelles": 0,
+          "mitochondria": 14,
+          "boundRibosomes": 900,
+          "freeRibosomes": 1000,
+          "nuclearPores": 50,
+          "roughERConnected": true,
+          "smoothERConnected": true,
+          "corticalTopology": "irregular mesh",
+          "seed": 240917,
+          "modelId": "mammalian"
+        },
+        "camera": [
+          3.2000000000000006,
+          2.7999999999999976,
+          25.038461538461544
+        ],
+        "target": [
+          0,
+          0,
+          0
+        ],
+        "focusPoint": [
+          -3.4,
+          3,
+          0.1
+        ],
+        "clippingConstant": 9,
+        "transitioning": false,
+        "visibleIds": [
+          "nucleus",
+          "nucleolus",
+          "rough-er",
+          "smooth-er",
+          "golgi",
+          "mitochondria",
+          "lysosomes",
+          "peroxisomes",
+          "endosomes",
+          "ribosomes",
+          "cytoskeleton",
+          "membrane"
+        ]
+      }
+    },
+    {
+      "test": "320x568/plant: all selections, isolation, focus, section, quality, labels, keyboard",
+      "status": "passed",
+      "render": {
+        "modelId": "plant",
+        "selected": "cell-wall",
+        "isolated": false,
+        "membrane": true,
+        "wall": true,
+        "labels": true,
+        "clipping": 0,
+        "quality": "balanced",
+        "rotating": false,
+        "webgl": true,
+        "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4, Unspecified Version)",
+        "dpr": 1.5,
+        "triangles": 750764,
+        "calls": 48,
+        "geometries": 39,
+        "labelIds": [
+          "nucleus",
+          "chloroplasts",
+          "vacuole"
+        ],
+        "manifest": {
+          "nuclearMembranes": 2,
+          "mitochondrialMembranes": 2,
+          "poreSymmetry": 8,
+          "chromatin": "interphase fibers",
+          "golgiRibosomes": 0,
+          "plantOrganelles": 3,
+          "mitochondria": 6,
+          "boundRibosomes": 900,
+          "freeRibosomes": 1000,
+          "nuclearPores": 50,
+          "roughERConnected": true,
+          "smoothERConnected": true,
+          "corticalTopology": "peripheral tracks",
+          "seed": 240918,
+          "modelId": "plant",
+          "chloroplasts": 6,
+          "chloroplastEnvelopeMembranes": 2,
+          "vacuoleMembranes": 1,
+          "wallComposition": "cellulose, hemicelluloses, pectins and proteins",
+          "golgiArrangement": "discrete stacks"
+        },
+        "camera": [
+          3.2,
+          2.8000000000000016,
+          22.32
+        ],
+        "target": [
+          0,
+          0,
+          0
+        ],
+        "focusPoint": [
+          0,
+          0,
+          0
+        ],
+        "clippingConstant": 9,
+        "transitioning": false,
+        "visibleIds": [
+          "nucleus",
+          "nucleolus",
+          "rough-er",
+          "smooth-er",
+          "golgi",
+          "mitochondria",
+          "chloroplasts",
+          "vacuole",
+          "cell-wall",
+          "peroxisomes",
+          "endosomes",
+          "ribosomes",
+          "cytoskeleton",
+          "membrane"
+        ]
+      }
+    },
+    {
+      "test": "320x568/fungal: all selections, isolation, focus, section, quality, labels, keyboard",
+      "status": "passed",
+      "render": {
+        "modelId": "fungal",
+        "selected": "cell-wall",
+        "isolated": false,
+        "membrane": true,
+        "wall": true,
+        "labels": true,
+        "clipping": 0,
+        "quality": "balanced",
+        "rotating": false,
+        "webgl": true,
+        "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4, Unspecified Version)",
+        "dpr": 1.5,
+        "triangles": 792692,
+        "calls": 46,
+        "geometries": 37,
+        "labelIds": [
+          "nucleus",
+          "vacuole",
+          "bud-neck"
+        ],
+        "manifest": {
+          "nuclearMembranes": 2,
+          "mitochondrialMembranes": 2,
+          "poreSymmetry": 8,
+          "chromatin": "interphase fibers",
+          "golgiRibosomes": 0,
+          "plantOrganelles": 0,
+          "mitochondria": 6,
+          "boundRibosomes": 900,
+          "freeRibosomes": 1000,
+          "nuclearPores": 50,
+          "roughERConnected": true,
+          "smoothERConnected": true,
+          "corticalTopology": "peripheral tracks",
+          "seed": 240919,
+          "modelId": "fungal",
+          "chloroplasts": 0,
+          "vacuoleMembranes": 1,
+          "wallComposition": "beta-glucans, mannoproteins and chitin",
+          "golgiArrangement": "dispersed unstacked cisternae",
+          "budConnection": "open"
+        },
+        "camera": [
+          3.199999999999999,
+          2.7999999999999985,
+          18.59999999999999
+        ],
+        "target": [
+          0,
+          0,
+          0
+        ],
+        "focusPoint": [
+          0,
+          0,
+          0
+        ],
+        "clippingConstant": 9,
+        "transitioning": false,
+        "visibleIds": [
+          "nucleus",
+          "nucleolus",
+          "rough-er",
+          "smooth-er",
+          "golgi",
+          "mitochondria",
+          "vacuole",
+          "cell-wall",
+          "bud-neck",
+          "peroxisomes",
+          "endosomes",
+          "ribosomes",
+          "cytoskeleton",
+          "membrane"
+        ]
+      }
+    },
+    {
+      "test": "320x568/mammalian: all selections, isolation, focus, section, quality, labels, keyboard",
+      "status": "passed",
+      "render": {
+        "modelId": "mammalian",
+        "selected": "membrane",
+        "isolated": false,
+        "membrane": true,
+        "wall": true,
+        "labels": true,
+        "clipping": 0,
+        "quality": "balanced",
+        "rotating": false,
+        "webgl": true,
+        "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4, Unspecified Version)",
+        "dpr": 1.5,
+        "triangles": 659340,
+        "calls": 42,
+        "geometries": 34,
+        "labelIds": [
+          "nucleus",
+          "golgi",
+          "mitochondria"
+        ],
+        "manifest": {
+          "nuclearMembranes": 2,
+          "mitochondrialMembranes": 2,
+          "poreSymmetry": 8,
+          "chromatin": "interphase fibers",
+          "golgiRibosomes": 0,
+          "plantOrganelles": 0,
+          "mitochondria": 14,
+          "boundRibosomes": 900,
+          "freeRibosomes": 1000,
+          "nuclearPores": 50,
+          "roughERConnected": true,
+          "smoothERConnected": true,
+          "corticalTopology": "irregular mesh",
+          "seed": 240917,
+          "modelId": "mammalian"
+        },
+        "camera": [
+          3.199999999999999,
+          2.7999999999999985,
+          18.59999999999999
+        ],
+        "target": [
+          0,
+          0,
+          0
+        ],
+        "focusPoint": [
+          0,
+          0,
+          0
+        ],
+        "clippingConstant": 9,
+        "transitioning": false,
+        "visibleIds": [
+          "nucleus",
+          "nucleolus",
+          "rough-er",
+          "smooth-er",
+          "golgi",
+          "mitochondria",
+          "lysosomes",
+          "peroxisomes",
+          "endosomes",
+          "ribosomes",
+          "cytoskeleton",
+          "membrane"
+        ]
+      }
+    },
+    {
+      "test": "568x320/plant: all selections, isolation, focus, section, quality, labels, keyboard",
+      "status": "passed",
+      "render": {
+        "modelId": "plant",
+        "selected": "cell-wall",
+        "isolated": false,
+        "membrane": true,
+        "wall": true,
+        "labels": true,
+        "clipping": 0,
+        "quality": "balanced",
+        "rotating": false,
+        "webgl": true,
+        "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4, Unspecified Version)",
+        "dpr": 1.5,
+        "triangles": 750764,
+        "calls": 48,
+        "geometries": 39,
+        "labelIds": [
+          "nucleus",
+          "chloroplasts",
+          "vacuole"
+        ],
+        "manifest": {
+          "nuclearMembranes": 2,
+          "mitochondrialMembranes": 2,
+          "poreSymmetry": 8,
+          "chromatin": "interphase fibers",
+          "golgiRibosomes": 0,
+          "plantOrganelles": 3,
+          "mitochondria": 6,
+          "boundRibosomes": 900,
+          "freeRibosomes": 1000,
+          "nuclearPores": 50,
+          "roughERConnected": true,
+          "smoothERConnected": true,
+          "corticalTopology": "peripheral tracks",
+          "seed": 240918,
+          "modelId": "plant",
+          "chloroplasts": 6,
+          "chloroplastEnvelopeMembranes": 2,
+          "vacuoleMembranes": 1,
+          "wallComposition": "cellulose, hemicelluloses, pectins and proteins",
+          "golgiArrangement": "discrete stacks"
+        },
+        "camera": [
+          3.2,
+          2.8000000000000016,
+          22.32
+        ],
+        "target": [
+          0,
+          0,
+          0
+        ],
+        "focusPoint": [
+          0,
+          0,
+          0
+        ],
+        "clippingConstant": 9,
+        "transitioning": false,
+        "visibleIds": [
+          "nucleus",
+          "nucleolus",
+          "rough-er",
+          "smooth-er",
+          "golgi",
+          "mitochondria",
+          "chloroplasts",
+          "vacuole",
+          "cell-wall",
+          "peroxisomes",
+          "endosomes",
+          "ribosomes",
+          "cytoskeleton",
+          "membrane"
+        ]
+      }
+    },
+    {
+      "test": "568x320/fungal: all selections, isolation, focus, section, quality, labels, keyboard",
+      "status": "passed",
+      "render": {
+        "modelId": "fungal",
+        "selected": "cell-wall",
+        "isolated": false,
+        "membrane": true,
+        "wall": true,
+        "labels": true,
+        "clipping": 0,
+        "quality": "balanced",
+        "rotating": false,
+        "webgl": true,
+        "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4, Unspecified Version)",
+        "dpr": 1.5,
+        "triangles": 792692,
+        "calls": 46,
+        "geometries": 37,
+        "labelIds": [
+          "nucleus",
+          "vacuole",
+          "bud-neck"
+        ],
+        "manifest": {
+          "nuclearMembranes": 2,
+          "mitochondrialMembranes": 2,
+          "poreSymmetry": 8,
+          "chromatin": "interphase fibers",
+          "golgiRibosomes": 0,
+          "plantOrganelles": 0,
+          "mitochondria": 6,
+          "boundRibosomes": 900,
+          "freeRibosomes": 1000,
+          "nuclearPores": 50,
+          "roughERConnected": true,
+          "smoothERConnected": true,
+          "corticalTopology": "peripheral tracks",
+          "seed": 240919,
+          "modelId": "fungal",
+          "chloroplasts": 0,
+          "vacuoleMembranes": 1,
+          "wallComposition": "beta-glucans, mannoproteins and chitin",
+          "golgiArrangement": "dispersed unstacked cisternae",
+          "budConnection": "open"
+        },
+        "camera": [
+          3.199999999999999,
+          2.7999999999999985,
+          18.59999999999999
+        ],
+        "target": [
+          0,
+          0,
+          0
+        ],
+        "focusPoint": [
+          0,
+          0,
+          0
+        ],
+        "clippingConstant": 9,
+        "transitioning": false,
+        "visibleIds": [
+          "nucleus",
+          "nucleolus",
+          "rough-er",
+          "smooth-er",
+          "golgi",
+          "mitochondria",
+          "vacuole",
+          "cell-wall",
+          "bud-neck",
+          "peroxisomes",
+          "endosomes",
+          "ribosomes",
+          "cytoskeleton",
+          "membrane"
+        ]
+      }
+    },
+    {
+      "test": "568x320/mammalian: all selections, isolation, focus, section, quality, labels, keyboard",
+      "status": "passed",
+      "render": {
+        "modelId": "mammalian",
+        "selected": "membrane",
+        "isolated": false,
+        "membrane": true,
+        "wall": true,
+        "labels": true,
+        "clipping": 0,
+        "quality": "balanced",
+        "rotating": false,
+        "webgl": true,
+        "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4, Unspecified Version)",
+        "dpr": 1.5,
+        "triangles": 659340,
+        "calls": 42,
+        "geometries": 34,
+        "labelIds": [
+          "nucleus",
+          "golgi",
+          "mitochondria"
+        ],
+        "manifest": {
+          "nuclearMembranes": 2,
+          "mitochondrialMembranes": 2,
+          "poreSymmetry": 8,
+          "chromatin": "interphase fibers",
+          "golgiRibosomes": 0,
+          "plantOrganelles": 0,
+          "mitochondria": 14,
+          "boundRibosomes": 900,
+          "freeRibosomes": 1000,
+          "nuclearPores": 50,
+          "roughERConnected": true,
+          "smoothERConnected": true,
+          "corticalTopology": "irregular mesh",
+          "seed": 240917,
+          "modelId": "mammalian"
+        },
+        "camera": [
+          3.199999999999999,
+          2.7999999999999985,
+          18.59999999999999
+        ],
+        "target": [
+          0,
+          0,
+          0
+        ],
+        "focusPoint": [
+          0,
+          0,
+          0
+        ],
+        "clippingConstant": 9,
+        "transitioning": false,
+        "visibleIds": [
+          "nucleus",
+          "nucleolus",
+          "rough-er",
+          "smooth-er",
+          "golgi",
+          "mitochondria",
+          "lysosomes",
+          "peroxisomes",
+          "endosomes",
+          "ribosomes",
+          "cytoskeleton",
+          "membrane"
+        ]
+      }
+    },
+    {
+      "test": "844x390/plant: all selections, isolation, focus, section, quality, labels, keyboard",
+      "status": "passed",
+      "render": {
+        "modelId": "plant",
+        "selected": "cell-wall",
+        "isolated": false,
+        "membrane": true,
+        "wall": true,
+        "labels": true,
+        "clipping": 0,
+        "quality": "balanced",
+        "rotating": false,
+        "webgl": true,
+        "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4, Unspecified Version)",
+        "dpr": 1.5,
+        "triangles": 750764,
+        "calls": 48,
+        "geometries": 39,
+        "labelIds": [
+          "nucleus",
+          "chloroplasts",
+          "vacuole"
+        ],
+        "manifest": {
+          "nuclearMembranes": 2,
+          "mitochondrialMembranes": 2,
+          "poreSymmetry": 8,
+          "chromatin": "interphase fibers",
+          "golgiRibosomes": 0,
+          "plantOrganelles": 3,
+          "mitochondria": 6,
+          "boundRibosomes": 900,
+          "freeRibosomes": 1000,
+          "nuclearPores": 50,
+          "roughERConnected": true,
+          "smoothERConnected": true,
+          "corticalTopology": "peripheral tracks",
+          "seed": 240918,
+          "modelId": "plant",
+          "chloroplasts": 6,
+          "chloroplastEnvelopeMembranes": 2,
+          "vacuoleMembranes": 1,
+          "wallComposition": "cellulose, hemicelluloses, pectins and proteins",
+          "golgiArrangement": "discrete stacks"
+        },
+        "camera": [
+          3.2,
+          2.8000000000000016,
+          22.32
+        ],
+        "target": [
+          0,
+          0,
+          0
+        ],
+        "focusPoint": [
+          0,
+          0,
+          0
+        ],
+        "clippingConstant": 9,
+        "transitioning": false,
+        "visibleIds": [
+          "nucleus",
+          "nucleolus",
+          "rough-er",
+          "smooth-er",
+          "golgi",
+          "mitochondria",
+          "chloroplasts",
+          "vacuole",
+          "cell-wall",
+          "peroxisomes",
+          "endosomes",
+          "ribosomes",
+          "cytoskeleton",
+          "membrane"
+        ]
+      }
+    },
+    {
+      "test": "844x390/fungal: all selections, isolation, focus, section, quality, labels, keyboard",
+      "status": "passed",
+      "render": {
+        "modelId": "fungal",
+        "selected": "cell-wall",
+        "isolated": false,
+        "membrane": true,
+        "wall": true,
+        "labels": true,
+        "clipping": 0,
+        "quality": "balanced",
+        "rotating": false,
+        "webgl": true,
+        "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4, Unspecified Version)",
+        "dpr": 1.5,
+        "triangles": 792692,
+        "calls": 46,
+        "geometries": 37,
+        "labelIds": [
+          "nucleus",
+          "vacuole",
+          "bud-neck"
+        ],
+        "manifest": {
+          "nuclearMembranes": 2,
+          "mitochondrialMembranes": 2,
+          "poreSymmetry": 8,
+          "chromatin": "interphase fibers",
+          "golgiRibosomes": 0,
+          "plantOrganelles": 0,
+          "mitochondria": 6,
+          "boundRibosomes": 900,
+          "freeRibosomes": 1000,
+          "nuclearPores": 50,
+          "roughERConnected": true,
+          "smoothERConnected": true,
+          "corticalTopology": "peripheral tracks",
+          "seed": 240919,
+          "modelId": "fungal",
+          "chloroplasts": 0,
+          "vacuoleMembranes": 1,
+          "wallComposition": "beta-glucans, mannoproteins and chitin",
+          "golgiArrangement": "dispersed unstacked cisternae",
+          "budConnection": "open"
+        },
+        "camera": [
+          3.199999999999999,
+          2.7999999999999985,
+          18.59999999999999
+        ],
+        "target": [
+          0,
+          0,
+          0
+        ],
+        "focusPoint": [
+          0,
+          0,
+          0
+        ],
+        "clippingConstant": 9,
+        "transitioning": false,
+        "visibleIds": [
+          "nucleus",
+          "nucleolus",
+          "rough-er",
+          "smooth-er",
+          "golgi",
+          "mitochondria",
+          "vacuole",
+          "cell-wall",
+          "bud-neck",
+          "peroxisomes",
+          "endosomes",
+          "ribosomes",
+          "cytoskeleton",
+          "membrane"
+        ]
+      }
+    },
+    {
+      "test": "844x390/mammalian: all selections, isolation, focus, section, quality, labels, keyboard",
+      "status": "passed",
+      "render": {
+        "modelId": "mammalian",
+        "selected": "membrane",
+        "isolated": false,
+        "membrane": true,
+        "wall": true,
+        "labels": true,
+        "clipping": 0,
+        "quality": "balanced",
+        "rotating": false,
+        "webgl": true,
+        "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4, Unspecified Version)",
+        "dpr": 1.5,
+        "triangles": 659340,
+        "calls": 42,
+        "geometries": 34,
+        "labelIds": [
+          "nucleus",
+          "golgi",
+          "mitochondria"
+        ],
+        "manifest": {
+          "nuclearMembranes": 2,
+          "mitochondrialMembranes": 2,
+          "poreSymmetry": 8,
+          "chromatin": "interphase fibers",
+          "golgiRibosomes": 0,
+          "plantOrganelles": 0,
+          "mitochondria": 14,
+          "boundRibosomes": 900,
+          "freeRibosomes": 1000,
+          "nuclearPores": 50,
+          "roughERConnected": true,
+          "smoothERConnected": true,
+          "corticalTopology": "irregular mesh",
+          "seed": 240917,
+          "modelId": "mammalian"
+        },
+        "camera": [
+          3.199999999999999,
+          2.7999999999999985,
+          18.59999999999999
+        ],
+        "target": [
+          0,
+          0,
+          0
+        ],
+        "focusPoint": [
+          0,
+          0,
+          0
+        ],
+        "clippingConstant": 9,
+        "transitioning": false,
+        "visibleIds": [
+          "nucleus",
+          "nucleolus",
+          "rough-er",
+          "smooth-er",
+          "golgi",
+          "mitochondria",
+          "lysosomes",
+          "peroxisomes",
+          "endosomes",
+          "ribosomes",
+          "cytoskeleton",
+          "membrane"
+        ]
+      }
+    },
+    {
+      "test": "off: all models and all sourced field notes remain accessible without WebGL",
+      "status": "passed"
+    },
+    {
+      "test": "initialization: all models and all sourced field notes remain accessible without WebGL",
+      "status": "passed"
+    },
+    {
+      "test": "rapid animated switching and repeated GPU resource replacement",
+      "status": "passed",
+      "memory": [
+        {
+          "id": "plant",
+          "geometries": 39,
+          "labels": 3
+        },
+        {
+          "id": "fungal",
+          "geometries": 37,
+          "labels": 3
+        },
+        {
+          "id": "mammalian",
+          "geometries": 34,
+          "labels": 3
+        },
+        {
+          "id": "plant",
+          "geometries": 39,
+          "labels": 3
+        },
+        {
+          "id": "fungal",
+          "geometries": 37,
+          "labels": 3
+        },
+        {
+          "id": "mammalian",
+          "geometries": 34,
+          "labels": 3
+        },
+        {
+          "id": "plant",
+          "geometries": 39,
+          "labels": 3
+        },
+        {
+          "id": "fungal",
+          "geometries": 37,
+          "labels": 3
+        },
+        {
+          "id": "mammalian",
+          "geometries": 34,
+          "labels": 3
+        },
+        {
+          "id": "plant",
+          "geometries": 39,
+          "labels": 3
+        },
+        {
+          "id": "fungal",
+          "geometries": 37,
+          "labels": 3
+        },
+        {
+          "id": "mammalian",
+          "geometries": 34,
+          "labels": 3
+        },
+        {
+          "id": "plant",
+          "geometries": 39,
+          "labels": 3
+        },
+        {
+          "id": "fungal",
+          "geometries": 37,
+          "labels": 3
+        },
+        {
+          "id": "mammalian",
+          "geometries": 34,
+          "labels": 3
+        },
+        {
+          "id": "plant",
+          "geometries": 39,
+          "labels": 3
+        },
+        {
+          "id": "fungal",
+          "geometries": 37,
+          "labels": 3
+        },
+        {
+          "id": "mammalian",
+          "geometries": 34,
+          "labels": 3
+        }
+      ]
+    }
+  ],
+  "errors": []
+}

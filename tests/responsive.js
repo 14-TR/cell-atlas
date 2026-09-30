@@ -6,7 +6,7 @@ const report=[];
 try {
   for(const [width,height] of [[320,568],[390,844],[844,390],[1024,768]]) {
     const page=await browser.newPage({viewport:{width,height},deviceScaleFactor:1.5,isMobile:width<900,hasTouch:true,reducedMotion:'reduce'});
-    await page.goto('http://127.0.0.1:4175');
+    await page.goto(process.env.BASE_URL || 'http://127.0.0.1:4175');
     await page.waitForFunction(()=>window.cellAtlas?.ready);
     assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true,`${width} has no horizontal overflow`);
     const undersized=await page.locator('button:visible').evaluateAll(buttons=>buttons.map(b=>({name:b.getAttribute('aria-label')||b.textContent.trim(),r:b.getBoundingClientRect()})).filter(b=>b.r.width<44||b.r.height<44).map(b=>({name:b.name,width:b.r.width,height:b.r.height})));

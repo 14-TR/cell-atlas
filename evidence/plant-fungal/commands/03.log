@@ -1,0 +1,163 @@
+
+> cell-atlas@1.0.0 test:e2e
+> node tests/smoke.js
+
+{
+  "tests": [
+    {
+      "mode": "desktop",
+      "status": "passed",
+      "render": {
+        "modelId": "mammalian",
+        "selected": "nucleus",
+        "isolated": false,
+        "membrane": true,
+        "wall": true,
+        "labels": true,
+        "clipping": 0,
+        "quality": "balanced",
+        "rotating": false,
+        "webgl": true,
+        "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4, Unspecified Version)",
+        "dpr": 1,
+        "triangles": 659340,
+        "calls": 42,
+        "geometries": 34,
+        "labelIds": [
+          "nucleus",
+          "golgi",
+          "mitochondria"
+        ],
+        "manifest": {
+          "nuclearMembranes": 2,
+          "mitochondrialMembranes": 2,
+          "poreSymmetry": 8,
+          "chromatin": "interphase fibers",
+          "golgiRibosomes": 0,
+          "plantOrganelles": 0,
+          "mitochondria": 14,
+          "boundRibosomes": 900,
+          "freeRibosomes": 1000,
+          "nuclearPores": 50,
+          "roughERConnected": true,
+          "smoothERConnected": true,
+          "corticalTopology": "irregular mesh",
+          "seed": 240917,
+          "modelId": "mammalian"
+        },
+        "camera": [
+          3.2,
+          2.799999999999999,
+          18.649253731343283
+        ],
+        "target": [
+          0,
+          0,
+          0
+        ],
+        "focusPoint": [
+          -1.45,
+          0.9,
+          0.4
+        ],
+        "clippingConstant": 9,
+        "transitioning": false,
+        "visibleIds": [
+          "nucleus",
+          "nucleolus",
+          "rough-er",
+          "smooth-er",
+          "golgi",
+          "mitochondria",
+          "lysosomes",
+          "peroxisomes",
+          "endosomes",
+          "ribosomes",
+          "cytoskeleton",
+          "membrane"
+        ]
+      }
+    },
+    {
+      "mode": "mobile",
+      "status": "passed",
+      "render": {
+        "modelId": "mammalian",
+        "selected": "nucleus",
+        "isolated": false,
+        "membrane": true,
+        "wall": true,
+        "labels": true,
+        "clipping": 0,
+        "quality": "balanced",
+        "rotating": false,
+        "webgl": true,
+        "gpu": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4, Unspecified Version)",
+        "dpr": 1.5,
+        "triangles": 659340,
+        "calls": 42,
+        "geometries": 34,
+        "labelIds": [
+          "nucleus",
+          "golgi",
+          "mitochondria"
+        ],
+        "manifest": {
+          "nuclearMembranes": 2,
+          "mitochondrialMembranes": 2,
+          "poreSymmetry": 8,
+          "chromatin": "interphase fibers",
+          "golgiRibosomes": 0,
+          "plantOrganelles": 0,
+          "mitochondria": 14,
+          "boundRibosomes": 900,
+          "freeRibosomes": 1000,
+          "nuclearPores": 50,
+          "roughERConnected": true,
+          "smoothERConnected": true,
+          "corticalTopology": "irregular mesh",
+          "seed": 240917,
+          "modelId": "mammalian"
+        },
+        "camera": [
+          3.199999999999999,
+          2.7999999999999985,
+          18.59999999999999
+        ],
+        "target": [
+          0,
+          0,
+          0
+        ],
+        "focusPoint": [
+          -1.45,
+          0.9,
+          0.4
+        ],
+        "clippingConstant": 9,
+        "transitioning": false,
+        "visibleIds": [
+          "nucleus",
+          "nucleolus",
+          "rough-er",
+          "smooth-er",
+          "golgi",
+          "mitochondria",
+          "lysosomes",
+          "peroxisomes",
+          "endosomes",
+          "ribosomes",
+          "cytoskeleton",
+          "membrane"
+        ]
+      }
+    },
+    {
+      "mode": "fallback",
+      "status": "passed"
+    }
+  ],
+  "errors": [],
+  "url": "http://127.0.0.1:4176",
+  "at": "2026-09-30T01:23:36.960Z"
+}
