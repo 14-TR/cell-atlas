@@ -1,0 +1,31 @@
+
+> cell-atlas@1.0.0 test
+> node --test tests/*.test.js
+
+✔ seeded geometry preserves explicit cellular illustration invariants (152.798083ms)
+✔ walled-cell organelles stay outside the vacuole lumen (176.871459ms)
+✔ mammalian/low: deterministic finite geometry and complete selectable groups (98.922667ms)
+✔ mammalian/balanced: deterministic finite geometry and complete selectable groups (104.328416ms)
+✔ mammalian/high: deterministic finite geometry and complete selectable groups (115.228875ms)
+✔ plant/low: deterministic finite geometry and complete selectable groups (108.868792ms)
+✔ plant/balanced: deterministic finite geometry and complete selectable groups (121.400042ms)
+✔ plant/high: deterministic finite geometry and complete selectable groups (138.34425ms)
+✔ fungal/low: deterministic finite geometry and complete selectable groups (117.975584ms)
+✔ fungal/balanced: deterministic finite geometry and complete selectable groups (124.234458ms)
+✔ fungal/high: deterministic finite geometry and complete selectable groups (141.809583ms)
+✔ new model organelles fit within the enclosing plasma membrane (124.388791ms)
+✔ disposing a specimen releases instance buffers as well as geometry and materials (49.029708ms)
+✔ chloroplast grana expose layered discs rather than end-on dots in the front cutaway (47.417333ms)
+✔ mammalian geometry remains byte-identical to the original low-quality specimen (42.180833ms)
+✔ plant geometry has an outer wall, central tonoplast and distinct chloroplast membrane systems (48.804458ms)
+✔ budding yeast has a continuous mother-bud envelope and dispersed Golgi, not plant anatomy (49.138792ms)
+✔ model registry keeps mammalian defaults and scopes plant and budding yeast biology (2.103208ms)
+✔ a sourced generalized mammalian interphase atlas declares its limits (0.751417ms)
+ℹ tests 19
+ℹ suites 0
+ℹ pass 19
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1667.7425

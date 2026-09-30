@@ -1,0 +1,43 @@
+[
+  {
+    "test": "inline section control and real CDP touch drag",
+    "value": 65,
+    "status": "passed"
+  },
+  {
+    "test": "list/next/previous reveal, follow isolation, focus and wrap; whole-cell reset",
+    "status": "passed"
+  },
+  {
+    "test": "320x568 all twelve selections, touch slider and target reachability",
+    "touchDepth": 70,
+    "canvasHeight": 212,
+    "status": "passed"
+  },
+  {
+    "test": "390x844 all twelve selections, touch slider and target reachability",
+    "touchDepth": 70,
+    "canvasHeight": 434,
+    "status": "passed"
+  },
+  {
+    "test": "568x320 all twelve selections, touch slider and target reachability",
+    "touchDepth": 70,
+    "canvasHeight": 184,
+    "status": "passed"
+  },
+  {
+    "test": "844x390 all twelve selections, touch slider and target reachability",
+    "touchDepth": 70,
+    "canvasHeight": 254,
+    "status": "passed"
+  },
+  {
+    "test": "WebGL fallback supports next/previous and sourced field notes",
+    "status": "passed"
+  },
+  {
+    "test": "animated rapid navigation ends at the newest selection",
+    "status": "passed"
+  }
+]

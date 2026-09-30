@@ -1,0 +1,34 @@
+[
+  {
+    "width": 320,
+    "height": 568,
+    "targets": ">=44px",
+    "overflow": false,
+    "keyboardOrbit": true,
+    "fieldNotes": true
+  },
+  {
+    "width": 390,
+    "height": 844,
+    "targets": ">=44px",
+    "overflow": false,
+    "keyboardOrbit": true,
+    "fieldNotes": true
+  },
+  {
+    "width": 844,
+    "height": 390,
+    "targets": ">=44px",
+    "overflow": false,
+    "keyboardOrbit": true,
+    "fieldNotes": true
+  },
+  {
+    "width": 1024,
+    "height": 768,
+    "targets": ">=44px",
+    "overflow": false,
+    "keyboardOrbit": true,
+    "fieldNotes": true
+  }
+]
