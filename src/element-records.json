@@ -1,0 +1,1182 @@
+[
+  {
+    "number": 1,
+    "symbol": "H",
+    "name": "Hydrogen",
+    "family": "Nonmetal",
+    "configuration": "1s1",
+    "massNumber": 1,
+    "isotopeBasis": "most abundant in NIST composition table",
+    "isotopeEstimated": false
+  },
+  {
+    "number": 2,
+    "symbol": "He",
+    "name": "Helium",
+    "family": "Noble gas",
+    "configuration": "1s2",
+    "massNumber": 4,
+    "isotopeBasis": "most abundant in NIST composition table",
+    "isotopeEstimated": false
+  },
+  {
+    "number": 3,
+    "symbol": "Li",
+    "name": "Lithium",
+    "family": "Alkali metal",
+    "configuration": "[He]2s1",
+    "massNumber": 7,
+    "isotopeBasis": "most abundant in NIST composition table",
+    "isotopeEstimated": false
+  },
+  {
+    "number": 4,
+    "symbol": "Be",
+    "name": "Beryllium",
+    "family": "Alkaline earth metal",
+    "configuration": "[He]2s2",
+    "massNumber": 9,
+    "isotopeBasis": "most abundant in NIST composition table",
+    "isotopeEstimated": false
+  },
+  {
+    "number": 5,
+    "symbol": "B",
+    "name": "Boron",
+    "family": "Metalloid",
+    "configuration": "[He]2s2 2p1",
+    "massNumber": 11,
+    "isotopeBasis": "most abundant in NIST composition table",
+    "isotopeEstimated": false
+  },
+  {
+    "number": 6,
+    "symbol": "C",
+    "name": "Carbon",
+    "family": "Nonmetal",
+    "configuration": "[He]2s2 2p2",
+    "massNumber": 12,
+    "isotopeBasis": "most abundant in NIST composition table",
+    "isotopeEstimated": false
+  },
+  {
+    "number": 7,
+    "symbol": "N",
+    "name": "Nitrogen",
+    "family": "Nonmetal",
+    "configuration": "[He] 2s2 2p3",
+    "massNumber": 14,
+    "isotopeBasis": "most abundant in NIST composition table",
+    "isotopeEstimated": false
+  },
+  {
+    "number": 8,
+    "symbol": "O",
+    "name": "Oxygen",
+    "family": "Nonmetal",
+    "configuration": "[He]2s2 2p4",
+    "massNumber": 16,
+    "isotopeBasis": "most abundant in NIST composition table",
+    "isotopeEstimated": false
+  },
+  {
+    "number": 9,
+    "symbol": "F",
+    "name": "Fluorine",
+    "family": "Halogen",
+    "configuration": "[He]2s2 2p5",
+    "massNumber": 19,
+    "isotopeBasis": "most abundant in NIST composition table",
+    "isotopeEstimated": false
+  },
+  {
+    "number": 10,
+    "symbol": "Ne",
+    "name": "Neon",
+    "family": "Noble gas",
+    "configuration": "[He]2s2 2p6",
+    "massNumber": 20,
+    "isotopeBasis": "most abundant in NIST composition table",
+    "isotopeEstimated": false
+  },
+  {
+    "number": 11,
+    "symbol": "Na",
+    "name": "Sodium",
+    "family": "Alkali metal",
+    "configuration": "[Ne]3s1",
+    "massNumber": 23,
+    "isotopeBasis": "most abundant in NIST composition table",
+    "isotopeEstimated": false
+  },
+  {
+    "number": 12,
+    "symbol": "Mg",
+    "name": "Magnesium",
+    "family": "Alkaline earth metal",
+    "configuration": "[Ne]3s2",
+    "massNumber": 24,
+    "isotopeBasis": "most abundant in NIST composition table",
+    "isotopeEstimated": false
+  },
+  {
+    "number": 13,
+    "symbol": "Al",
+    "name": "Aluminum",
+    "family": "Post-transition metal",
+    "configuration": "[Ne]3s2 3p1",
+    "massNumber": 27,
+    "isotopeBasis": "most abundant in NIST composition table",
+    "isotopeEstimated": false
+  },
+  {
+    "number": 14,
+    "symbol": "Si",
+    "name": "Silicon",
+    "family": "Metalloid",
+    "configuration": "[Ne]3s2 3p2",
+    "massNumber": 28,
+    "isotopeBasis": "most abundant in NIST composition table",
+    "isotopeEstimated": false
+  },
+  {
+    "number": 15,
+    "symbol": "P",
+    "name": "Phosphorus",
+    "family": "Nonmetal",
+    "configuration": "[Ne]3s2 3p3",
+    "massNumber": 31,
+    "isotopeBasis": "most abundant in NIST composition table",
+    "isotopeEstimated": false
+  },
+  {
+    "number": 16,
+    "symbol": "S",
+    "name": "Sulfur",
+    "family": "Nonmetal",
+    "configuration": "[Ne]3s2 3p4",
+    "massNumber": 32,
+    "isotopeBasis": "most abundant in NIST composition table",
+    "isotopeEstimated": false
+  },
+  {
+    "number": 17,
+    "symbol": "Cl",
+    "name": "Chlorine",
+    "family": "Halogen",
+    "configuration": "[Ne]3s2 3p5",
+    "massNumber": 35,
+    "isotopeBasis": "most abundant in NIST composition table",
+    "isotopeEstimated": false
+  },
+  {
+    "number": 18,
+    "symbol": "Ar",
+    "name": "Argon",
+    "family": "Noble gas",
+    "configuration": "[Ne]3s2 3p6",
+    "massNumber": 40,
+    "isotopeBasis": "most abundant in NIST composition table",
+    "isotopeEstimated": false
+  },
+  {
+    "number": 19,
+    "symbol": "K",
+    "name": "Potassium",
+    "family": "Alkali metal",
+    "configuration": "[Ar]4s1",
+    "massNumber": 39,
+    "isotopeBasis": "most abundant in NIST composition table",
+    "isotopeEstimated": false
+  },
+  {
+    "number": 20,
+    "symbol": "Ca",
+    "name": "Calcium",
+    "family": "Alkaline earth metal",
+    "configuration": "[Ar]4s2",
+    "massNumber": 40,
+    "isotopeBasis": "most abundant in NIST composition table",
+    "isotopeEstimated": false
+  },
+  {
+    "number": 21,
+    "symbol": "Sc",
+    "name": "Scandium",
+    "family": "Transition metal",
+    "configuration": "[Ar]4s2 3d1",
+    "massNumber": 45,
+    "isotopeBasis": "most abundant in NIST composition table",
+    "isotopeEstimated": false
+  },
+  {
+    "number": 22,
+    "symbol": "Ti",
+    "name": "Titanium",
+    "family": "Transition metal",
+    "configuration": "[Ar]4s2 3d2",
+    "massNumber": 48,
+    "isotopeBasis": "most abundant in NIST composition table",
+    "isotopeEstimated": false
+  },
+  {
+    "number": 23,
+    "symbol": "V",
+    "name": "Vanadium",
+    "family": "Transition metal",
+    "configuration": "[Ar]4s2 3d3",
+    "massNumber": 51,
+    "isotopeBasis": "most abundant in NIST composition table",
+    "isotopeEstimated": false
+  },
+  {
+    "number": 24,
+    "symbol": "Cr",
+    "name": "Chromium",
+    "family": "Transition metal",
+    "configuration": "[Ar]3d5 4s1",
+    "massNumber": 52,
+    "isotopeBasis": "most abundant in NIST composition table",
+    "isotopeEstimated": false
+  },
+  {
+    "number": 25,
+    "symbol": "Mn",
+    "name": "Manganese",
+    "family": "Transition metal",
+    "configuration": "[Ar]4s2 3d5",
+    "massNumber": 55,
+    "isotopeBasis": "most abundant in NIST composition table",
+    "isotopeEstimated": false
+  },
+  {
+    "number": 26,
+    "symbol": "Fe",
+    "name": "Iron",
+    "family": "Transition metal",
+    "configuration": "[Ar]4s2 3d6",
+    "massNumber": 56,
+    "isotopeBasis": "most abundant in NIST composition table",
+    "isotopeEstimated": false
+  },
+  {
+    "number": 27,
+    "symbol": "Co",
+    "name": "Cobalt",
+    "family": "Transition metal",
+    "configuration": "[Ar]4s2 3d7",
+    "massNumber": 59,
+    "isotopeBasis": "most abundant in NIST composition table",
+    "isotopeEstimated": false
+  },
+  {
+    "number": 28,
+    "symbol": "Ni",
+    "name": "Nickel",
+    "family": "Transition metal",
+    "configuration": "[Ar]4s2 3d8",
+    "massNumber": 58,
+    "isotopeBasis": "most abundant in NIST composition table",
+    "isotopeEstimated": false
+  },
+  {
+    "number": 29,
+    "symbol": "Cu",
+    "name": "Copper",
+    "family": "Transition metal",
+    "configuration": "[Ar]4s1 3d10",
+    "massNumber": 63,
+    "isotopeBasis": "most abundant in NIST composition table",
+    "isotopeEstimated": false
+  },
+  {
+    "number": 30,
+    "symbol": "Zn",
+    "name": "Zinc",
+    "family": "Transition metal",
+    "configuration": "[Ar]4s2 3d10",
+    "massNumber": 64,
+    "isotopeBasis": "most abundant in NIST composition table",
+    "isotopeEstimated": false
+  },
+  {
+    "number": 31,
+    "symbol": "Ga",
+    "name": "Gallium",
+    "family": "Post-transition metal",
+    "configuration": "[Ar]4s2 3d10 4p1",
+    "massNumber": 69,
+    "isotopeBasis": "most abundant in NIST composition table",
+    "isotopeEstimated": false
+  },
+  {
+    "number": 32,
+    "symbol": "Ge",
+    "name": "Germanium",
+    "family": "Metalloid",
+    "configuration": "[Ar]4s2 3d10 4p2",
+    "massNumber": 74,
+    "isotopeBasis": "most abundant in NIST composition table",
+    "isotopeEstimated": false
+  },
+  {
+    "number": 33,
+    "symbol": "As",
+    "name": "Arsenic",
+    "family": "Metalloid",
+    "configuration": "[Ar]4s2 3d10 4p3",
+    "massNumber": 75,
+    "isotopeBasis": "most abundant in NIST composition table",
+    "isotopeEstimated": false
+  },
+  {
+    "number": 34,
+    "symbol": "Se",
+    "name": "Selenium",
+    "family": "Nonmetal",
+    "configuration": "[Ar]4s2 3d10 4p4",
+    "massNumber": 80,
+    "isotopeBasis": "most abundant in NIST composition table",
+    "isotopeEstimated": false
+  },
+  {
+    "number": 35,
+    "symbol": "Br",
+    "name": "Bromine",
+    "family": "Halogen",
+    "configuration": "[Ar]4s2 3d10 4p5",
+    "massNumber": 79,
+    "isotopeBasis": "most abundant in NIST composition table",
+    "isotopeEstimated": false
+  },
+  {
+    "number": 36,
+    "symbol": "Kr",
+    "name": "Krypton",
+    "family": "Noble gas",
+    "configuration": "[Ar]4s2 3d10 4p6",
+    "massNumber": 84,
+    "isotopeBasis": "most abundant in NIST composition table",
+    "isotopeEstimated": false
+  },
+  {
+    "number": 37,
+    "symbol": "Rb",
+    "name": "Rubidium",
+    "family": "Alkali metal",
+    "configuration": "[Kr]5s1",
+    "massNumber": 85,
+    "isotopeBasis": "most abundant in NIST composition table",
+    "isotopeEstimated": false
+  },
+  {
+    "number": 38,
+    "symbol": "Sr",
+    "name": "Strontium",
+    "family": "Alkaline earth metal",
+    "configuration": "[Kr]5s2",
+    "massNumber": 88,
+    "isotopeBasis": "most abundant in NIST composition table",
+    "isotopeEstimated": false
+  },
+  {
+    "number": 39,
+    "symbol": "Y",
+    "name": "Yttrium",
+    "family": "Transition metal",
+    "configuration": "[Kr]5s2 4d1",
+    "massNumber": 89,
+    "isotopeBasis": "most abundant in NIST composition table",
+    "isotopeEstimated": false
+  },
+  {
+    "number": 40,
+    "symbol": "Zr",
+    "name": "Zirconium",
+    "family": "Transition metal",
+    "configuration": "[Kr]5s2 4d2",
+    "massNumber": 90,
+    "isotopeBasis": "most abundant in NIST composition table",
+    "isotopeEstimated": false
+  },
+  {
+    "number": 41,
+    "symbol": "Nb",
+    "name": "Niobium",
+    "family": "Transition metal",
+    "configuration": "[Kr]5s1 4d4",
+    "massNumber": 93,
+    "isotopeBasis": "most abundant in NIST composition table",
+    "isotopeEstimated": false
+  },
+  {
+    "number": 42,
+    "symbol": "Mo",
+    "name": "Molybdenum",
+    "family": "Transition metal",
+    "configuration": "[Kr]5s1 4d5",
+    "massNumber": 98,
+    "isotopeBasis": "most abundant in NIST composition table",
+    "isotopeEstimated": false
+  },
+  {
+    "number": 43,
+    "symbol": "Tc",
+    "name": "Technetium",
+    "family": "Transition metal",
+    "configuration": "[Kr]5s2 4d5",
+    "massNumber": 97,
+    "isotopeBasis": "selected isotope listed by NIST; no natural-abundance claim",
+    "isotopeEstimated": false
+  },
+  {
+    "number": 44,
+    "symbol": "Ru",
+    "name": "Ruthenium",
+    "family": "Transition metal",
+    "configuration": "[Kr]5s1 4d7",
+    "massNumber": 102,
+    "isotopeBasis": "most abundant in NIST composition table",
+    "isotopeEstimated": false
+  },
+  {
+    "number": 45,
+    "symbol": "Rh",
+    "name": "Rhodium",
+    "family": "Transition metal",
+    "configuration": "[Kr]5s1 4d8",
+    "massNumber": 103,
+    "isotopeBasis": "most abundant in NIST composition table",
+    "isotopeEstimated": false
+  },
+  {
+    "number": 46,
+    "symbol": "Pd",
+    "name": "Palladium",
+    "family": "Transition metal",
+    "configuration": "[Kr]4d10",
+    "massNumber": 106,
+    "isotopeBasis": "most abundant in NIST composition table",
+    "isotopeEstimated": false
+  },
+  {
+    "number": 47,
+    "symbol": "Ag",
+    "name": "Silver",
+    "family": "Transition metal",
+    "configuration": "[Kr]5s1 4d10",
+    "massNumber": 107,
+    "isotopeBasis": "most abundant in NIST composition table",
+    "isotopeEstimated": false
+  },
+  {
+    "number": 48,
+    "symbol": "Cd",
+    "name": "Cadmium",
+    "family": "Transition metal",
+    "configuration": "[Kr]5s2 4d10",
+    "massNumber": 114,
+    "isotopeBasis": "most abundant in NIST composition table",
+    "isotopeEstimated": false
+  },
+  {
+    "number": 49,
+    "symbol": "In",
+    "name": "Indium",
+    "family": "Post-transition metal",
+    "configuration": "[Kr]5s2 4d10 5p1",
+    "massNumber": 115,
+    "isotopeBasis": "most abundant in NIST composition table",
+    "isotopeEstimated": false
+  },
+  {
+    "number": 50,
+    "symbol": "Sn",
+    "name": "Tin",
+    "family": "Post-transition metal",
+    "configuration": "[Kr]5s2 4d10 5p2",
+    "massNumber": 120,
+    "isotopeBasis": "most abundant in NIST composition table",
+    "isotopeEstimated": false
+  },
+  {
+    "number": 51,
+    "symbol": "Sb",
+    "name": "Antimony",
+    "family": "Metalloid",
+    "configuration": "[Kr]5s2 4d10 5p3",
+    "massNumber": 121,
+    "isotopeBasis": "most abundant in NIST composition table",
+    "isotopeEstimated": false
+  },
+  {
+    "number": 52,
+    "symbol": "Te",
+    "name": "Tellurium",
+    "family": "Metalloid",
+    "configuration": "[Kr]5s2 4d10 5p4",
+    "massNumber": 130,
+    "isotopeBasis": "most abundant in NIST composition table",
+    "isotopeEstimated": false
+  },
+  {
+    "number": 53,
+    "symbol": "I",
+    "name": "Iodine",
+    "family": "Halogen",
+    "configuration": "[Kr]5s2 4d10 5p5",
+    "massNumber": 127,
+    "isotopeBasis": "most abundant in NIST composition table",
+    "isotopeEstimated": false
+  },
+  {
+    "number": 54,
+    "symbol": "Xe",
+    "name": "Xenon",
+    "family": "Noble gas",
+    "configuration": "[Kr]5s2 4d10 5p6",
+    "massNumber": 132,
+    "isotopeBasis": "most abundant in NIST composition table",
+    "isotopeEstimated": false
+  },
+  {
+    "number": 55,
+    "symbol": "Cs",
+    "name": "Cesium",
+    "family": "Alkali metal",
+    "configuration": "[Xe]6s1",
+    "massNumber": 133,
+    "isotopeBasis": "most abundant in NIST composition table",
+    "isotopeEstimated": false
+  },
+  {
+    "number": 56,
+    "symbol": "Ba",
+    "name": "Barium",
+    "family": "Alkaline earth metal",
+    "configuration": "[Xe]6s2",
+    "massNumber": 138,
+    "isotopeBasis": "most abundant in NIST composition table",
+    "isotopeEstimated": false
+  },
+  {
+    "number": 57,
+    "symbol": "La",
+    "name": "Lanthanum",
+    "family": "Lanthanide",
+    "configuration": "[Xe]6s2 5d1",
+    "massNumber": 139,
+    "isotopeBasis": "most abundant in NIST composition table",
+    "isotopeEstimated": false
+  },
+  {
+    "number": 58,
+    "symbol": "Ce",
+    "name": "Cerium",
+    "family": "Lanthanide",
+    "configuration": "[Xe]6s2 4f1 5d1",
+    "massNumber": 140,
+    "isotopeBasis": "most abundant in NIST composition table",
+    "isotopeEstimated": false
+  },
+  {
+    "number": 59,
+    "symbol": "Pr",
+    "name": "Praseodymium",
+    "family": "Lanthanide",
+    "configuration": "[Xe]6s2 4f3",
+    "massNumber": 141,
+    "isotopeBasis": "most abundant in NIST composition table",
+    "isotopeEstimated": false
+  },
+  {
+    "number": 60,
+    "symbol": "Nd",
+    "name": "Neodymium",
+    "family": "Lanthanide",
+    "configuration": "[Xe]6s2 4f4",
+    "massNumber": 142,
+    "isotopeBasis": "most abundant in NIST composition table",
+    "isotopeEstimated": false
+  },
+  {
+    "number": 61,
+    "symbol": "Pm",
+    "name": "Promethium",
+    "family": "Lanthanide",
+    "configuration": "[Xe]6s2 4f5",
+    "massNumber": 145,
+    "isotopeBasis": "selected isotope listed by NIST; no natural-abundance claim",
+    "isotopeEstimated": false
+  },
+  {
+    "number": 62,
+    "symbol": "Sm",
+    "name": "Samarium",
+    "family": "Lanthanide",
+    "configuration": "[Xe]6s2 4f6",
+    "massNumber": 152,
+    "isotopeBasis": "most abundant in NIST composition table",
+    "isotopeEstimated": false
+  },
+  {
+    "number": 63,
+    "symbol": "Eu",
+    "name": "Europium",
+    "family": "Lanthanide",
+    "configuration": "[Xe]6s2 4f7",
+    "massNumber": 153,
+    "isotopeBasis": "most abundant in NIST composition table",
+    "isotopeEstimated": false
+  },
+  {
+    "number": 64,
+    "symbol": "Gd",
+    "name": "Gadolinium",
+    "family": "Lanthanide",
+    "configuration": "[Xe]6s2 4f7 5d1",
+    "massNumber": 158,
+    "isotopeBasis": "most abundant in NIST composition table",
+    "isotopeEstimated": false
+  },
+  {
+    "number": 65,
+    "symbol": "Tb",
+    "name": "Terbium",
+    "family": "Lanthanide",
+    "configuration": "[Xe]6s2 4f9",
+    "massNumber": 159,
+    "isotopeBasis": "most abundant in NIST composition table",
+    "isotopeEstimated": false
+  },
+  {
+    "number": 66,
+    "symbol": "Dy",
+    "name": "Dysprosium",
+    "family": "Lanthanide",
+    "configuration": "[Xe]6s2 4f10",
+    "massNumber": 164,
+    "isotopeBasis": "most abundant in NIST composition table",
+    "isotopeEstimated": false
+  },
+  {
+    "number": 67,
+    "symbol": "Ho",
+    "name": "Holmium",
+    "family": "Lanthanide",
+    "configuration": "[Xe]6s2 4f11",
+    "massNumber": 165,
+    "isotopeBasis": "most abundant in NIST composition table",
+    "isotopeEstimated": false
+  },
+  {
+    "number": 68,
+    "symbol": "Er",
+    "name": "Erbium",
+    "family": "Lanthanide",
+    "configuration": "[Xe]6s2 4f12",
+    "massNumber": 166,
+    "isotopeBasis": "most abundant in NIST composition table",
+    "isotopeEstimated": false
+  },
+  {
+    "number": 69,
+    "symbol": "Tm",
+    "name": "Thulium",
+    "family": "Lanthanide",
+    "configuration": "[Xe]6s2 4f13",
+    "massNumber": 169,
+    "isotopeBasis": "most abundant in NIST composition table",
+    "isotopeEstimated": false
+  },
+  {
+    "number": 70,
+    "symbol": "Yb",
+    "name": "Ytterbium",
+    "family": "Lanthanide",
+    "configuration": "[Xe]6s2 4f14",
+    "massNumber": 174,
+    "isotopeBasis": "most abundant in NIST composition table",
+    "isotopeEstimated": false
+  },
+  {
+    "number": 71,
+    "symbol": "Lu",
+    "name": "Lutetium",
+    "family": "Lanthanide",
+    "configuration": "[Xe]6s2 4f14 5d1",
+    "massNumber": 175,
+    "isotopeBasis": "most abundant in NIST composition table",
+    "isotopeEstimated": false
+  },
+  {
+    "number": 72,
+    "symbol": "Hf",
+    "name": "Hafnium",
+    "family": "Transition metal",
+    "configuration": "[Xe]6s2 4f14 5d2",
+    "massNumber": 180,
+    "isotopeBasis": "most abundant in NIST composition table",
+    "isotopeEstimated": false
+  },
+  {
+    "number": 73,
+    "symbol": "Ta",
+    "name": "Tantalum",
+    "family": "Transition metal",
+    "configuration": "[Xe]6s2 4f14 5d3",
+    "massNumber": 181,
+    "isotopeBasis": "most abundant in NIST composition table",
+    "isotopeEstimated": false
+  },
+  {
+    "number": 74,
+    "symbol": "W",
+    "name": "Tungsten",
+    "family": "Transition metal",
+    "configuration": "[Xe]6s2 4f14 5d4",
+    "massNumber": 184,
+    "isotopeBasis": "most abundant in NIST composition table",
+    "isotopeEstimated": false
+  },
+  {
+    "number": 75,
+    "symbol": "Re",
+    "name": "Rhenium",
+    "family": "Transition metal",
+    "configuration": "[Xe]6s2 4f14 5d5",
+    "massNumber": 187,
+    "isotopeBasis": "most abundant in NIST composition table",
+    "isotopeEstimated": false
+  },
+  {
+    "number": 76,
+    "symbol": "Os",
+    "name": "Osmium",
+    "family": "Transition metal",
+    "configuration": "[Xe]6s2 4f14 5d6",
+    "massNumber": 192,
+    "isotopeBasis": "most abundant in NIST composition table",
+    "isotopeEstimated": false
+  },
+  {
+    "number": 77,
+    "symbol": "Ir",
+    "name": "Iridium",
+    "family": "Transition metal",
+    "configuration": "[Xe]6s2 4f14 5d7",
+    "massNumber": 193,
+    "isotopeBasis": "most abundant in NIST composition table",
+    "isotopeEstimated": false
+  },
+  {
+    "number": 78,
+    "symbol": "Pt",
+    "name": "Platinum",
+    "family": "Transition metal",
+    "configuration": "[Xe]6s1 4f14 5d9",
+    "massNumber": 195,
+    "isotopeBasis": "most abundant in NIST composition table",
+    "isotopeEstimated": false
+  },
+  {
+    "number": 79,
+    "symbol": "Au",
+    "name": "Gold",
+    "family": "Transition metal",
+    "configuration": "[Xe]6s1 4f14 5d10",
+    "massNumber": 197,
+    "isotopeBasis": "most abundant in NIST composition table",
+    "isotopeEstimated": false
+  },
+  {
+    "number": 80,
+    "symbol": "Hg",
+    "name": "Mercury",
+    "family": "Transition metal",
+    "configuration": "[Xe]6s2 4f14 5d10",
+    "massNumber": 202,
+    "isotopeBasis": "most abundant in NIST composition table",
+    "isotopeEstimated": false
+  },
+  {
+    "number": 81,
+    "symbol": "Tl",
+    "name": "Thallium",
+    "family": "Post-transition metal",
+    "configuration": "[Xe]6s2 4f14 5d10 6p1",
+    "massNumber": 205,
+    "isotopeBasis": "most abundant in NIST composition table",
+    "isotopeEstimated": false
+  },
+  {
+    "number": 82,
+    "symbol": "Pb",
+    "name": "Lead",
+    "family": "Post-transition metal",
+    "configuration": "[Xe]6s2 4f14 5d10 6p2",
+    "massNumber": 208,
+    "isotopeBasis": "most abundant in NIST composition table",
+    "isotopeEstimated": false
+  },
+  {
+    "number": 83,
+    "symbol": "Bi",
+    "name": "Bismuth",
+    "family": "Post-transition metal",
+    "configuration": "[Xe]6s2 4f14 5d10 6p3",
+    "massNumber": 209,
+    "isotopeBasis": "most abundant in NIST composition table",
+    "isotopeEstimated": false
+  },
+  {
+    "number": 84,
+    "symbol": "Po",
+    "name": "Polonium",
+    "family": "Metalloid",
+    "configuration": "[Xe]6s2 4f14 5d10 6p4",
+    "massNumber": 209,
+    "isotopeBasis": "selected isotope listed by NIST; no natural-abundance claim",
+    "isotopeEstimated": false
+  },
+  {
+    "number": 85,
+    "symbol": "At",
+    "name": "Astatine",
+    "family": "Halogen",
+    "configuration": "[Xe]6s2 4f14 5d10 6p5",
+    "massNumber": 210,
+    "isotopeBasis": "selected isotope listed by NIST; no natural-abundance claim",
+    "isotopeEstimated": false
+  },
+  {
+    "number": 86,
+    "symbol": "Rn",
+    "name": "Radon",
+    "family": "Noble gas",
+    "configuration": "[Xe]6s2 4f14 5d10 6p6",
+    "massNumber": 211,
+    "isotopeBasis": "selected isotope listed by NIST; no natural-abundance claim",
+    "isotopeEstimated": false
+  },
+  {
+    "number": 87,
+    "symbol": "Fr",
+    "name": "Francium",
+    "family": "Alkali metal",
+    "configuration": "[Rn]7s1",
+    "massNumber": 223,
+    "isotopeBasis": "selected isotope listed by NIST; no natural-abundance claim",
+    "isotopeEstimated": false
+  },
+  {
+    "number": 88,
+    "symbol": "Ra",
+    "name": "Radium",
+    "family": "Alkaline earth metal",
+    "configuration": "[Rn]7s2",
+    "massNumber": 223,
+    "isotopeBasis": "selected isotope listed by NIST; no natural-abundance claim",
+    "isotopeEstimated": false
+  },
+  {
+    "number": 89,
+    "symbol": "Ac",
+    "name": "Actinium",
+    "family": "Actinide",
+    "configuration": "[Rn]7s2 6d1",
+    "massNumber": 227,
+    "isotopeBasis": "selected isotope listed by NIST; no natural-abundance claim",
+    "isotopeEstimated": false
+  },
+  {
+    "number": 90,
+    "symbol": "Th",
+    "name": "Thorium",
+    "family": "Actinide",
+    "configuration": "[Rn]7s2 6d2",
+    "massNumber": 232,
+    "isotopeBasis": "most abundant in NIST composition table",
+    "isotopeEstimated": false
+  },
+  {
+    "number": 91,
+    "symbol": "Pa",
+    "name": "Protactinium",
+    "family": "Actinide",
+    "configuration": "[Rn]7s2 5f2 6d1",
+    "massNumber": 231,
+    "isotopeBasis": "most abundant in NIST composition table",
+    "isotopeEstimated": false
+  },
+  {
+    "number": 92,
+    "symbol": "U",
+    "name": "Uranium",
+    "family": "Actinide",
+    "configuration": "[Rn]7s2 5f3 6d1",
+    "massNumber": 238,
+    "isotopeBasis": "most abundant in NIST composition table",
+    "isotopeEstimated": false
+  },
+  {
+    "number": 93,
+    "symbol": "Np",
+    "name": "Neptunium",
+    "family": "Actinide",
+    "configuration": "[Rn]7s2 5f4 6d1",
+    "massNumber": 236,
+    "isotopeBasis": "selected isotope listed by NIST; no natural-abundance claim",
+    "isotopeEstimated": false
+  },
+  {
+    "number": 94,
+    "symbol": "Pu",
+    "name": "Plutonium",
+    "family": "Actinide",
+    "configuration": "[Rn]7s2 5f6",
+    "massNumber": 238,
+    "isotopeBasis": "selected isotope listed by NIST; no natural-abundance claim",
+    "isotopeEstimated": false
+  },
+  {
+    "number": 95,
+    "symbol": "Am",
+    "name": "Americium",
+    "family": "Actinide",
+    "configuration": "[Rn]7s2 5f7",
+    "massNumber": 241,
+    "isotopeBasis": "selected isotope listed by NIST; no natural-abundance claim",
+    "isotopeEstimated": false
+  },
+  {
+    "number": 96,
+    "symbol": "Cm",
+    "name": "Curium",
+    "family": "Actinide",
+    "configuration": "[Rn]7s2 5f7 6d1",
+    "massNumber": 243,
+    "isotopeBasis": "selected isotope listed by NIST; no natural-abundance claim",
+    "isotopeEstimated": false
+  },
+  {
+    "number": 97,
+    "symbol": "Bk",
+    "name": "Berkelium",
+    "family": "Actinide",
+    "configuration": "[Rn]7s2 5f9",
+    "massNumber": 247,
+    "isotopeBasis": "selected isotope listed by NIST; no natural-abundance claim",
+    "isotopeEstimated": false
+  },
+  {
+    "number": 98,
+    "symbol": "Cf",
+    "name": "Californium",
+    "family": "Actinide",
+    "configuration": "[Rn]7s2 5f10",
+    "massNumber": 249,
+    "isotopeBasis": "selected isotope listed by NIST; no natural-abundance claim",
+    "isotopeEstimated": false
+  },
+  {
+    "number": 99,
+    "symbol": "Es",
+    "name": "Einsteinium",
+    "family": "Actinide",
+    "configuration": "[Rn]7s2 5f11",
+    "massNumber": 252,
+    "isotopeBasis": "selected isotope listed by NIST; no natural-abundance claim",
+    "isotopeEstimated": false
+  },
+  {
+    "number": 100,
+    "symbol": "Fm",
+    "name": "Fermium",
+    "family": "Actinide",
+    "configuration": "[Rn] 5f12 7s2",
+    "massNumber": 257,
+    "isotopeBasis": "selected isotope listed by NIST; no natural-abundance claim",
+    "isotopeEstimated": false
+  },
+  {
+    "number": 101,
+    "symbol": "Md",
+    "name": "Mendelevium",
+    "family": "Actinide",
+    "configuration": "[Rn]7s2 5f13",
+    "massNumber": 258,
+    "isotopeBasis": "selected isotope listed by NIST; no natural-abundance claim",
+    "isotopeEstimated": false
+  },
+  {
+    "number": 102,
+    "symbol": "No",
+    "name": "Nobelium",
+    "family": "Actinide",
+    "configuration": "[Rn]7s2 5f14",
+    "massNumber": 259,
+    "isotopeBasis": "selected isotope listed by NIST; no natural-abundance claim",
+    "isotopeEstimated": true
+  },
+  {
+    "number": 103,
+    "symbol": "Lr",
+    "name": "Lawrencium",
+    "family": "Actinide",
+    "configuration": "[Rn]5f14 7s2 7p1",
+    "massNumber": 262,
+    "isotopeBasis": "selected isotope listed by NIST; no natural-abundance claim",
+    "isotopeEstimated": true
+  },
+  {
+    "number": 104,
+    "symbol": "Rf",
+    "name": "Rutherfordium",
+    "family": "Transition metal",
+    "configuration": "[Rn]7s2 5f14 6d2",
+    "massNumber": 267,
+    "isotopeBasis": "selected isotope listed by NIST; no natural-abundance claim",
+    "isotopeEstimated": true
+  },
+  {
+    "number": 105,
+    "symbol": "Db",
+    "name": "Dubnium",
+    "family": "Transition metal",
+    "configuration": "[Rn]7s2 5f14 6d3",
+    "massNumber": 268,
+    "isotopeBasis": "selected isotope listed by NIST; no natural-abundance claim",
+    "isotopeEstimated": true
+  },
+  {
+    "number": 106,
+    "symbol": "Sg",
+    "name": "Seaborgium",
+    "family": "Transition metal",
+    "configuration": "[Rn]7s2 5f14 6d4",
+    "massNumber": 271,
+    "isotopeBasis": "selected isotope listed by NIST; no natural-abundance claim",
+    "isotopeEstimated": true
+  },
+  {
+    "number": 107,
+    "symbol": "Bh",
+    "name": "Bohrium",
+    "family": "Transition metal",
+    "configuration": "[Rn]7s2 5f14 6d5",
+    "massNumber": 272,
+    "isotopeBasis": "selected isotope listed by NIST; no natural-abundance claim",
+    "isotopeEstimated": true
+  },
+  {
+    "number": 108,
+    "symbol": "Hs",
+    "name": "Hassium",
+    "family": "Transition metal",
+    "configuration": "[Rn]7s2 5f14 6d6",
+    "massNumber": 270,
+    "isotopeBasis": "selected isotope listed by NIST; no natural-abundance claim",
+    "isotopeEstimated": true
+  },
+  {
+    "number": 109,
+    "symbol": "Mt",
+    "name": "Meitnerium",
+    "family": "Transition metal",
+    "configuration": "[Rn]7s2 5f14 6d7 (calculated)",
+    "massNumber": 276,
+    "isotopeBasis": "selected isotope listed by NIST; no natural-abundance claim",
+    "isotopeEstimated": true
+  },
+  {
+    "number": 110,
+    "symbol": "Ds",
+    "name": "Darmstadtium",
+    "family": "Transition metal",
+    "configuration": "[Rn]7s2 5f14 6d8 (predicted)",
+    "massNumber": 281,
+    "isotopeBasis": "selected isotope listed by NIST; no natural-abundance claim",
+    "isotopeEstimated": true
+  },
+  {
+    "number": 111,
+    "symbol": "Rg",
+    "name": "Roentgenium",
+    "family": "Transition metal",
+    "configuration": "[Rn]7s2 5f14 6d9 (predicted)",
+    "massNumber": 280,
+    "isotopeBasis": "selected isotope listed by NIST; no natural-abundance claim",
+    "isotopeEstimated": true
+  },
+  {
+    "number": 112,
+    "symbol": "Cn",
+    "name": "Copernicium",
+    "family": "Transition metal",
+    "configuration": "[Rn]7s2 5f14 6d10 (predicted)",
+    "massNumber": 285,
+    "isotopeBasis": "selected isotope listed by NIST; no natural-abundance claim",
+    "isotopeEstimated": true
+  },
+  {
+    "number": 113,
+    "symbol": "Nh",
+    "name": "Nihonium",
+    "family": "Post-transition metal",
+    "configuration": "[Rn]5f14 6d10 7s2 7p1 (predicted)",
+    "massNumber": 284,
+    "isotopeBasis": "selected isotope listed by NIST; no natural-abundance claim",
+    "isotopeEstimated": true
+  },
+  {
+    "number": 114,
+    "symbol": "Fl",
+    "name": "Flerovium",
+    "family": "Post-transition metal",
+    "configuration": "[Rn]7s2 7p2 5f14 6d10 (predicted)",
+    "massNumber": 289,
+    "isotopeBasis": "selected isotope listed by NIST; no natural-abundance claim",
+    "isotopeEstimated": true
+  },
+  {
+    "number": 115,
+    "symbol": "Mc",
+    "name": "Moscovium",
+    "family": "Post-transition metal",
+    "configuration": "[Rn]7s2 7p3 5f14 6d10 (predicted)",
+    "massNumber": 288,
+    "isotopeBasis": "selected isotope listed by NIST; no natural-abundance claim",
+    "isotopeEstimated": true
+  },
+  {
+    "number": 116,
+    "symbol": "Lv",
+    "name": "Livermorium",
+    "family": "Post-transition metal",
+    "configuration": "[Rn]7s2 7p4 5f14 6d10 (predicted)",
+    "massNumber": 293,
+    "isotopeBasis": "selected isotope listed by NIST; no natural-abundance claim",
+    "isotopeEstimated": true
+  },
+  {
+    "number": 117,
+    "symbol": "Ts",
+    "name": "Tennessine",
+    "family": "Halogen",
+    "configuration": "[Rn]7s2 7p5 5f14 6d10 (predicted)",
+    "massNumber": 294,
+    "isotopeBasis": "selected isotope in IUPAC 2022 periodic table",
+    "isotopeEstimated": false
+  },
+  {
+    "number": 118,
+    "symbol": "Og",
+    "name": "Oganesson",
+    "family": "Noble gas",
+    "configuration": "[Rn]7s2 7p6 5f14 6d10 (predicted)",
+    "massNumber": 294,
+    "isotopeBasis": "selected isotope listed by NIST; no natural-abundance claim",
+    "isotopeEstimated": true
+  }
+]

@@ -6,7 +6,7 @@ const registry = () => import('../src/models.js').catch(() => ({}));
 test('model registry keeps mammalian defaults and scopes plant and budding yeast biology', async () => {
   const { cellModels, getCellModel } = await registry();
   assert.ok(cellModels, 'a cell-model registry exists');
-  assert.deepEqual(Object.keys(cellModels), ['mammalian', 'plant', 'fungal']);
+  assert.deepEqual(Object.keys(cellModels).slice(0, 3), ['mammalian', 'plant', 'fungal']);
   const { model, structures } = await import('../src/data.js');
   assert.equal(getCellModel().cellType, model.cellType);
   assert.equal(getCellModel().structures, structures, 'original mammalian field notes remain intact');

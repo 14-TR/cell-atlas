@@ -73,4 +73,6 @@
 @media(max-width:700px){.top-nav{gap:8px}.model-picker select{width:126px;font-size:10px;padding-left:7px;padding-right:16px}.top-nav button{padding:0 3px}}
 @media(max-width:370px){.model-picker select{width:111px}.top-nav{gap:4px}}
 @media(max-height:500px) and (orientation:landscape){.model-picker select{width:158px}}
+.atlas-link{min-height:44px;display:inline-flex;align-items:center;gap:8px;font-size:11px;color:var(--accent);white-space:nowrap}
+@media(max-width:370px){.atlas-link{font-size:10px;gap:4px}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;scroll-behavior:auto!important}}

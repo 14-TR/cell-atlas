@@ -1,6 +1,6 @@
 # Cell Atlas
 
-An interactive, mobile-first Three.js atlas with three selectable, scientifically scoped specimens: a **generalized mammalian interphase cell**, a **generalized photosynthetic plant cell**, and an **early-budded Saccharomyces cerevisiae cell**. Plain ES modules and Vite. Copyright © TR Ingram.
+An interactive, mobile-first Three.js atlas with six selectable, scientifically scoped specimens: a **generalized mammalian interphase cell**, a **generalized photosynthetic plant cell**, an **early-budded Saccharomyces cerevisiae cell**, a **motile Escherichia coli bacterium**, a **generalized multipolar neuron**, and a **mature human red blood cell**. A separate **118-element periodic table** opens interactive 3D educational atom models. Plain ES modules and Vite. Copyright © TR Ingram.
 
 ## Run
 
@@ -29,7 +29,7 @@ The browser tests use `BASE_URL` (default `http://127.0.0.1:4175`), except produ
 
 ## Explore
 
-- The always-available **Cell model** selector switches between mammalian, plant and budding yeast specimens. Switching loads that specimen’s structure index, labels, field notes and reference library, selects its default structure, resets sectioning/isolation/boundary visibility and camera framing, and pauses rotation. Rendering quality and label preferences are retained. The selector also works in reading mode.
+- The always-available **Cell model** selector switches between mammalian, plant, budding yeast, E. coli, neuron and mature human red blood cell specimens. Switching loads that specimen’s structure index, labels, field notes and reference library, selects its default structure, resets sectioning/isolation/boundary visibility and camera framing, and pauses rotation. Rendering quality and label preferences are retained. The selector also works in reading mode.
 
 - One finger / left drag: orbit. Pinch / wheel: zoom. Two fingers / right drag: pan.
 - Tap a large rendered structure, or use the color-keyed structure index, to select it. The index also covers tiny particles and the membrane.
@@ -42,6 +42,27 @@ The browser tests use `BASE_URL` (default `http://127.0.0.1:4175`), except produ
 - Field notes and Sources & accuracy include direct NCBI Bookshelf and peer-reviewed PMC references scoped to the current model. Native dialogs support Escape and focus management.
 - `?webgl=off` exercises the accessible reading-mode fallback. Initialization failure and context loss also fall back to the structure guide.
 
+## Elements
+
+Choose **Periodic table** in the cell footer, or open `atoms.html`. All 118 buttons occupy the conventional 18-column table with detached lanthanide/actinide rows. The table scrolls horizontally on narrow phones without shrinking touch targets. Search by name, symbol or atomic number; Enter opens the first result. Table arrows navigate spatially; Home/End move within a row.
+
+Each button opens a native dialog with a real Three.js atom, mouse/touch orbit, pinch/wheel zoom, keyboard arrows/+/-/Home, explicit zoom/reset controls, element details and neutral electron shell counts. Escape/Close restores focus. The close control stays visible while scrolling notes. One renderer is reused; each atom's geometry/material/instance buffers are released on close or replacement. Context loss and `atoms.html?webgl=off` retain all text and selection in reading mode.
+
+**Educational shell model, not to scale. Rings are not literal electron trajectories.** Nucleus packing and particle positions are illustrative, not a quantum simulation. Neutrons belong to the named representative isotope, not a rounded average atomic weight. Configurations come from PubChem, with NIST's 7p Lawrencium correction; superheavy predictions are flagged. See [source, isotope and licensing details](DATA-SOURCES.md).
+
+## Expansion verification
+
+With the app running on an explicitly chosen port and `dist/` freshly built:
+
+```sh
+npm test
+npm run build
+BASE_URL=http://127.0.0.1:4175 npm run test:expansion
+BASE_URL=http://127.0.0.1:4175 npm run test:baseline-browser
+```
+
+The expansion suite covers six cells at five viewport sizes, all 118 element buttons and geometry/particle totals, H/C/Fe/Au/U/Og renders, keyboard/scrolling, real CDP touch orbit/pinch, 48 atom disposal cycles, 24 cell switches, context loss, forced fallback and production `/cell-atlas/` navigation. Baseline browser scripts execute unchanged in an isolated output directory, preserving historical evidence. GPU screenshots remain in `evidence/expansion/` but are ignored by Git; small JSON/text receipts and the review report can be staged separately. No physical-device/Safari performance claim is made.
+
 ## Geometry
 
 The original mammalian specimen retains its geometry, colors and twelve structures. The preservation test compares SHA-256 fingerprints of low-quality material names and vertex/index/instance buffers from the candidate and an independent, byte-preserved pre-change generator on the same runtime. The test-only fixture comes from commit `e7c9968c2c2b2ca465430c60eecc5070cd3472e8`; literal source-integrity hashes protect both fixture files, and tests require no Git history. Historical platform-specific geometry hashes are receipts, not cross-runtime oracles; see [CI follow-up](evidence/plant-fungal/ci-followup/README.md).
@@ -51,6 +72,12 @@ Seeded procedural geometry includes two perforated nuclear envelopes with styliz
 The **plant** specimen has fourteen selectable structures: its own rounded box-like primary wall with crossed fiber texture, a separate inner plasma membrane, a large tonoplast-bounded vacuole, six chloroplast cutaways with two envelope membranes and stacked thylakoids joined by lamellae, two discrete Golgi stacks, and peripheral shared organelles. Animal-style lysosomes are replaced by the lytic vacuole. No adjacent cells, plasmodesmata or woody secondary wall are modeled.
 
 The **fungal** specimen also has fourteen structures. A continuous mother–neck–bud surface defines the wall and inner membrane (not two overlapping spheres). A neck ring and older scars suggest chitin-rich regions; the cytoplasmic connection remains open. It has a lytic vacuole, dispersed individual Golgi cisternae including one in the bud, and an ER extension into the bud. It has no chloroplasts or cellulose plant wall; it is not a hyphal mold or a universal fungal cell.
+
+The **bacterium** is a motile vegetative E. coli: a rod-shaped cutaway with separate inner membrane, peptidoglycan wall and outer membrane, unenclosed DNA, paired 70S ribosome glyphs and shortened peritrichous flagella. It has no eukaryotic organelles.
+
+The **neuron** has its own multipolar silhouette: branching dendrites, a cutaway soma/nucleus with simplified Nissl substance and mitochondria, a continuous shortened unmyelinated axon, and terminal branches. It is not a complete brain-region reconstruction; glia, molecular channels and synaptic partners are omitted.
+
+The **mature human red blood cell** is a biconcave disc, with no nucleus, ER, Golgi, ribosomes or mitochondria. A transparent display sector exposes enlarged hemoglobin glyphs and a simplified membrane skeleton; the central depression is not a hole. Geometry tests check that the skeleton stays beneath the membrane.
 
 Repeated small structures are instanced. Static geometry is merged by material/selection group. Model/quality replacement disposes geometry, materials and instance buffers; repeated switching is tested for stable geometry counts. Balanced mammalian rendering uses approximately 659k triangles and 42 draw calls in the tested overview; plant and yeast are denser and performance is device-dependent. DPR caps are 1.0 / 1.5 / 1.75 for efficient / balanced / detailed. Curve tessellation changes with quality. Scene rendering is skipped in hidden tabs.
 
@@ -65,10 +92,15 @@ Automated science checks verify **metadata and generated-geometry invariants**, 
 ## Files
 
 - `src/data.js` — preserved mammalian descriptions, disclaimers, reference mapping and seed.
-- `src/models.js` — three-model registry, scoped biology, reference library, captions and labels.
+- `src/models.js` — six-model registry, scoped biology, reference library, captions and labels.
 - `src/walled-cell.js` — plant/yeast outlines, layouts, vacuoles, chloroplasts and bud structures.
 - `src/cell.js` — deterministic procedural meshes, instancing, geometry/material grouping.
-- `src/main.js` — renderer, selection, controls, dialogs, fallback, diagnostics.
+- `src/main.js` — cell renderer, selection, controls, dialogs, fallback, diagnostics.
+- `src/specialized-models.js`, `src/specialized-cell.js` — scoped new specimen notes and independent geometry generators.
+- `atoms.html`, `src/atoms-main.js`, `src/atoms.css` — separate periodic-table entry and accessible element dialog.
+- `src/elements.js`, `src/element-records.json` — sourced neutral-atom configurations, isotope choices and table positions.
+- `src/atom.js`, `src/atom-viewer.js` — disposable atom geometry and interactive viewer.
+- `DATA-SOURCES.md`, `scripts/prepare-elements.py` — provenance, source notices and reproducible factual extraction.
 - `src/style.css`, `index.html` — responsive Explore surface and inspector.
 - `tests/` — unit, browser, responsive, touch, and production-subpath tests.
 - `evidence/` — actual browser screenshots and JSON receipts, not mockups.

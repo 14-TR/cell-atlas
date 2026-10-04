@@ -2,6 +2,7 @@ import * as THREE from 'three';
 import { mergeGeometries } from 'three/addons/utils/BufferGeometryUtils.js';
 import { model } from './data.js';
 import { getCellModel } from './models.js';
+import { createSpecializedCell } from './specialized-cell.js';
 import { plantLayout, fungalLayout, inPlant, inYeast, inVacuole, buildPlant, buildFungal } from './walled-cell.js';
 
 export function seededRandom(seed = model.seed) {
@@ -28,6 +29,7 @@ function surface(fn, nu = 48, nv = 20, keep) {
 
 export function createCell({ quality = 'balanced', modelId = 'mammalian' } = {}) {
   const definition = getCellModel(modelId), { structures } = definition;
+  if (['bacterium','neuron','red-blood-cell'].includes(modelId)) return createSpecializedCell(definition, quality);
   const layout = modelId === 'plant' ? plantLayout : modelId === 'fungal' ? fungalLayout : null;
   const rng = seededRandom(definition.seed), root = new THREE.Group(), groups = new Map(), batches = new Map();
   const assemblyIds = new Set(['nucleus','nucleolus','rough-er','smooth-er']);

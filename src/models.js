@@ -1,9 +1,10 @@
 import { structures as mammalianStructures, model as mammalianModel, sources } from './data.js';
+import { specializedModels, specializedSources } from './specialized-models.js';
 
 // Shared field notes describe conserved eukaryotic structures. Overrides below
 // keep taxon-specific anatomy out of the other models, without editing mammals.
 export const modelSources = {
-  ...sources,
+  ...sources, ...specializedSources,
   plantWall: { title: 'The plant cell wall—dynamic, strong, and adaptable (Plant Cell)', url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC11062476/' },
   chloroplast: { title: 'Chloroplast evolution, structure and functions', url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC4075315/' },
   plantVacuole: { title: 'A Review of Plant Vacuoles: Formation, Located Proteins, and Functions', url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC6783984/' },
@@ -113,6 +114,7 @@ export const cellModels = {
     disclaimer: `An early-budded Saccharomyces cerevisiae interphase cell, not a representation of all fungi or a hyphal mold. ${limits} Bud size and scars are illustrative, not a timed cell-cycle reconstruction.`,
     accuracy: 'A budding yeast, not all fungi: a glucan/mannoprotein/chitin wall, lytic vacuole, open bud neck and dispersed unstacked Golgi cisternae. No chloroplasts, cellulose plant wall, completed septum or mitotic spindle. Organelle inheritance is simplified.',
     structures: fungalStructures, defaultSelection: 'vacuole', labels: [{ id: 'nucleus', text: 'Nucleus' }, { id: 'vacuole', text: 'Vacuole' }, { id: 'bud-neck', text: 'Bud neck' }] },
+  ...specializedModels,
 };
 export function getCellModel(id = 'mammalian') {
   if (!Object.hasOwn(cellModels, id)) throw new Error(`Unknown cell model: ${id}`);

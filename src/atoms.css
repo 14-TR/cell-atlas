@@ -1,0 +1,65 @@
+@import './style.css';
+.atom-document,.atom-page{height:auto;min-height:100%;overflow:auto}
+.atom-page{background:radial-gradient(ellipse at 35% 12%,#24322d,#101717 65%);font-size:13px;line-height:1.55}
+.atom-header,.elements-main,.atom-footer{max-width:1600px;margin:auto;padding-left:38px;padding-right:38px}
+.atom-header{padding-top:28px;padding-bottom:35px;display:flex;justify-content:space-between;align-items:center;gap:20px}
+.atom-header nav{display:flex;gap:24px}.atom-header nav a{min-height:44px;display:flex;align-items:center}
+.atom-header [aria-current]{border-bottom:1px solid var(--accent);color:var(--accent)}
+.table-intro{display:flex;gap:60px;justify-content:space-between;align-items:center;margin:24px 0 40px}
+.table-intro h2{font:400 52px/1.02 'Instrument Serif',Georgia,serif;margin:16px 0;color:#eef0e6;letter-spacing:-1px}
+.table-intro h2 em{color:#bbcdbb}.table-intro>div>p{max-width:390px;color:var(--muted);margin-top:20px}
+#element-search-form{width:340px;flex-shrink:0;position:relative;align-self:flex-start;margin-top:35px}
+#element-search-form label{font-size:12px;color:var(--accent)}.search-line{display:flex;border-bottom:1px solid #a5bda770;margin-top:8px}
+#element-search{border:0;background:transparent;color:inherit;min-width:0;width:100%;min-height:48px;font:inherit;padding:8px 0}
+#search-status{font-size:11px;color:var(--muted);margin-top:10px}
+#search-results:empty{display:none}#search-results{position:absolute;top:100%;left:0;right:0;z-index:2;max-height:280px;overflow:auto;background:#1b2924;border:1px solid #708774;box-shadow:0 10px 30px #0007;border-radius:5px;margin-top:6px}
+#search-results button{display:block;width:100%;text-align:left;padding:10px 14px}
+.table-heading{display:flex;justify-content:space-between;border-top:1px solid var(--line);padding-top:22px;color:var(--muted);font-size:11px}
+.scroll-instruction{font-size:11px;color:var(--muted);margin:10px 0 14px}
+#table-scroll{overflow-x:auto;overscroll-behavior-x:contain;padding:5px 5px 18px;margin:0 -5px;scrollbar-color:#667f71 #16211d;scrollbar-width:thin}
+#periodic-table{display:grid;grid-template-columns:repeat(18,minmax(54px,1fr));grid-template-rows:24px repeat(7,76px) 12px repeat(2,76px);gap:5px;min-width:1100px}
+#periodic-table button{border:1px solid color-mix(in srgb,var(--family) 35%,transparent);background:color-mix(in srgb,var(--family) 7%,#111c18);color:var(--family);display:flex;flex-direction:column;justify-content:center;align-items:flex-start;padding:5px 8px;min-width:0;min-height:44px;line-height:1.1;position:relative;border-radius:3px}
+#periodic-table button:hover,#periodic-table button[aria-pressed=true]{background:color-mix(in srgb,var(--family) 22%,#111c18);border-color:var(--family)}
+#periodic-table button:focus-visible{z-index:1;outline-offset:1px}
+.element-number{font-size:10px;opacity:.85}#periodic-table strong{font-size:25px;font-weight:500;margin:3px 0}.element-name{font-size:8px;letter-spacing:-.2px;max-width:100%;overflow:hidden;text-overflow:ellipsis}
+.group-number{color:var(--muted);font-size:10px;text-align:center}.series-placeholder,.series-caption{display:flex;align-items:center;justify-content:center;font-size:10px;color:var(--muted);text-align:center}.series-placeholder{border:1px dashed #65756b}
+#family-key{display:flex;gap:12px 24px;flex-wrap:wrap;margin:22px 0;color:var(--muted);font-size:10px}
+#family-key span:before{content:'';display:inline-block;width:7px;height:7px;background:var(--family);border-radius:50%;margin-right:7px}
+.table-note{max-width:800px;font-size:11px;color:var(--muted)}
+.data-notes{margin:28px 0 35px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:12px 0;max-width:950px}
+.data-notes summary{padding:10px 0;cursor:pointer;color:var(--accent)}.data-notes p{color:var(--muted);margin:15px 0;max-width:850px;font-size:12px}
+.atom-page a:hover{text-decoration:underline}.data-notes a{color:#c9dbc7;text-decoration:underline}
+.atom-footer{position:static;display:flex;justify-content:space-between;gap:20px;padding-bottom:26px;transform:none;width:auto;font-size:11px;color:var(--muted)}.atom-footer a{min-height:44px;display:flex;align-items:center}
+#atom-dialog{padding:22px 28px 18px;width:min(1100px,calc(100% - 32px));max-width:none;max-height:calc(100dvh - 32px);border:1px solid #8b9f8855;background:#14201e;overflow:auto;color:#e8ece3;border-radius:10px}
+#atom-dialog::backdrop{background:#060d0de8;backdrop-filter:blur(4px)}
+.atom-dialog-heading{position:sticky;top:0;z-index:2;background:#14201e;display:flex;justify-content:space-between;align-items:center;gap:15px;border-bottom:1px solid var(--line);padding-bottom:12px}
+#atom-name{font:400 38px/1.15 'Instrument Serif',Georgia,serif;margin-top:6px}.atom-dialog-heading .kicker{font-size:9px;letter-spacing:1px}
+.atom-workspace{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(260px,1fr);gap:28px}
+.atom-scene{min-width:0}#atom-viewport{height:420px;position:relative;background:radial-gradient(ellipse,#2a3934,transparent 68%)}
+#atom-viewport canvas{display:block;touch-action:none;width:100%;height:100%;border-radius:4px}#atom-viewport canvas:focus-visible{outline:2px solid var(--accent);outline-offset:-3px}
+#atom-status{color:var(--muted);font-size:10px;margin:4px 0 12px;min-height:30px}
+.atom-tools{display:flex;gap:6px;flex-wrap:wrap}.atom-tools button{border:1px solid #849b7855;padding:0 12px;font-size:11px}
+.atom-info{padding-top:15px}.atom-info h3{margin:18px 0 6px;font-size:11px;letter-spacing:.6px;color:#b9cbb7}.atom-info p{font-size:12px;line-height:1.6}
+.atom-info .atom-symbol{font:400 55px/1.1 'Instrument Serif',Georgia,serif;color:#d3e0c6;margin-bottom:8px}
+.atom-info .info-note{font-size:10px;color:#a5b5ac;line-height:1.65;margin-top:6px}
+#shell-list{list-style:none;padding:0;margin:0;display:flex;gap:6px;flex-wrap:wrap}#shell-list li{padding:4px 7px;background:#a0bd9711;border:1px solid #a0bd9733;border-radius:3px;font-size:11px}
+#atom-configuration{overflow-wrap:anywhere;font-family:monospace;font-size:13px}
+.particle-key{display:flex;flex-wrap:wrap;gap:12px;font-size:10px;margin:20px 0 10px}.particle-key span:nth-child(1){color:#da997d}.particle-key span:nth-child(2){color:#b0bbc8}.particle-key span:nth-child(3){color:#b9e3d6}
+.atom-info>a{display:block;min-height:35px;color:var(--accent);font-size:11px;padding:6px 0}
+#atom-caveat{margin:20px 0 0;border-top:1px solid var(--line);padding-top:14px;font-size:11px;line-height:1.6;color:#bdcdbf}
+#atom-viewport.atom-reading-mode{height:150px;display:grid;place-items:center}#atom-viewport.atom-reading-mode:after{content:'3D unavailable · reading mode';color:var(--muted)}
+[data-atom-control]:disabled{opacity:.35;cursor:default}
+@media(max-width:700px){
+  .atom-header,.elements-main,.atom-footer{padding-left:20px;padding-right:20px}
+  .atom-header{padding-top:18px;padding-bottom:20px}.atom-header nav{gap:16px;font-size:11px}
+  .table-intro{display:block;margin-top:10px;margin-bottom:28px}.table-intro h2{font-size:42px}.table-intro>div>p{font-size:12px;margin-top:12px;max-width:320px}
+  #element-search-form{width:100%;margin-top:26px}#search-results{max-height:210px}
+  .table-heading{font-size:9px;gap:10px}.table-heading .kicker{font-size:9px;letter-spacing:1px}
+  #family-key{gap:10px 15px}.atom-footer{flex-wrap:wrap;gap:8px}.atom-footer>span:last-child{width:100%}
+  #atom-dialog{width:calc(100% - 16px);max-height:calc(100dvh - 16px);padding:14px 16px;border-radius:7px}
+  #atom-name{font-size:30px}.atom-dialog-heading .kicker{font-size:8px}
+  .atom-workspace{grid-template-columns:1fr;gap:12px}#atom-viewport{height:280px}
+  .atom-info{border-top:1px solid var(--line);padding-top:16px}.atom-info .atom-symbol{float:right;font-size:42px;margin:0 0 10px 15px}
+  .atom-tools button{padding:0 10px}#atom-caveat{font-size:10px}
+}
+@media(max-height:500px) and (orientation:landscape){#atom-dialog{max-height:calc(100dvh - 12px);padding:12px 18px}.atom-workspace{grid-template-columns:minmax(0,1.2fr) minmax(200px,1fr);gap:18px}#atom-viewport{height:210px}#atom-name{font-size:28px}.atom-tools{gap:4px}.atom-tools button{padding:0 6px}#atom-status{font-size:9px}.atom-info{border:0}.atom-info .atom-symbol{float:none}}

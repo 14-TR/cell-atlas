@@ -25,6 +25,7 @@ $('cell-model').replaceChildren(...Object.values(cellModels).map(m => new Option
 function updateModelGuide() {
   $('model-disclaimer').textContent = model.disclaimer;
   $('model-accuracy').textContent = model.accuracy;
+  document.querySelectorAll('.eukaryote-detail').forEach(el => { el.hidden = !['mammalian','plant','fungal'].includes(model.id); });
   $('model-caption').textContent = model.caption;
   $('model-phase').textContent = model.phase;
   $('list-hint').textContent = `${structures.length} structures. One living system.`;
@@ -107,8 +108,8 @@ function updateRotation() {
 function resetCamera(animated = true) {
   if (!camera) return;
   const aspect = viewport.clientWidth / viewport.clientHeight;
-  const distance = Math.max(18.6, 22.5 / aspect) * (state.modelId === 'plant' ? 1.2 : 1);
-  const position = new THREE.Vector3(3.2, 2.8, distance);
+  const distance = Math.max(18.6, 22.5 / aspect) * (['plant','neuron'].includes(state.modelId) ? 1.2 : 1);
+  const position = state.modelId === 'red-blood-cell' ? new THREE.Vector3(distance * .48, distance * .35, distance * .92) : new THREE.Vector3(3.2, 2.8, distance);
   moveCamera(position, new THREE.Vector3(0,0,0), animated);
 }
 function moveCamera(position, target, animated = true) {

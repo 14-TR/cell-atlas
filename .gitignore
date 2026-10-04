@@ -1,3 +1,7 @@
 node_modules/
 dist/
 .DS_Store
+# Local GPU screenshots are review evidence, not publication assets.
+evidence/expansion/**/*.png
+evidence/expansion/baseline-run/dist
+evidence/expansion/review-candidate.tar.gz
