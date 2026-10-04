@@ -1,0 +1,907 @@
+[
+  {
+    "id": "salt",
+    "name": "Sodium + chlorine",
+    "category": "combination",
+    "reactants": [
+      {
+        "formula": "Na",
+        "coefficient": 2,
+        "phase": "s"
+      },
+      {
+        "formula": "Cl2",
+        "coefficient": 1,
+        "phase": "g"
+      }
+    ],
+    "products": [
+      {
+        "formula": "NaCl",
+        "coefficient": 2,
+        "phase": "s"
+      }
+    ],
+    "sourceId": "openstax-4-2-classifying-chemical-reactions-math-22",
+    "sourceUrl": "https://openstax.org/books/chemistry-2e/pages/4-2-classifying-chemical-reactions",
+    "note": "Na is sodium metal, not a sodium ion. Elemental chlorine is Cl2, a diatomic molecule\u2014not isolated Cl. The product is an extended Na+/Cl\u2212 ionic solid, not a discrete NaCl molecule."
+  },
+  {
+    "id": "water",
+    "name": "Hydrogen + oxygen",
+    "category": "combination",
+    "reactants": [
+      {
+        "formula": "H2",
+        "coefficient": 2,
+        "phase": "g"
+      },
+      {
+        "formula": "O2",
+        "coefficient": 1,
+        "phase": "g"
+      }
+    ],
+    "products": [
+      {
+        "formula": "H2O",
+        "coefficient": 2,
+        "phase": "l"
+      }
+    ],
+    "sourceId": "openstax-5-3-enthalpy-math-7",
+    "sourceUrl": "https://openstax.org/books/chemistry-2e/pages/5-3-enthalpy",
+    "note": "Hydrogen and oxygen reactants are the diatomic molecules H2 and O2, not separate H and O atoms. The animation shows only atom accounting, not an actual reaction mechanism."
+  },
+  {
+    "id": "ammonia",
+    "name": "Nitrogen + hydrogen",
+    "category": "combination",
+    "reactants": [
+      {
+        "formula": "N2",
+        "coefficient": 1,
+        "phase": ""
+      },
+      {
+        "formula": "H2",
+        "coefficient": 3,
+        "phase": ""
+      }
+    ],
+    "products": [
+      {
+        "formula": "NH3",
+        "coefficient": 2,
+        "phase": ""
+      }
+    ],
+    "sourceId": "openstax-4-1-writing-and-balancing-chemical-equations-math-48",
+    "sourceUrl": "https://openstax.org/books/chemistry-2e/pages/4-1-writing-and-balancing-chemical-equations",
+    "note": "This is the balanced synthesis stoichiometry, not a claim of complete conversion or spontaneous reaction. Real ammonia formation is equilibrium- and condition-dependent."
+  },
+  {
+    "id": "hydrogen-chloride",
+    "name": "Hydrogen + chlorine",
+    "category": "combination",
+    "reactants": [
+      {
+        "formula": "H2",
+        "coefficient": 1,
+        "phase": "g"
+      },
+      {
+        "formula": "Cl2",
+        "coefficient": 1,
+        "phase": "g"
+      }
+    ],
+    "products": [
+      {
+        "formula": "HCl",
+        "coefficient": 2,
+        "phase": "g"
+      }
+    ],
+    "sourceId": "openstax-4-2-classifying-chemical-reactions-math-26",
+    "sourceUrl": "https://openstax.org/books/chemistry-2e/pages/4-2-classifying-chemical-reactions",
+    "note": "States: (s) solid, (l) liquid, (g) gas, (aq) dissolved in water. Formulas group atom inventories; ions and solids are not asserted to be discrete molecules."
+  },
+  {
+    "id": "magnesium-chloride",
+    "name": "Magnesium + chlorine",
+    "category": "combination",
+    "reactants": [
+      {
+        "formula": "Mg",
+        "coefficient": 1,
+        "phase": "s"
+      },
+      {
+        "formula": "Cl2",
+        "coefficient": 1,
+        "phase": "g"
+      }
+    ],
+    "products": [
+      {
+        "formula": "MgCl2",
+        "coefficient": 1,
+        "phase": "s"
+      }
+    ],
+    "sourceId": "openstax-4-exercises-math-33",
+    "sourceUrl": "https://openstax.org/books/chemistry-2e/pages/4-exercises",
+    "note": "States: (s) solid, (l) liquid, (g) gas, (aq) dissolved in water. Formulas group atom inventories; ions and solids are not asserted to be discrete molecules."
+  },
+  {
+    "id": "methane-oxidation",
+    "name": "Methane oxidation",
+    "category": "oxidation",
+    "reactants": [
+      {
+        "formula": "CH4",
+        "coefficient": 1,
+        "phase": ""
+      },
+      {
+        "formula": "O2",
+        "coefficient": 2,
+        "phase": ""
+      }
+    ],
+    "products": [
+      {
+        "formula": "CO2",
+        "coefficient": 1,
+        "phase": ""
+      },
+      {
+        "formula": "H2O",
+        "coefficient": 2,
+        "phase": ""
+      }
+    ],
+    "sourceId": "openstax-4-1-writing-and-balancing-chemical-equations-math-2",
+    "sourceUrl": "https://openstax.org/books/chemistry-2e/pages/4-1-writing-and-balancing-chemical-equations",
+    "note": "States: (s) solid, (l) liquid, (g) gas, (aq) dissolved in water. Formulas group atom inventories; ions and solids are not asserted to be discrete molecules."
+  },
+  {
+    "id": "ethane-oxidation",
+    "name": "Ethane oxidation",
+    "category": "oxidation",
+    "reactants": [
+      {
+        "formula": "C2H6",
+        "coefficient": 2,
+        "phase": ""
+      },
+      {
+        "formula": "O2",
+        "coefficient": 7,
+        "phase": ""
+      }
+    ],
+    "products": [
+      {
+        "formula": "H2O",
+        "coefficient": 6,
+        "phase": ""
+      },
+      {
+        "formula": "CO2",
+        "coefficient": 4,
+        "phase": ""
+      }
+    ],
+    "sourceId": "openstax-4-1-writing-and-balancing-chemical-equations-math-46",
+    "sourceUrl": "https://openstax.org/books/chemistry-2e/pages/4-1-writing-and-balancing-chemical-equations",
+    "note": "States: (s) solid, (l) liquid, (g) gas, (aq) dissolved in water. Formulas group atom inventories; ions and solids are not asserted to be discrete molecules."
+  },
+  {
+    "id": "ethene-oxidation",
+    "name": "Ethene oxidation",
+    "category": "oxidation",
+    "reactants": [
+      {
+        "formula": "C2H4",
+        "coefficient": 1,
+        "phase": "g"
+      },
+      {
+        "formula": "O2",
+        "coefficient": 3,
+        "phase": "g"
+      }
+    ],
+    "products": [
+      {
+        "formula": "CO2",
+        "coefficient": 2,
+        "phase": "g"
+      },
+      {
+        "formula": "H2O",
+        "coefficient": 2,
+        "phase": "l"
+      }
+    ],
+    "sourceId": "openstax-4-2-classifying-chemical-reactions-math-44",
+    "sourceUrl": "https://openstax.org/books/chemistry-2e/pages/4-2-classifying-chemical-reactions",
+    "note": "States: (s) solid, (l) liquid, (g) gas, (aq) dissolved in water. Formulas group atom inventories; ions and solids are not asserted to be discrete molecules."
+  },
+  {
+    "id": "peroxide",
+    "name": "Hydrogen peroxide decomposition",
+    "category": "decomposition",
+    "reactants": [
+      {
+        "formula": "H2O2",
+        "coefficient": 2,
+        "phase": "aq"
+      }
+    ],
+    "products": [
+      {
+        "formula": "H2O",
+        "coefficient": 2,
+        "phase": "l"
+      },
+      {
+        "formula": "O2",
+        "coefficient": 1,
+        "phase": "g"
+      }
+    ],
+    "sourceId": "openstax-4-2-classifying-chemical-reactions-math-42",
+    "sourceUrl": "https://openstax.org/books/chemistry-2e/pages/4-2-classifying-chemical-reactions",
+    "note": "Decomposition requires suitable conditions or an energy input. The equation does not mean the substance falls apart by itself."
+  },
+  {
+    "id": "limestone",
+    "name": "Calcium carbonate decomposition",
+    "category": "decomposition",
+    "reactants": [
+      {
+        "formula": "CaCO3",
+        "coefficient": 1,
+        "phase": "s"
+      }
+    ],
+    "products": [
+      {
+        "formula": "CaO",
+        "coefficient": 1,
+        "phase": "s"
+      },
+      {
+        "formula": "CO2",
+        "coefficient": 1,
+        "phase": "g"
+      }
+    ],
+    "sourceId": "openstax-4-1-writing-and-balancing-chemical-equations-math-50",
+    "sourceUrl": "https://openstax.org/books/chemistry-2e/pages/4-1-writing-and-balancing-chemical-equations",
+    "note": "Decomposition requires suitable conditions or an energy input. The equation does not mean the substance falls apart by itself."
+  },
+  {
+    "id": "zinc-carbonate",
+    "name": "Zinc carbonate decomposition",
+    "category": "decomposition",
+    "reactants": [
+      {
+        "formula": "ZnCO3",
+        "coefficient": 1,
+        "phase": "s"
+      }
+    ],
+    "products": [
+      {
+        "formula": "ZnO",
+        "coefficient": 1,
+        "phase": "s"
+      },
+      {
+        "formula": "CO2",
+        "coefficient": 1,
+        "phase": "g"
+      }
+    ],
+    "sourceId": "openstax-4-2-classifying-chemical-reactions-math-40",
+    "sourceUrl": "https://openstax.org/books/chemistry-2e/pages/4-2-classifying-chemical-reactions",
+    "note": "Decomposition requires suitable conditions or an energy input. The equation does not mean the substance falls apart by itself."
+  },
+  {
+    "id": "water-split",
+    "name": "Water decomposition",
+    "category": "decomposition",
+    "reactants": [
+      {
+        "formula": "H2O",
+        "coefficient": 2,
+        "phase": ""
+      }
+    ],
+    "products": [
+      {
+        "formula": "H2",
+        "coefficient": 2,
+        "phase": ""
+      },
+      {
+        "formula": "O2",
+        "coefficient": 1,
+        "phase": ""
+      }
+    ],
+    "sourceId": "openstax-4-1-writing-and-balancing-chemical-equations-math-20",
+    "sourceUrl": "https://openstax.org/books/chemistry-2e/pages/4-1-writing-and-balancing-chemical-equations",
+    "note": "Decomposition requires suitable conditions or an energy input. The equation does not mean the substance falls apart by itself."
+  },
+  {
+    "id": "silver-chloride",
+    "name": "Silver chloride precipitation",
+    "category": "precipitation",
+    "reactants": [
+      {
+        "formula": "AgNO3",
+        "coefficient": 1,
+        "phase": "aq"
+      },
+      {
+        "formula": "NaCl",
+        "coefficient": 1,
+        "phase": "aq"
+      }
+    ],
+    "products": [
+      {
+        "formula": "AgCl",
+        "coefficient": 1,
+        "phase": "s"
+      },
+      {
+        "formula": "NaNO3",
+        "coefficient": 1,
+        "phase": "aq"
+      }
+    ],
+    "sourceId": "openstax-4-exercises-math-110",
+    "sourceUrl": "https://openstax.org/books/chemistry-2e/pages/4-exercises",
+    "note": "Solid product formation is represented by (s). Dissolved ionic compounds are formula-unit bookkeeping here, not intact molecules in solution."
+  },
+  {
+    "id": "lead-iodide",
+    "name": "Lead iodide precipitation",
+    "category": "precipitation",
+    "reactants": [
+      {
+        "formula": "KI",
+        "coefficient": 2,
+        "phase": "aq"
+      },
+      {
+        "formula": "Pb(NO3)2",
+        "coefficient": 1,
+        "phase": "aq"
+      }
+    ],
+    "products": [
+      {
+        "formula": "PbI2",
+        "coefficient": 1,
+        "phase": "s"
+      },
+      {
+        "formula": "KNO3",
+        "coefficient": 2,
+        "phase": "aq"
+      }
+    ],
+    "sourceId": "openstax-4-2-classifying-chemical-reactions-math-0",
+    "sourceUrl": "https://openstax.org/books/chemistry-2e/pages/4-2-classifying-chemical-reactions",
+    "note": "Solid product formation is represented by (s). Dissolved ionic compounds are formula-unit bookkeeping here, not intact molecules in solution."
+  },
+  {
+    "id": "barium-sulfate",
+    "name": "Barium sulfate precipitation",
+    "category": "precipitation",
+    "reactants": [
+      {
+        "formula": "BaCl2",
+        "coefficient": 1,
+        "phase": "aq"
+      },
+      {
+        "formula": "K2SO4",
+        "coefficient": 1,
+        "phase": "aq"
+      }
+    ],
+    "products": [
+      {
+        "formula": "BaSO4",
+        "coefficient": 1,
+        "phase": "s"
+      },
+      {
+        "formula": "KCl",
+        "coefficient": 2,
+        "phase": "aq"
+      }
+    ],
+    "sourceId": "openstax-4-2-classifying-chemical-reactions-math-43",
+    "sourceUrl": "https://openstax.org/books/chemistry-2e/pages/4-2-classifying-chemical-reactions",
+    "note": "Solid product formation is represented by (s). Dissolved ionic compounds are formula-unit bookkeeping here, not intact molecules in solution."
+  },
+  {
+    "id": "calcium-silver",
+    "name": "Calcium chloride + silver nitrate",
+    "category": "precipitation",
+    "reactants": [
+      {
+        "formula": "CaCl2",
+        "coefficient": 1,
+        "phase": "aq"
+      },
+      {
+        "formula": "AgNO3",
+        "coefficient": 2,
+        "phase": "aq"
+      }
+    ],
+    "products": [
+      {
+        "formula": "Ca(NO3)2",
+        "coefficient": 1,
+        "phase": "aq"
+      },
+      {
+        "formula": "AgCl",
+        "coefficient": 2,
+        "phase": "s"
+      }
+    ],
+    "sourceId": "openstax-4-1-writing-and-balancing-chemical-equations-math-51",
+    "sourceUrl": "https://openstax.org/books/chemistry-2e/pages/4-1-writing-and-balancing-chemical-equations",
+    "note": "Solid product formation is represented by (s). Dissolved ionic compounds are formula-unit bookkeeping here, not intact molecules in solution."
+  },
+  {
+    "id": "silver-ionic",
+    "name": "Silver chloride \u00b7 net ionic",
+    "category": "precipitation",
+    "reactants": [
+      {
+        "formula": "Cl-",
+        "coefficient": 1,
+        "phase": "aq"
+      },
+      {
+        "formula": "Ag+",
+        "coefficient": 1,
+        "phase": "aq"
+      }
+    ],
+    "products": [
+      {
+        "formula": "AgCl",
+        "coefficient": 1,
+        "phase": "s"
+      }
+    ],
+    "sourceId": "openstax-4-1-writing-and-balancing-chemical-equations-math-56",
+    "sourceUrl": "https://openstax.org/books/chemistry-2e/pages/4-1-writing-and-balancing-chemical-equations",
+    "note": "Solid product formation is represented by (s). Dissolved ionic compounds are formula-unit bookkeeping here, not intact molecules in solution."
+  },
+  {
+    "id": "neutral-ionic",
+    "name": "Neutralization \u00b7 net ionic",
+    "category": "acid-base",
+    "reactants": [
+      {
+        "formula": "H+",
+        "coefficient": 1,
+        "phase": "aq"
+      },
+      {
+        "formula": "OH-",
+        "coefficient": 1,
+        "phase": "aq"
+      }
+    ],
+    "products": [
+      {
+        "formula": "H2O",
+        "coefficient": 1,
+        "phase": "l"
+      }
+    ],
+    "sourceId": "openstax-4-exercises-math-23",
+    "sourceUrl": "https://openstax.org/books/chemistry-2e/pages/4-exercises",
+    "note": "States: (s) solid, (l) liquid, (g) gas, (aq) dissolved in water. Formulas group atom inventories; ions and solids are not asserted to be discrete molecules."
+  },
+  {
+    "id": "hydronium",
+    "name": "Hydronium + hydroxide",
+    "category": "acid-base",
+    "reactants": [
+      {
+        "formula": "H3O+",
+        "coefficient": 1,
+        "phase": "aq"
+      },
+      {
+        "formula": "OH-",
+        "coefficient": 1,
+        "phase": "aq"
+      }
+    ],
+    "products": [
+      {
+        "formula": "H2O",
+        "coefficient": 2,
+        "phase": "l"
+      }
+    ],
+    "sourceId": "openstax-4-2-classifying-chemical-reactions-math-18",
+    "sourceUrl": "https://openstax.org/books/chemistry-2e/pages/4-2-classifying-chemical-reactions",
+    "note": "States: (s) solid, (l) liquid, (g) gas, (aq) dissolved in water. Formulas group atom inventories; ions and solids are not asserted to be discrete molecules."
+  },
+  {
+    "id": "magnesium-neutral",
+    "name": "Magnesium hydroxide + acid",
+    "category": "acid-base",
+    "reactants": [
+      {
+        "formula": "Mg(OH)2",
+        "coefficient": 1,
+        "phase": "s"
+      },
+      {
+        "formula": "HCl",
+        "coefficient": 2,
+        "phase": "aq"
+      }
+    ],
+    "products": [
+      {
+        "formula": "MgCl2",
+        "coefficient": 1,
+        "phase": "aq"
+      },
+      {
+        "formula": "H2O",
+        "coefficient": 2,
+        "phase": "l"
+      }
+    ],
+    "sourceId": "openstax-4-2-classifying-chemical-reactions-math-14",
+    "sourceUrl": "https://openstax.org/books/chemistry-2e/pages/4-2-classifying-chemical-reactions",
+    "note": "States: (s) solid, (l) liquid, (g) gas, (aq) dissolved in water. Formulas group atom inventories; ions and solids are not asserted to be discrete molecules."
+  },
+  {
+    "id": "barium-neutral",
+    "name": "Barium hydroxide + acid",
+    "category": "acid-base",
+    "reactants": [
+      {
+        "formula": "Ba(OH)2",
+        "coefficient": 1,
+        "phase": "aq"
+      },
+      {
+        "formula": "HNO3",
+        "coefficient": 2,
+        "phase": "aq"
+      }
+    ],
+    "products": [
+      {
+        "formula": "Ba(NO3)2",
+        "coefficient": 1,
+        "phase": "aq"
+      },
+      {
+        "formula": "H2O",
+        "coefficient": 2,
+        "phase": "l"
+      }
+    ],
+    "sourceId": "openstax-4-2-classifying-chemical-reactions-math-17",
+    "sourceUrl": "https://openstax.org/books/chemistry-2e/pages/4-2-classifying-chemical-reactions",
+    "note": "States: (s) solid, (l) liquid, (g) gas, (aq) dissolved in water. Formulas group atom inventories; ions and solids are not asserted to be discrete molecules."
+  },
+  {
+    "id": "calcium-neutral",
+    "name": "Calcium hydroxide + acid",
+    "category": "acid-base",
+    "reactants": [
+      {
+        "formula": "Ca(OH)2",
+        "coefficient": 1,
+        "phase": "aq"
+      },
+      {
+        "formula": "HCl",
+        "coefficient": 2,
+        "phase": "aq"
+      }
+    ],
+    "products": [
+      {
+        "formula": "CaCl2",
+        "coefficient": 1,
+        "phase": "aq"
+      },
+      {
+        "formula": "H2O",
+        "coefficient": 2,
+        "phase": "l"
+      }
+    ],
+    "sourceId": "openstax-4-exercises-math-119",
+    "sourceUrl": "https://openstax.org/books/chemistry-2e/pages/4-exercises",
+    "note": "States: (s) solid, (l) liquid, (g) gas, (aq) dissolved in water. Formulas group atom inventories; ions and solids are not asserted to be discrete molecules."
+  },
+  {
+    "id": "sulfuric-neutral",
+    "name": "Sulfuric acid + potassium hydroxide",
+    "category": "acid-base",
+    "reactants": [
+      {
+        "formula": "H2SO4",
+        "coefficient": 1,
+        "phase": "aq"
+      },
+      {
+        "formula": "KOH",
+        "coefficient": 2,
+        "phase": "aq"
+      }
+    ],
+    "products": [
+      {
+        "formula": "K2SO4",
+        "coefficient": 1,
+        "phase": "aq"
+      },
+      {
+        "formula": "H2O",
+        "coefficient": 2,
+        "phase": "l"
+      }
+    ],
+    "sourceId": "openstax-4-exercises-math-117",
+    "sourceUrl": "https://openstax.org/books/chemistry-2e/pages/4-exercises",
+    "note": "States: (s) solid, (l) liquid, (g) gas, (aq) dissolved in water. Formulas group atom inventories; ions and solids are not asserted to be discrete molecules."
+  },
+  {
+    "id": "carbon-dioxide-base",
+    "name": "Carbon dioxide + sodium hydroxide",
+    "category": "acid-base",
+    "reactants": [
+      {
+        "formula": "CO2",
+        "coefficient": 1,
+        "phase": "aq"
+      },
+      {
+        "formula": "NaOH",
+        "coefficient": 2,
+        "phase": "aq"
+      }
+    ],
+    "products": [
+      {
+        "formula": "Na2CO3",
+        "coefficient": 1,
+        "phase": "aq"
+      },
+      {
+        "formula": "H2O",
+        "coefficient": 1,
+        "phase": "l"
+      }
+    ],
+    "sourceId": "openstax-4-1-writing-and-balancing-chemical-equations-math-58",
+    "sourceUrl": "https://openstax.org/books/chemistry-2e/pages/4-1-writing-and-balancing-chemical-equations",
+    "note": "States: (s) solid, (l) liquid, (g) gas, (aq) dissolved in water. Formulas group atom inventories; ions and solids are not asserted to be discrete molecules."
+  },
+  {
+    "id": "bicarbonate",
+    "name": "Bicarbonate + acid",
+    "category": "acid-base",
+    "reactants": [
+      {
+        "formula": "NaHCO3",
+        "coefficient": 1,
+        "phase": "aq"
+      },
+      {
+        "formula": "HCl",
+        "coefficient": 1,
+        "phase": "aq"
+      }
+    ],
+    "products": [
+      {
+        "formula": "NaCl",
+        "coefficient": 1,
+        "phase": "aq"
+      },
+      {
+        "formula": "CO2",
+        "coefficient": 1,
+        "phase": "g"
+      },
+      {
+        "formula": "H2O",
+        "coefficient": 1,
+        "phase": "l"
+      }
+    ],
+    "sourceId": "openstax-4-exercises-math-113",
+    "sourceUrl": "https://openstax.org/books/chemistry-2e/pages/4-exercises",
+    "note": "States: (s) solid, (l) liquid, (g) gas, (aq) dissolved in water. Formulas group atom inventories; ions and solids are not asserted to be discrete molecules."
+  },
+  {
+    "id": "zinc-acid",
+    "name": "Zinc + hydrochloric acid",
+    "category": "displacement",
+    "reactants": [
+      {
+        "formula": "Zn",
+        "coefficient": 1,
+        "phase": "s"
+      },
+      {
+        "formula": "HCl",
+        "coefficient": 2,
+        "phase": "aq"
+      }
+    ],
+    "products": [
+      {
+        "formula": "ZnCl2",
+        "coefficient": 1,
+        "phase": "aq"
+      },
+      {
+        "formula": "H2",
+        "coefficient": 1,
+        "phase": "g"
+      }
+    ],
+    "sourceId": "openstax-4-2-classifying-chemical-reactions-math-38",
+    "sourceUrl": "https://openstax.org/books/chemistry-2e/pages/4-2-classifying-chemical-reactions",
+    "note": "States: (s) solid, (l) liquid, (g) gas, (aq) dissolved in water. Formulas group atom inventories; ions and solids are not asserted to be discrete molecules."
+  },
+  {
+    "id": "copper-silver",
+    "name": "Copper + silver nitrate",
+    "category": "displacement",
+    "reactants": [
+      {
+        "formula": "Cu",
+        "coefficient": 1,
+        "phase": "s"
+      },
+      {
+        "formula": "AgNO3",
+        "coefficient": 2,
+        "phase": "aq"
+      }
+    ],
+    "products": [
+      {
+        "formula": "Cu(NO3)2",
+        "coefficient": 1,
+        "phase": "aq"
+      },
+      {
+        "formula": "Ag",
+        "coefficient": 2,
+        "phase": "s"
+      }
+    ],
+    "sourceId": "openstax-4-2-classifying-chemical-reactions-math-39",
+    "sourceUrl": "https://openstax.org/books/chemistry-2e/pages/4-2-classifying-chemical-reactions",
+    "note": "States: (s) solid, (l) liquid, (g) gas, (aq) dissolved in water. Formulas group atom inventories; ions and solids are not asserted to be discrete molecules."
+  },
+  {
+    "id": "zinc-copper",
+    "name": "Zinc + copper sulfate",
+    "category": "displacement",
+    "reactants": [
+      {
+        "formula": "CuSO4",
+        "coefficient": 1,
+        "phase": "aq"
+      },
+      {
+        "formula": "Zn",
+        "coefficient": 1,
+        "phase": "s"
+      }
+    ],
+    "products": [
+      {
+        "formula": "Cu",
+        "coefficient": 1,
+        "phase": "s"
+      },
+      {
+        "formula": "ZnSO4",
+        "coefficient": 1,
+        "phase": "aq"
+      }
+    ],
+    "sourceId": "openstax-4-4-reaction-yields-math-12",
+    "sourceUrl": "https://openstax.org/books/chemistry-2e/pages/4-4-reaction-yields",
+    "note": "States: (s) solid, (l) liquid, (g) gas, (aq) dissolved in water. Formulas group atom inventories; ions and solids are not asserted to be discrete molecules."
+  },
+  {
+    "id": "magnesium-nickel",
+    "name": "Magnesium + nickel chloride",
+    "category": "displacement",
+    "reactants": [
+      {
+        "formula": "Mg",
+        "coefficient": 1,
+        "phase": "s"
+      },
+      {
+        "formula": "NiCl2",
+        "coefficient": 1,
+        "phase": "aq"
+      }
+    ],
+    "products": [
+      {
+        "formula": "MgCl2",
+        "coefficient": 1,
+        "phase": "aq"
+      },
+      {
+        "formula": "Ni",
+        "coefficient": 1,
+        "phase": "s"
+      }
+    ],
+    "sourceId": "openstax-4-exercises-math-37",
+    "sourceUrl": "https://openstax.org/books/chemistry-2e/pages/4-exercises",
+    "note": "States: (s) solid, (l) liquid, (g) gas, (aq) dissolved in water. Formulas group atom inventories; ions and solids are not asserted to be discrete molecules."
+  },
+  {
+    "id": "zinc-sulfuric",
+    "name": "Zinc + sulfuric acid",
+    "category": "displacement",
+    "reactants": [
+      {
+        "formula": "Zn",
+        "coefficient": 1,
+        "phase": "s"
+      },
+      {
+        "formula": "H2SO4",
+        "coefficient": 1,
+        "phase": "aq"
+      }
+    ],
+    "products": [
+      {
+        "formula": "ZnSO4",
+        "coefficient": 1,
+        "phase": "aq"
+      },
+      {
+        "formula": "H2",
+        "coefficient": 1,
+        "phase": "g"
+      }
+    ],
+    "sourceId": "openstax-4-exercises-math-40",
+    "sourceUrl": "https://openstax.org/books/chemistry-2e/pages/4-exercises",
+    "note": "States: (s) solid, (l) liquid, (g) gas, (aq) dissolved in water. Formulas group atom inventories; ions and solids are not asserted to be discrete molecules."
+  }
+]

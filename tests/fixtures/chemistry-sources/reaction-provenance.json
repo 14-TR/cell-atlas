@@ -1,0 +1,937 @@
+[
+  {
+    "id": "salt",
+    "fixture": "4-2-classifying-chemical-reactions.html",
+    "sha256": "57f40846e51ec4a9dbcc3be19aa5d6add6938a5d52a21b2d6fe45917b416804a",
+    "mathIndex": 22,
+    "mathSHA256": "4642bbde6bee13955560960b843cbe3a0e5cd2ca77ffd07146011df561c8887c",
+    "sourceText": "2Na(s)+Cl2(g)\u27f62NaCl(s)2Na(s)+Cl2(g)\u27f62NaCl(s)",
+    "equation": "2 Na(s) + Cl2(g) -> 2 NaCl(s)",
+    "reactants": [
+      {
+        "formula": "Na",
+        "coefficient": 2,
+        "phase": "s"
+      },
+      {
+        "formula": "Cl2",
+        "coefficient": 1,
+        "phase": "g"
+      }
+    ],
+    "products": [
+      {
+        "formula": "NaCl",
+        "coefficient": 2,
+        "phase": "s"
+      }
+    ]
+  },
+  {
+    "id": "water",
+    "fixture": "5-3-enthalpy.html",
+    "sha256": "a7072cc6e6f1b78972f45598c3fb4fcbcf763f443dfaeb9cab73880fee511932",
+    "mathIndex": 7,
+    "mathSHA256": "742544bd476b20ac2410994119b250ab34a39679ca1eeab482792b7623671ad8",
+    "sourceText": "(two-fold increase in amounts)2H2(g)+O2(g)\u27f62H2O(l)\u0394H=2\u00d7(\u2212286kJ)=\u2212572kJ(two-fold decrease in amounts)12H2(g)+14O2(g)\u27f612H2O(l)\u0394H=12\u00d7(\u2212286kJ)=\u2212143kJ(two-fold increase in amounts)2H2(g)+O2(g)\u27f62H2O(l)\u0394H=2\u00d7(\u2212286kJ)=\u2212572kJ(two-fold decrease in amounts)12H2(g)+14O2(g)\u27f612H2O(l)\u0394H=12\u00d7(\u2212286kJ)=\u2212143kJ",
+    "equation": "2 H2(g) + O2(g) -> 2 H2O(l)",
+    "reactants": [
+      {
+        "formula": "H2",
+        "coefficient": 2,
+        "phase": "g"
+      },
+      {
+        "formula": "O2",
+        "coefficient": 1,
+        "phase": "g"
+      }
+    ],
+    "products": [
+      {
+        "formula": "H2O",
+        "coefficient": 2,
+        "phase": "l"
+      }
+    ]
+  },
+  {
+    "id": "ammonia",
+    "fixture": "4-1-writing-and-balancing-chemical-equations.html",
+    "sha256": "79d1a754c2333fb4bc84009fa69ac2abcc46406b8587110c48f36cc42ace5059",
+    "mathIndex": 48,
+    "mathSHA256": "89797081b7dd91435ab2dda9d8b7f4ec62d01fb3796c0f6515e06cd12bd54544",
+    "sourceText": "N2+3H2\u27f62NH3N2+3H2\u27f62NH3",
+    "equation": "N2 + 3 H2 -> 2 NH3",
+    "reactants": [
+      {
+        "formula": "N2",
+        "coefficient": 1,
+        "phase": ""
+      },
+      {
+        "formula": "H2",
+        "coefficient": 3,
+        "phase": ""
+      }
+    ],
+    "products": [
+      {
+        "formula": "NH3",
+        "coefficient": 2,
+        "phase": ""
+      }
+    ]
+  },
+  {
+    "id": "hydrogen-chloride",
+    "fixture": "4-2-classifying-chemical-reactions.html",
+    "sha256": "57f40846e51ec4a9dbcc3be19aa5d6add6938a5d52a21b2d6fe45917b416804a",
+    "mathIndex": 26,
+    "mathSHA256": "26e2c4eba154bfaa4fc1de4c1ae5df68f0a67061c72a0eb69dbbac88be8afff1",
+    "sourceText": "H2(g)+Cl2(g)\u27f62HCl(g)H2(g)+Cl2(g)\u27f62HCl(g)",
+    "equation": "H2(g) + Cl2(g) -> 2 HCl(g)",
+    "reactants": [
+      {
+        "formula": "H2",
+        "coefficient": 1,
+        "phase": "g"
+      },
+      {
+        "formula": "Cl2",
+        "coefficient": 1,
+        "phase": "g"
+      }
+    ],
+    "products": [
+      {
+        "formula": "HCl",
+        "coefficient": 2,
+        "phase": "g"
+      }
+    ]
+  },
+  {
+    "id": "magnesium-chloride",
+    "fixture": "4-exercises.html",
+    "sha256": "049971c928b7c0306a9c897dcad574d0eac18659fc9e1d57636bdffebc4fea7c",
+    "mathIndex": 33,
+    "mathSHA256": "f34150bdbe6666990ef30ff9128ba667649eab5e6aeaa7d284299d409fc7c7c1",
+    "sourceText": "Mg(s)+Cl2(g)\u27f6MgCl2(s)Mg(s)+Cl2(g)\u27f6MgCl2(s)",
+    "equation": "Mg(s) + Cl2(g) -> MgCl2(s)",
+    "reactants": [
+      {
+        "formula": "Mg",
+        "coefficient": 1,
+        "phase": "s"
+      },
+      {
+        "formula": "Cl2",
+        "coefficient": 1,
+        "phase": "g"
+      }
+    ],
+    "products": [
+      {
+        "formula": "MgCl2",
+        "coefficient": 1,
+        "phase": "s"
+      }
+    ]
+  },
+  {
+    "id": "methane-oxidation",
+    "fixture": "4-1-writing-and-balancing-chemical-equations.html",
+    "sha256": "79d1a754c2333fb4bc84009fa69ac2abcc46406b8587110c48f36cc42ace5059",
+    "mathIndex": 2,
+    "mathSHA256": "80b01f556afb5b1c2066905cf963bf389ca358e48a6c753d14ebf38ff3b23fe3",
+    "sourceText": "CH4+2O2\u27f6CO2+2H2OCH4+2O2\u27f6CO2+2H2O",
+    "equation": "CH4 + 2 O2 -> CO2 + 2 H2O",
+    "reactants": [
+      {
+        "formula": "CH4",
+        "coefficient": 1,
+        "phase": ""
+      },
+      {
+        "formula": "O2",
+        "coefficient": 2,
+        "phase": ""
+      }
+    ],
+    "products": [
+      {
+        "formula": "CO2",
+        "coefficient": 1,
+        "phase": ""
+      },
+      {
+        "formula": "H2O",
+        "coefficient": 2,
+        "phase": ""
+      }
+    ]
+  },
+  {
+    "id": "ethane-oxidation",
+    "fixture": "4-1-writing-and-balancing-chemical-equations.html",
+    "sha256": "79d1a754c2333fb4bc84009fa69ac2abcc46406b8587110c48f36cc42ace5059",
+    "mathIndex": 46,
+    "mathSHA256": "218486b51b9128bdaf559f68e1141dd8ac5646b3c0831251342a3497e1fd3084",
+    "sourceText": "2C2H6+7O2\u27f66H2O+4CO22C2H6+7O2\u27f66H2O+4CO2",
+    "equation": "2 C2H6 + 7 O2 -> 6 H2O + 4 CO2",
+    "reactants": [
+      {
+        "formula": "C2H6",
+        "coefficient": 2,
+        "phase": ""
+      },
+      {
+        "formula": "O2",
+        "coefficient": 7,
+        "phase": ""
+      }
+    ],
+    "products": [
+      {
+        "formula": "H2O",
+        "coefficient": 6,
+        "phase": ""
+      },
+      {
+        "formula": "CO2",
+        "coefficient": 4,
+        "phase": ""
+      }
+    ]
+  },
+  {
+    "id": "ethene-oxidation",
+    "fixture": "4-2-classifying-chemical-reactions.html",
+    "sha256": "57f40846e51ec4a9dbcc3be19aa5d6add6938a5d52a21b2d6fe45917b416804a",
+    "mathIndex": 44,
+    "mathSHA256": "635016162732ceecf5725a5e835c57ad3aa768870b7b840c5cb71758e9fe589f",
+    "sourceText": "C2H4(g)+3O2(g)\u27f62CO2(g)+2H2O(l)C2H4(g)+3O2(g)\u27f62CO2(g)+2H2O(l)",
+    "equation": "C2H4(g) + 3 O2(g) -> 2 CO2(g) + 2 H2O(l)",
+    "reactants": [
+      {
+        "formula": "C2H4",
+        "coefficient": 1,
+        "phase": "g"
+      },
+      {
+        "formula": "O2",
+        "coefficient": 3,
+        "phase": "g"
+      }
+    ],
+    "products": [
+      {
+        "formula": "CO2",
+        "coefficient": 2,
+        "phase": "g"
+      },
+      {
+        "formula": "H2O",
+        "coefficient": 2,
+        "phase": "l"
+      }
+    ]
+  },
+  {
+    "id": "peroxide",
+    "fixture": "4-2-classifying-chemical-reactions.html",
+    "sha256": "57f40846e51ec4a9dbcc3be19aa5d6add6938a5d52a21b2d6fe45917b416804a",
+    "mathIndex": 42,
+    "mathSHA256": "02fc7bca11ed0ca67bb2600786085c0bd4eba79b34ebf964dbc53537e702f96f",
+    "sourceText": "2H2O2(aq)\u27f62H2O(l)+O2(g)2H2O2(aq)\u27f62H2O(l)+O2(g)",
+    "equation": "2 H2O2(aq) -> 2 H2O(l) + O2(g)",
+    "reactants": [
+      {
+        "formula": "H2O2",
+        "coefficient": 2,
+        "phase": "aq"
+      }
+    ],
+    "products": [
+      {
+        "formula": "H2O",
+        "coefficient": 2,
+        "phase": "l"
+      },
+      {
+        "formula": "O2",
+        "coefficient": 1,
+        "phase": "g"
+      }
+    ]
+  },
+  {
+    "id": "limestone",
+    "fixture": "4-1-writing-and-balancing-chemical-equations.html",
+    "sha256": "79d1a754c2333fb4bc84009fa69ac2abcc46406b8587110c48f36cc42ace5059",
+    "mathIndex": 50,
+    "mathSHA256": "1524145b5d36c53f124ceacb490db20bf97147bf984673008e57feeb1233645f",
+    "sourceText": "CaCO3(s)\u27f6\u0394CaO(s)+CO2(g)CaCO3(s)\u27f6\u0394CaO(s)+CO2(g)",
+    "equation": "CaCO3(s) -> CaO(s) + CO2(g)",
+    "reactants": [
+      {
+        "formula": "CaCO3",
+        "coefficient": 1,
+        "phase": "s"
+      }
+    ],
+    "products": [
+      {
+        "formula": "CaO",
+        "coefficient": 1,
+        "phase": "s"
+      },
+      {
+        "formula": "CO2",
+        "coefficient": 1,
+        "phase": "g"
+      }
+    ]
+  },
+  {
+    "id": "zinc-carbonate",
+    "fixture": "4-2-classifying-chemical-reactions.html",
+    "sha256": "57f40846e51ec4a9dbcc3be19aa5d6add6938a5d52a21b2d6fe45917b416804a",
+    "mathIndex": 40,
+    "mathSHA256": "c6eb94a9fea4c0c84959e004a04ef49e70c50ac6852f09fc246348d5a631ed5c",
+    "sourceText": "ZnCO3(s)\u27f6ZnO(s)+CO2(g)ZnCO3(s)\u27f6ZnO(s)+CO2(g)",
+    "equation": "ZnCO3(s) -> ZnO(s) + CO2(g)",
+    "reactants": [
+      {
+        "formula": "ZnCO3",
+        "coefficient": 1,
+        "phase": "s"
+      }
+    ],
+    "products": [
+      {
+        "formula": "ZnO",
+        "coefficient": 1,
+        "phase": "s"
+      },
+      {
+        "formula": "CO2",
+        "coefficient": 1,
+        "phase": "g"
+      }
+    ]
+  },
+  {
+    "id": "water-split",
+    "fixture": "4-1-writing-and-balancing-chemical-equations.html",
+    "sha256": "79d1a754c2333fb4bc84009fa69ac2abcc46406b8587110c48f36cc42ace5059",
+    "mathIndex": 20,
+    "mathSHA256": "52cc6a6b051ace6661adabf85e9ab1399556a247ca92fbabdd1dcb15153aebde",
+    "sourceText": "2H2O\u27f62H2+O2(balanced)2H2O\u27f62H2+O2(balanced)",
+    "equation": "2 H2O -> 2 H2 + O2",
+    "reactants": [
+      {
+        "formula": "H2O",
+        "coefficient": 2,
+        "phase": ""
+      }
+    ],
+    "products": [
+      {
+        "formula": "H2",
+        "coefficient": 2,
+        "phase": ""
+      },
+      {
+        "formula": "O2",
+        "coefficient": 1,
+        "phase": ""
+      }
+    ]
+  },
+  {
+    "id": "silver-chloride",
+    "fixture": "4-exercises.html",
+    "sha256": "049971c928b7c0306a9c897dcad574d0eac18659fc9e1d57636bdffebc4fea7c",
+    "mathIndex": 110,
+    "mathSHA256": "88f4160a617a6d6fb1edfabea1946170e998e63ff121457140a3c798a877728a",
+    "sourceText": "AgNO3(aq)+NaCl(aq)\u27f6AgCl(s)+NaNO3(aq)AgNO3(aq)+NaCl(aq)\u27f6AgCl(s)+NaNO3(aq)",
+    "equation": "AgNO3(aq) + NaCl(aq) -> AgCl(s) + NaNO3(aq)",
+    "reactants": [
+      {
+        "formula": "AgNO3",
+        "coefficient": 1,
+        "phase": "aq"
+      },
+      {
+        "formula": "NaCl",
+        "coefficient": 1,
+        "phase": "aq"
+      }
+    ],
+    "products": [
+      {
+        "formula": "AgCl",
+        "coefficient": 1,
+        "phase": "s"
+      },
+      {
+        "formula": "NaNO3",
+        "coefficient": 1,
+        "phase": "aq"
+      }
+    ]
+  },
+  {
+    "id": "lead-iodide",
+    "fixture": "4-2-classifying-chemical-reactions.html",
+    "sha256": "57f40846e51ec4a9dbcc3be19aa5d6add6938a5d52a21b2d6fe45917b416804a",
+    "mathIndex": 0,
+    "mathSHA256": "fbce16b4f8a9c0ba1fcd4731ba28961476957cdf21bfba3bd4d5a916cf6385ed",
+    "sourceText": "2KI(aq)+Pb(NO3)2(aq)\u27f6PbI2(s)+2KNO3(aq)2KI(aq)+Pb(NO3)2(aq)\u27f6PbI2(s)+2KNO3(aq)",
+    "equation": "2 KI(aq) + Pb(NO3)2(aq) -> PbI2(s) + 2 KNO3(aq)",
+    "reactants": [
+      {
+        "formula": "KI",
+        "coefficient": 2,
+        "phase": "aq"
+      },
+      {
+        "formula": "Pb(NO3)2",
+        "coefficient": 1,
+        "phase": "aq"
+      }
+    ],
+    "products": [
+      {
+        "formula": "PbI2",
+        "coefficient": 1,
+        "phase": "s"
+      },
+      {
+        "formula": "KNO3",
+        "coefficient": 2,
+        "phase": "aq"
+      }
+    ]
+  },
+  {
+    "id": "barium-sulfate",
+    "fixture": "4-2-classifying-chemical-reactions.html",
+    "sha256": "57f40846e51ec4a9dbcc3be19aa5d6add6938a5d52a21b2d6fe45917b416804a",
+    "mathIndex": 43,
+    "mathSHA256": "b63f3a13898023c3c31fd6336c56b193fb06cd0074932cc6841074b5ce643c26",
+    "sourceText": "BaCl2(aq)+K2SO4(aq)\u27f6BaSO4(s)+2KCl(aq)BaCl2(aq)+K2SO4(aq)\u27f6BaSO4(s)+2KCl(aq)",
+    "equation": "BaCl2(aq) + K2SO4(aq) -> BaSO4(s) + 2 KCl(aq)",
+    "reactants": [
+      {
+        "formula": "BaCl2",
+        "coefficient": 1,
+        "phase": "aq"
+      },
+      {
+        "formula": "K2SO4",
+        "coefficient": 1,
+        "phase": "aq"
+      }
+    ],
+    "products": [
+      {
+        "formula": "BaSO4",
+        "coefficient": 1,
+        "phase": "s"
+      },
+      {
+        "formula": "KCl",
+        "coefficient": 2,
+        "phase": "aq"
+      }
+    ]
+  },
+  {
+    "id": "calcium-silver",
+    "fixture": "4-1-writing-and-balancing-chemical-equations.html",
+    "sha256": "79d1a754c2333fb4bc84009fa69ac2abcc46406b8587110c48f36cc42ace5059",
+    "mathIndex": 51,
+    "mathSHA256": "a192bd55e404e4a89fb613accad654c65048bad28bf1e8045ac6f0f29541355e",
+    "sourceText": "CaCl2(aq)+2AgNO3(aq)\u27f6Ca(NO3)2(aq)+2AgCl(s)CaCl2(aq)+2AgNO3(aq)\u27f6Ca(NO3)2(aq)+2AgCl(s)",
+    "equation": "CaCl2(aq) + 2 AgNO3(aq) -> Ca(NO3)2(aq) + 2 AgCl(s)",
+    "reactants": [
+      {
+        "formula": "CaCl2",
+        "coefficient": 1,
+        "phase": "aq"
+      },
+      {
+        "formula": "AgNO3",
+        "coefficient": 2,
+        "phase": "aq"
+      }
+    ],
+    "products": [
+      {
+        "formula": "Ca(NO3)2",
+        "coefficient": 1,
+        "phase": "aq"
+      },
+      {
+        "formula": "AgCl",
+        "coefficient": 2,
+        "phase": "s"
+      }
+    ]
+  },
+  {
+    "id": "silver-ionic",
+    "fixture": "4-1-writing-and-balancing-chemical-equations.html",
+    "sha256": "79d1a754c2333fb4bc84009fa69ac2abcc46406b8587110c48f36cc42ace5059",
+    "mathIndex": 56,
+    "mathSHA256": "85ada6336494baac2d0d9e01fe1375257070f69070f300461caf92d1fa40dbab",
+    "sourceText": "Cl\u2212(aq)+Ag+(aq)\u27f6AgCl(s)Cl\u2212(aq)+Ag+(aq)\u27f6AgCl(s)",
+    "equation": "Cl-(aq) + Ag+(aq) -> AgCl(s)",
+    "reactants": [
+      {
+        "formula": "Cl-",
+        "coefficient": 1,
+        "phase": "aq"
+      },
+      {
+        "formula": "Ag+",
+        "coefficient": 1,
+        "phase": "aq"
+      }
+    ],
+    "products": [
+      {
+        "formula": "AgCl",
+        "coefficient": 1,
+        "phase": "s"
+      }
+    ]
+  },
+  {
+    "id": "neutral-ionic",
+    "fixture": "4-exercises.html",
+    "sha256": "049971c928b7c0306a9c897dcad574d0eac18659fc9e1d57636bdffebc4fea7c",
+    "mathIndex": 23,
+    "mathSHA256": "6e8d40e72ada8c38daa3d3921126f267bae2ec8f9450550848d468e5b9a6c611",
+    "sourceText": "H+(aq)+OH\u2212(aq)\u27f6H2O(l)H+(aq)+OH\u2212(aq)\u27f6H2O(l)",
+    "equation": "H+(aq) + OH-(aq) -> H2O(l)",
+    "reactants": [
+      {
+        "formula": "H+",
+        "coefficient": 1,
+        "phase": "aq"
+      },
+      {
+        "formula": "OH-",
+        "coefficient": 1,
+        "phase": "aq"
+      }
+    ],
+    "products": [
+      {
+        "formula": "H2O",
+        "coefficient": 1,
+        "phase": "l"
+      }
+    ]
+  },
+  {
+    "id": "hydronium",
+    "fixture": "4-2-classifying-chemical-reactions.html",
+    "sha256": "57f40846e51ec4a9dbcc3be19aa5d6add6938a5d52a21b2d6fe45917b416804a",
+    "mathIndex": 18,
+    "mathSHA256": "4049f7c8488f0c5173981970c9f30c02bea97b5b53b8bde5e47a8f923464f343",
+    "sourceText": "H3O+(aq)+OH\u2212(aq)\u27f62H2O(l)H3O+(aq)+OH\u2212(aq)\u27f62H2O(l)",
+    "equation": "H3O+(aq) + OH-(aq) -> 2 H2O(l)",
+    "reactants": [
+      {
+        "formula": "H3O+",
+        "coefficient": 1,
+        "phase": "aq"
+      },
+      {
+        "formula": "OH-",
+        "coefficient": 1,
+        "phase": "aq"
+      }
+    ],
+    "products": [
+      {
+        "formula": "H2O",
+        "coefficient": 2,
+        "phase": "l"
+      }
+    ]
+  },
+  {
+    "id": "magnesium-neutral",
+    "fixture": "4-2-classifying-chemical-reactions.html",
+    "sha256": "57f40846e51ec4a9dbcc3be19aa5d6add6938a5d52a21b2d6fe45917b416804a",
+    "mathIndex": 14,
+    "mathSHA256": "9d188525ef6d00c1778debd427222601228b13aa48f402c94e48abd05f750a22",
+    "sourceText": "Mg(OH)2(s)+2HCl(aq)\u27f6MgCl2(aq)+2H2O(l).Mg(OH)2(s)+2HCl(aq)\u27f6MgCl2(aq)+2H2O(l).",
+    "equation": "Mg(OH)2(s) + 2 HCl(aq) -> MgCl2(aq) + 2 H2O(l)",
+    "reactants": [
+      {
+        "formula": "Mg(OH)2",
+        "coefficient": 1,
+        "phase": "s"
+      },
+      {
+        "formula": "HCl",
+        "coefficient": 2,
+        "phase": "aq"
+      }
+    ],
+    "products": [
+      {
+        "formula": "MgCl2",
+        "coefficient": 1,
+        "phase": "aq"
+      },
+      {
+        "formula": "H2O",
+        "coefficient": 2,
+        "phase": "l"
+      }
+    ]
+  },
+  {
+    "id": "barium-neutral",
+    "fixture": "4-2-classifying-chemical-reactions.html",
+    "sha256": "57f40846e51ec4a9dbcc3be19aa5d6add6938a5d52a21b2d6fe45917b416804a",
+    "mathIndex": 17,
+    "mathSHA256": "cba12b7006ef31acc3aec8dbbbf4920b7c0419a32d2e1d18c7a078fce0e18a52",
+    "sourceText": "Ba(OH)2(aq)+2HNO3(aq)\u27f6Ba(NO3)2(aq)+2H2O(l)Ba(OH)2(aq)+2HNO3(aq)\u27f6Ba(NO3)2(aq)+2H2O(l)",
+    "equation": "Ba(OH)2(aq) + 2 HNO3(aq) -> Ba(NO3)2(aq) + 2 H2O(l)",
+    "reactants": [
+      {
+        "formula": "Ba(OH)2",
+        "coefficient": 1,
+        "phase": "aq"
+      },
+      {
+        "formula": "HNO3",
+        "coefficient": 2,
+        "phase": "aq"
+      }
+    ],
+    "products": [
+      {
+        "formula": "Ba(NO3)2",
+        "coefficient": 1,
+        "phase": "aq"
+      },
+      {
+        "formula": "H2O",
+        "coefficient": 2,
+        "phase": "l"
+      }
+    ]
+  },
+  {
+    "id": "calcium-neutral",
+    "fixture": "4-exercises.html",
+    "sha256": "049971c928b7c0306a9c897dcad574d0eac18659fc9e1d57636bdffebc4fea7c",
+    "mathIndex": 119,
+    "mathSHA256": "7601062ab661f9343eef0ab1c96bac721d013f5b920bbb098feb61f3a0bf6f20",
+    "sourceText": "Ca(OH)2(aq)+2HCl(aq)\u27f6CaCl2(aq)+2H2O(l)Ca(OH)2(aq)+2HCl(aq)\u27f6CaCl2(aq)+2H2O(l)",
+    "equation": "Ca(OH)2(aq) + 2 HCl(aq) -> CaCl2(aq) + 2 H2O(l)",
+    "reactants": [
+      {
+        "formula": "Ca(OH)2",
+        "coefficient": 1,
+        "phase": "aq"
+      },
+      {
+        "formula": "HCl",
+        "coefficient": 2,
+        "phase": "aq"
+      }
+    ],
+    "products": [
+      {
+        "formula": "CaCl2",
+        "coefficient": 1,
+        "phase": "aq"
+      },
+      {
+        "formula": "H2O",
+        "coefficient": 2,
+        "phase": "l"
+      }
+    ]
+  },
+  {
+    "id": "sulfuric-neutral",
+    "fixture": "4-exercises.html",
+    "sha256": "049971c928b7c0306a9c897dcad574d0eac18659fc9e1d57636bdffebc4fea7c",
+    "mathIndex": 117,
+    "mathSHA256": "0d82e9090702aecf77741fa517ceda30b97ab8024fdaa146e6d3d5d7db844f21",
+    "sourceText": "H2SO4(aq)+2KOH(aq)\u27f6K2SO4(aq)+2H2O(l)H2SO4(aq)+2KOH(aq)\u27f6K2SO4(aq)+2H2O(l)",
+    "equation": "H2SO4(aq) + 2 KOH(aq) -> K2SO4(aq) + 2 H2O(l)",
+    "reactants": [
+      {
+        "formula": "H2SO4",
+        "coefficient": 1,
+        "phase": "aq"
+      },
+      {
+        "formula": "KOH",
+        "coefficient": 2,
+        "phase": "aq"
+      }
+    ],
+    "products": [
+      {
+        "formula": "K2SO4",
+        "coefficient": 1,
+        "phase": "aq"
+      },
+      {
+        "formula": "H2O",
+        "coefficient": 2,
+        "phase": "l"
+      }
+    ]
+  },
+  {
+    "id": "carbon-dioxide-base",
+    "fixture": "4-1-writing-and-balancing-chemical-equations.html",
+    "sha256": "79d1a754c2333fb4bc84009fa69ac2abcc46406b8587110c48f36cc42ace5059",
+    "mathIndex": 58,
+    "mathSHA256": "445414faf3af6ce9cc85660b39b5a523260dcc7d679acb2c06e2c17e43a9a225",
+    "sourceText": "CO2(aq)+2NaOH(aq)\u27f6Na2CO3(aq)+H2O(l)CO2(aq)+2NaOH(aq)\u27f6Na2CO3(aq)+H2O(l)",
+    "equation": "CO2(aq) + 2 NaOH(aq) -> Na2CO3(aq) + H2O(l)",
+    "reactants": [
+      {
+        "formula": "CO2",
+        "coefficient": 1,
+        "phase": "aq"
+      },
+      {
+        "formula": "NaOH",
+        "coefficient": 2,
+        "phase": "aq"
+      }
+    ],
+    "products": [
+      {
+        "formula": "Na2CO3",
+        "coefficient": 1,
+        "phase": "aq"
+      },
+      {
+        "formula": "H2O",
+        "coefficient": 1,
+        "phase": "l"
+      }
+    ]
+  },
+  {
+    "id": "bicarbonate",
+    "fixture": "4-exercises.html",
+    "sha256": "049971c928b7c0306a9c897dcad574d0eac18659fc9e1d57636bdffebc4fea7c",
+    "mathIndex": 113,
+    "mathSHA256": "1f0bb46589d8488dc0479439682605b214967a49e65084b1672ba16c420550e9",
+    "sourceText": "NaHCO3(aq)+HCl(aq)\u27f6NaCl(aq)+CO2(g)+H2O(l)NaHCO3(aq)+HCl(aq)\u27f6NaCl(aq)+CO2(g)+H2O(l)",
+    "equation": "NaHCO3(aq) + HCl(aq) -> NaCl(aq) + CO2(g) + H2O(l)",
+    "reactants": [
+      {
+        "formula": "NaHCO3",
+        "coefficient": 1,
+        "phase": "aq"
+      },
+      {
+        "formula": "HCl",
+        "coefficient": 1,
+        "phase": "aq"
+      }
+    ],
+    "products": [
+      {
+        "formula": "NaCl",
+        "coefficient": 1,
+        "phase": "aq"
+      },
+      {
+        "formula": "CO2",
+        "coefficient": 1,
+        "phase": "g"
+      },
+      {
+        "formula": "H2O",
+        "coefficient": 1,
+        "phase": "l"
+      }
+    ]
+  },
+  {
+    "id": "zinc-acid",
+    "fixture": "4-2-classifying-chemical-reactions.html",
+    "sha256": "57f40846e51ec4a9dbcc3be19aa5d6add6938a5d52a21b2d6fe45917b416804a",
+    "mathIndex": 38,
+    "mathSHA256": "49b13b46fe8f4b408ca3708ec9a76ac87626b55db70af68d35366f8b3dfcd662",
+    "sourceText": "Zn(s)+2HCl(aq)\u27f6ZnCl2(aq)+H2(g)Zn(s)+2HCl(aq)\u27f6ZnCl2(aq)+H2(g)",
+    "equation": "Zn(s) + 2 HCl(aq) -> ZnCl2(aq) + H2(g)",
+    "reactants": [
+      {
+        "formula": "Zn",
+        "coefficient": 1,
+        "phase": "s"
+      },
+      {
+        "formula": "HCl",
+        "coefficient": 2,
+        "phase": "aq"
+      }
+    ],
+    "products": [
+      {
+        "formula": "ZnCl2",
+        "coefficient": 1,
+        "phase": "aq"
+      },
+      {
+        "formula": "H2",
+        "coefficient": 1,
+        "phase": "g"
+      }
+    ]
+  },
+  {
+    "id": "copper-silver",
+    "fixture": "4-2-classifying-chemical-reactions.html",
+    "sha256": "57f40846e51ec4a9dbcc3be19aa5d6add6938a5d52a21b2d6fe45917b416804a",
+    "mathIndex": 39,
+    "mathSHA256": "e95218403c4fdb0591fb8f7634f6a9ba394f1c4c20ed3b90a202d33f7d971580",
+    "sourceText": "Cu(s)+2AgNO3(aq)\u27f6Cu(NO3)2(aq)+2Ag(s)Cu(s)+2AgNO3(aq)\u27f6Cu(NO3)2(aq)+2Ag(s)",
+    "equation": "Cu(s) + 2 AgNO3(aq) -> Cu(NO3)2(aq) + 2 Ag(s)",
+    "reactants": [
+      {
+        "formula": "Cu",
+        "coefficient": 1,
+        "phase": "s"
+      },
+      {
+        "formula": "AgNO3",
+        "coefficient": 2,
+        "phase": "aq"
+      }
+    ],
+    "products": [
+      {
+        "formula": "Cu(NO3)2",
+        "coefficient": 1,
+        "phase": "aq"
+      },
+      {
+        "formula": "Ag",
+        "coefficient": 2,
+        "phase": "s"
+      }
+    ]
+  },
+  {
+    "id": "zinc-copper",
+    "fixture": "4-4-reaction-yields.html",
+    "sha256": "c8d419bfa36466002afc8a1f73346bbd35d7c7399d4367b80f7985423c297f10",
+    "mathIndex": 12,
+    "mathSHA256": "7e4c2e8f1604cda1b097f58f5ed76318c7d6a5a827b57e3d068ed98247d78e58",
+    "sourceText": "CuSO4(aq)+Zn(s)\u27f6Cu(s)+ZnSO4(aq)CuSO4(aq)+Zn(s)\u27f6Cu(s)+ZnSO4(aq)",
+    "equation": "CuSO4(aq) + Zn(s) -> Cu(s) + ZnSO4(aq)",
+    "reactants": [
+      {
+        "formula": "CuSO4",
+        "coefficient": 1,
+        "phase": "aq"
+      },
+      {
+        "formula": "Zn",
+        "coefficient": 1,
+        "phase": "s"
+      }
+    ],
+    "products": [
+      {
+        "formula": "Cu",
+        "coefficient": 1,
+        "phase": "s"
+      },
+      {
+        "formula": "ZnSO4",
+        "coefficient": 1,
+        "phase": "aq"
+      }
+    ]
+  },
+  {
+    "id": "magnesium-nickel",
+    "fixture": "4-exercises.html",
+    "sha256": "049971c928b7c0306a9c897dcad574d0eac18659fc9e1d57636bdffebc4fea7c",
+    "mathIndex": 37,
+    "mathSHA256": "8836f6757ee5adf5a9306c3fc12751425aa1e00d6376979c984cacd27701f3c9",
+    "sourceText": "Mg(s)+NiCl2(aq)\u27f6MgCl2(aq)+Ni(s)Mg(s)+NiCl2(aq)\u27f6MgCl2(aq)+Ni(s)",
+    "equation": "Mg(s) + NiCl2(aq) -> MgCl2(aq) + Ni(s)",
+    "reactants": [
+      {
+        "formula": "Mg",
+        "coefficient": 1,
+        "phase": "s"
+      },
+      {
+        "formula": "NiCl2",
+        "coefficient": 1,
+        "phase": "aq"
+      }
+    ],
+    "products": [
+      {
+        "formula": "MgCl2",
+        "coefficient": 1,
+        "phase": "aq"
+      },
+      {
+        "formula": "Ni",
+        "coefficient": 1,
+        "phase": "s"
+      }
+    ]
+  },
+  {
+    "id": "zinc-sulfuric",
+    "fixture": "4-exercises.html",
+    "sha256": "049971c928b7c0306a9c897dcad574d0eac18659fc9e1d57636bdffebc4fea7c",
+    "mathIndex": 40,
+    "mathSHA256": "5e9b45c5596aad3c92e643fe33b6d152295b413b2304e834025b56eabca3c2ac",
+    "sourceText": "Zn(s)+H2SO4(aq)\u27f6ZnSO4(aq)+H2(g)Zn(s)+H2SO4(aq)\u27f6ZnSO4(aq)+H2(g)",
+    "equation": "Zn(s) + H2SO4(aq) -> ZnSO4(aq) + H2(g)",
+    "reactants": [
+      {
+        "formula": "Zn",
+        "coefficient": 1,
+        "phase": "s"
+      },
+      {
+        "formula": "H2SO4",
+        "coefficient": 1,
+        "phase": "aq"
+      }
+    ],
+    "products": [
+      {
+        "formula": "ZnSO4",
+        "coefficient": 1,
+        "phase": "aq"
+      },
+      {
+        "formula": "H2",
+        "coefficient": 1,
+        "phase": "g"
+      }
+    ]
+  }
+]
