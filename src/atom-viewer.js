@@ -3,26 +3,52 @@ import {OrbitControls} from 'three/addons/controls/OrbitControls.js';
 import {createAtom} from './atom.js';
 
 // One renderer per page, one disposable specimen per open dialog.
-export function createAtomViewer(viewport, status, rotationButton) {
-  let renderer, scene, camera, controls, atom, number, frame;
+export function createAtomViewer(viewport, status, rotationButton, animationButton) {
+  let renderer, scene, camera, controls, atom, number, frame = null;
   let webgl = false, opened = false, failed = false, rotating = false;
-  const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  let animating = false, time = 0, previousTime = null, visible = false, renderFrames = 0;
+  const display = {cloud:false, particles:true, nucleus:false};
+  const reduced = matchMedia('(prefers-reduced-motion: reduce)');
+  let wantsMotion = !reduced.matches;
   const observer = new ResizeObserver(resize);
   observer.observe(viewport);
+  const intersection = new IntersectionObserver(entries => {
+    visible = entries[0].isIntersecting;
+    schedule();
+  });
+  intersection.observe(viewport);
+  document.addEventListener('visibilitychange', schedule);
+  reduced.addEventListener('change', event => {if (event.matches) {motion(false);rotate(false);}});
   function rotate(value) {
     rotating = value;
-    if (controls) controls.autoRotate = value;
+    if (controls) {
+      controls.autoRotate = value;
+      if (!value) {
+        // Clear queued OrbitControls damping without advancing the held view.
+        // Otherwise a reduced-motion change or pause leaves the camera coasting.
+        const heldPosition = camera.position.clone();
+        controls.enableDamping = false;controls.update(0);controls.enableDamping = true;
+        camera.position.copy(heldPosition);controls.update(0);
+      }
+    }
     rotationButton.setAttribute('aria-pressed', String(value));
-    rotationButton.textContent = value ? 'Pause rotation' : 'Rotate atom';
+    rotationButton.textContent = value ? 'Pause rotation' : 'Rotate view';
+  }
+  function motion(value, remember = true) {
+    animating = value;
+    if (remember) wantsMotion = value;
+    animationButton.setAttribute('aria-pressed', String(value));
+    animationButton.textContent = value ? 'Pause animation' : 'Play animation';
   }
   function clear() {
-    cancelAnimationFrame(frame);
+    stop();
     if (atom) {scene.remove(atom.root); atom.dispose(); atom = null;}
     renderer?.renderLists.dispose();
     if (webgl) renderer.render(scene, camera);
   }
   function fallback() {
     failed = true; webgl = false;
+    motion(false, false);rotate(false);
     clear(); controls?.dispose(); renderer?.dispose();
     if (renderer) renderer.domElement.hidden = true;
     status.textContent = 'Reading mode — 3D unavailable. Element, isotope and shell data remain available. Reload to retry graphics.';
@@ -53,7 +79,7 @@ export function createAtomViewer(viewport, status, rotationButton) {
       controls.touches.ONE = THREE.TOUCH.ROTATE;controls.touches.TWO = THREE.TOUCH.DOLLY_ROTATE;
       controls.addEventListener('start', () => rotate(false));
       webgl = true;resize();
-      status.textContent = 'Shell model, not to scale. Rings are not electron trajectories. Drag to orbit · pinch or scroll to zoom. Keyboard: arrows, + / −, Home.';
+      status.textContent = 'Teaching model · not to scale. Moving markers and shell paths are not literal electron trajectories. Drag to orbit · pinch or scroll to zoom. Keyboard: arrows, + / −, Home.';
     } catch {fallback();}
   }
   function resize() {
@@ -91,11 +117,21 @@ export function createAtomViewer(viewport, status, rotationButton) {
     if (e.key === 'ArrowDown') s.phi += .12;
     s.makeSafe();camera.position.copy(controls.target).add(new THREE.Vector3().setFromSpherical(s));controls.update();
   }
-  function animate() {
-    if (!opened || !webgl) return;
+  function stop() {
+    cancelAnimationFrame(frame);frame = null;previousTime = null;
+  }
+  function schedule() {
+    stop();
+    if (opened && webgl && visible && !document.hidden) animate();
+  }
+  function animate(now = performance.now()) {
+    frame = null;
+    if (!opened || !webgl || !visible || document.hidden) {previousTime = null;return;}
+    const delta = previousTime === null ? 0 : Math.max(0, Math.min((now - previousTime) / 1000, .05));
+    previousTime = now;
+    if (animating) {time += delta;atom.update(time);}
+    controls.update(delta);renderer.render(scene, camera);renderFrames++;
     frame = requestAnimationFrame(animate);
-    if (document.hidden) return;
-    controls.update(1 / 60);renderer.render(scene, camera);
   }
   return {
     open(element) {
@@ -104,15 +140,27 @@ export function createAtomViewer(viewport, status, rotationButton) {
       clear();
       if (!webgl) return;
       atom = createAtom(element);scene.add(atom.root);
+      atom.setDisplay(display);
       renderer.domElement.setAttribute('aria-label', `3D shell model of ${element.name}. Arrow keys orbit, plus and minus zoom, Home resets.`);
-      resize();rotate(!reduced);reset();animate();
+      time = 0;visible = true;resize();rotate(false);motion(wantsMotion);reset();schedule();
     },
-    close() {opened = false;rotate(false);clear();},
+    close() {opened = false;visible = false;rotate(false);motion(false, false);clear();},
+    motion() {if (webgl) motion(!animating);},
+    display(key) {
+      if (!webgl || !Object.hasOwn(display, key)) return;
+      display[key] = !display[key];atom?.setDisplay(display);
+      return display[key];
+    },
     rotate() {rotate(!rotating);}, zoom, reset,
     diagnostics() {
       let gpu = 'unavailable';
       if (webgl) {const gl = renderer.getContext(), ext = gl.getExtension('WEBGL_debug_renderer_info');gpu = ext ? gl.getParameter(ext.UNMASKED_RENDERER_WEBGL) : gl.getParameter(gl.RENDERER);}
-      return {number, webgl, opened, rotating, gpu, camera:camera?.position.toArray(), geometries:renderer?.info.memory.geometries || 0, triangles:renderer?.info.render.triangles || 0, calls:renderer?.info.render.calls || 0};
+      const particles = {};
+      if (atom) for (const name of ['electrons','protons','neutrons']) {
+        const mesh = atom.root.getObjectByName(name);
+        particles[name] = Array.from({length:Math.min(6, mesh.count)}, (_, i) => Array.from(mesh.instanceMatrix.array.slice(i * 16 + 12, i * 16 + 15)));
+      }
+      return {number, webgl, opened, rotating, animating, visible, pendingFrame:frame !== null, renderFrames, time, particles, display:{...display}, gpu, camera:camera?.position.toArray(), geometries:renderer?.info.memory.geometries || 0, triangles:renderer?.info.render.triangles || 0, calls:renderer?.info.render.calls || 0};
     },
   };
 }

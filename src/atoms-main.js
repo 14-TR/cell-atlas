@@ -10,7 +10,7 @@ const families = {
   'Transition metal':'#c4ac8c', 'Post-transition metal':'#b5c2ad',
   'Lanthanide':'#b8a7cf', 'Actinide':'#cca9b8',
 };
-const viewer = createAtomViewer($('atom-viewport'), $('atom-status'), $('atom-rotate'));
+const viewer = createAtomViewer($('atom-viewport'), $('atom-status'), $('atom-rotate'), $('atom-animation'));
 let opener, matches = elements;
 function text(tag, value, className) {
   const el = document.createElement(tag);el.textContent = value;
@@ -54,6 +54,7 @@ function open(e, trigger) {
   $('element-source').href = e.url;$('isotope-source').href = e.isotopeSource;
   document.querySelectorAll('[data-element]').forEach(b => b.setAttribute('aria-pressed', String(Number(b.dataset.element) === e.number)));
   if (!dialog.open) dialog.showModal();
+  dialog.scrollTop = 0;
   viewer.open(e);
   $('atom-close').focus({preventScroll:true});
 }
@@ -98,6 +99,13 @@ function search() {
 $('element-search').addEventListener('input', search);
 $('element-search-form').addEventListener('submit', event => {event.preventDefault();if (matches.length) open(matches[0], $('element-search'));});
 $('atom-rotate').addEventListener('click', () => viewer.rotate());
+$('atom-animation').addEventListener('click', () => viewer.motion());
+for (const key of ['cloud','particles','nucleus']) {
+  $(`atom-${key}`).addEventListener('click', event => {
+    const value = viewer.display(key);
+    if (value !== undefined) event.currentTarget.setAttribute('aria-pressed', String(value));
+  });
+}
 $('atom-reset').addEventListener('click', () => viewer.reset());
 $('atom-zoom-in').addEventListener('click', () => viewer.zoom(.85));
 $('atom-zoom-out').addEventListener('click', () => viewer.zoom(1.18));

@@ -48,7 +48,23 @@ Choose **Periodic table** in the cell footer, or open `atoms.html`. All 118 butt
 
 Each button opens a native dialog with a real Three.js atom, mouse/touch orbit, pinch/wheel zoom, keyboard arrows/+/-/Home, explicit zoom/reset controls, element details and neutral electron shell counts. Escape/Close restores focus. The close control stays visible while scrolling notes. One renderer is reused; each atom's geometry/material/instance buffers are released on close or replacement. Context loss and `atoms.html?webgl=off` retain all text and selection in reading mode.
 
-**Educational shell model, not to scale. Rings are not literal electron trajectories.** Nucleus packing and particle positions are illustrative, not a quantum simulation. Neutrons belong to the named representative isotope, not a rounded average atomic weight. Configurations come from PubChem, with NIST's 7p Lawrencium correction; superheavy predictions are flagged. See [source, isotope and licensing details](DATA-SOURCES.md).
+The default is an **animated teaching model**: mint electron markers move along illustrative shell guides; orange protons and blue neutrons gently move inside the clustered nucleus. The particle legend is directly below the canvas, including on phones. **Pause animation** freezes particles and cloud glow without freezing camera interaction; **Rotate view** separately controls camera rotation (off initially). **Particles** and **Cloud** toggle independent layers. The optional glowing cloud is off by default. **Enlarge nucleus** emphasizes the nuclear cluster in place without reframing the camera or moving electron shells. Display choices and deliberate animation pause persist across selections in the page session.
+
+Reduced-motion users start with both animation and camera rotation stopped, with explicit opt-in available. A live change to reduced motion stops both; removing that preference does not restart them automatically. The animation clock and render loop stop when the canvas scrolls out of view, the page is hidden, the dialog is closed, or the context is lost. Returning onscreen resumes from the held illustration time without a catch-up jump.
+
+**Educational shell model, not to scale. Moving markers and shell paths are not literal electron trajectories or observations.** Speeds, nucleus packing, particle sizes and distances are illustrative; the gentle nucleon motion is not nuclear dynamics. The optional cloud is a **qualitative orbital-inspired illustration**, not a solved multielectron wavefunction or quantitative probability map. Neutrons belong to the named representative isotope, not a rounded average atomic weight. Configurations come from PubChem, with NIST's 7p Lawrencium correction; superheavy predictions are flagged. See [source, isotope and licensing details](DATA-SOURCES.md).
+
+### Animation verification
+
+```sh
+npm test
+npm run build
+npm run test:animation
+npm run test:animation-regressions
+python3 scripts/freeze-animation.py
+```
+
+Both new browser commands own ephemeral **127.0.0.1** servers and compare served HTML with the exact built entries. The temporal suite runs under `/cell-atlas/`, proves actual marker-buffer and rendered-pixel changes at a stationary camera, exact paused positions/time and stable pixels (at most eight single-channel-step raster differences), independent camera rotation, optional cloud glow, reduced-motion handling, real scroll-offscreen suspension, synthetic document-visibility handling, context loss and disposal. Every element animates in a mobile-emulated GPU browser. The regression wrapper runs all existing expansion and original browser scripts **unchanged**, writing into a fresh `evidence/animation/regressions-*` directory instead of replacing historical evidence. `ANIMATION_EVIDENCE` can select an alternate temporal-suite receipt directory. All new receipts belong under `evidence/animation/`; the freeze script saves source/build/evidence copies and SHA-256 manifests outside the worktree without staging, committing or modifying expansion receipts. Chromium/Metal mobile emulation is not physical-phone or Safari validation.
 
 ## Expansion verification
 

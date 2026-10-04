@@ -37,16 +37,19 @@
 .atom-workspace{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(260px,1fr);gap:28px}
 .atom-scene{min-width:0}#atom-viewport{height:420px;position:relative;background:radial-gradient(ellipse,#2a3934,transparent 68%)}
 #atom-viewport canvas{display:block;touch-action:none;width:100%;height:100%;border-radius:4px}#atom-viewport canvas:focus-visible{outline:2px solid var(--accent);outline-offset:-3px}
-#atom-status{color:var(--muted);font-size:10px;margin:4px 0 12px;min-height:30px}
-.atom-tools{display:flex;gap:6px;flex-wrap:wrap}.atom-tools button{border:1px solid #849b7855;padding:0 12px;font-size:11px}
+#atom-status{color:var(--muted);font-size:10px;margin:12px 0;min-height:30px}
+.atom-tools{display:flex;gap:6px;flex-wrap:wrap}.atom-tools button{border:1px solid #849b7855;padding:0 12px;font-size:11px;min-height:44px;min-width:44px}
+.atom-tools button[aria-pressed=true]{background:#94d3be1f;border-color:#a4d8c7;color:#d5f2e9}
+.atom-motion-tools{padding-bottom:6px}.atom-motion-tools #atom-animation{border-color:#a4d8c7}
 .atom-info{padding-top:15px}.atom-info h3{margin:18px 0 6px;font-size:11px;letter-spacing:.6px;color:#b9cbb7}.atom-info p{font-size:12px;line-height:1.6}
 .atom-info .atom-symbol{font:400 55px/1.1 'Instrument Serif',Georgia,serif;color:#d3e0c6;margin-bottom:8px}
 .atom-info .info-note{font-size:10px;color:#a5b5ac;line-height:1.65;margin-top:6px}
 #shell-list{list-style:none;padding:0;margin:0;display:flex;gap:6px;flex-wrap:wrap}#shell-list li{padding:4px 7px;background:#a0bd9711;border:1px solid #a0bd9733;border-radius:3px;font-size:11px}
 #atom-configuration{overflow-wrap:anywhere;font-family:monospace;font-size:13px}
-.particle-key{display:flex;flex-wrap:wrap;gap:12px;font-size:10px;margin:20px 0 10px}.particle-key span:nth-child(1){color:#da997d}.particle-key span:nth-child(2){color:#b0bbc8}.particle-key span:nth-child(3){color:#b9e3d6}
+.particle-key{display:flex;flex-wrap:wrap;gap:12px;font-size:11px;margin:8px 0 14px}.particle-key span:nth-child(1){color:#ff9166}.particle-key span:nth-child(2){color:#91b7ff}.particle-key span:nth-child(3){color:#7ff7e2}
 .atom-info>a{display:block;min-height:35px;color:var(--accent);font-size:11px;padding:6px 0}
 #atom-caveat{margin:20px 0 0;border-top:1px solid var(--line);padding-top:14px;font-size:11px;line-height:1.6;color:#bdcdbf}
+#atom-caveat a{color:#d5ebd8;text-decoration:underline}
 #atom-viewport.atom-reading-mode{height:150px;display:grid;place-items:center}#atom-viewport.atom-reading-mode:after{content:'3D unavailable · reading mode';color:var(--muted)}
 [data-atom-control]:disabled{opacity:.35;cursor:default}
 @media(max-width:700px){

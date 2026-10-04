@@ -33,7 +33,11 @@ Neutrons are the integer mass number minus atomic number. The model never obtain
 
 ## Model interpretation
 
-The 3D atom shows one marker per electron and one per proton/neutron for the named neutral isotope. Ring radii, marker placements and nucleus packing are an original educational drawing: **not to scale, not literal electron trajectories, not orbital wavefunctions, not a nuclear-structure calculation**. The whole model can rotate, but individual electrons are not animated as classical orbiting planets. Charge states, bonding, excitation and decay are outside scope.
+The 3D atom shows one marker per electron and one per proton/neutron for the named neutral isotope. The default **teaching animation** moves electrons around illustrative shell guides and gently displaces nucleons within the nucleus. Ring radii, motion speeds, marker placements and nucleus packing are an original educational drawing: **not to scale, not literal electron trajectories or observations, not a nuclear-structure/dynamics calculation**. Camera rotation is independent of particle animation. Charge states, bonding, excitation and decay are outside scope.
+
+An orbital is distinct from an orbit: the quantum-mechanical description specifies the probability of finding an electron in three-dimensional space around the nucleus, rather than these teaching paths.[12]
+
+The optional, default-off cloud is a **qualitative orbital-inspired illustration**, not a solved multielectron wavefunction, a quantitative probability-density map, or an element-specific set of s/p/d/f orbitals. Its spherical point samples, gentle glow modulation and clearing around the deliberately enlarged nucleus are display choices, not scientific data. No orbital solver is claimed. All particles are counted, but packing and perspective can occlude some markers. Colors identify particle types, not physical colors. The adjacent legend, model warning, detailed caveat and linked quantum-theory explanation make these limits explicit.
 
 ## Reuse / license notices
 
@@ -77,3 +81,4 @@ The NIST composition database's underlying evaluation is older than the fetch da
 [9] https://pubchem.ncbi.nlm.nih.gov/periodic-table
 [10] https://lanl.gov/lanl-resources/web-policies
 [11] https://www.nist.gov/open/license
+[12] https://openstax.org/books/chemistry/pages/6-3-development-of-quantum-theory
